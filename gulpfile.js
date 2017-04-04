@@ -29,7 +29,7 @@ gulp.task("copy-vendor-files", function() {
     gulp.src(['./vendor/**/*']).pipe(gulp.dest('./dist/dist'));
 })
 
-gulp.task("build", ["sass", "copy-vendor-files"]);
+gulp.task("build", ["copy-vendor-files", "sass"]);
 
 /**
  * Push build to gh-pages
