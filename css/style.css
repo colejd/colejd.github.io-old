@@ -1,3 +1,337 @@
-@import url(/dist/bootstrap/css/bootstrap.min.css);@import url(/dist/bootstrap/css/bootstrap-accessibility.css);@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";/* line 35, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu{overflow:auto;font-family:"Work Sans",sans-serif;font-size:12px;font-weight:200;background-color:#151515;position:fixed;top:0px;width:200px;height:100%;color:#d4d4d4;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:-moz-none;-o-user-select:none;user-select:none}/* line 55, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu .brand{background-color:#3194e8;color:#fff;line-height:50px;display:block;text-align:center;font-size:14px;user-select:none;cursor:default}/* line 66, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu .brand a{color:#fff;text-decoration:none}/* line 71, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu .toggle-btn{display:none}/* line 76, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu ul,.nav-side-menu li{list-style:none;padding:0px;margin:0px;line-height:35px;cursor:pointer}/* line 83, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu ul .collapsed .arrow:before,.nav-side-menu li .collapsed .arrow:before{font-family:FontAwesome;content:"\f053";display:inline-block;padding-left:10px;padding-right:10px;vertical-align:middle;float:right}/* line 96, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu ul:not(collapsed) .arrow:before,.nav-side-menu li:not(collapsed) .arrow:before{font-family:FontAwesome;content:"\f078";display:inline-block;padding-left:10px;padding-right:10px;vertical-align:middle;float:right}/* line 107, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu ul .active,.nav-side-menu li .active{border-left:3px solid #ebe88a;background-color:#212933}/* line 113, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu ul .sub-menu li.active,.nav-side-menu li .sub-menu li.active{color:#ebe88a}/* line 118, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu ul .sub-menu li.active a,.nav-side-menu li .sub-menu li.active a{color:#ebe88a}/* line 123, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu ul .sub-menu li,.nav-side-menu li .sub-menu li{background-color:#101315;border:none;line-height:28px;border-bottom:1px solid #3194e8;margin-left:0px}/* line 132, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu ul .sub-menu li:hover,.nav-side-menu li .sub-menu li:hover{background-color:#212933}/* line 137, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu ul .sub-menu li:before,.nav-side-menu li .sub-menu li:before{font-family:FontAwesome;content:"\f105";display:inline-block;padding-left:10px;padding-right:10px;vertical-align:middle}/* line 146, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu li{padding-left:0px;border-left:3px solid #151515;border-bottom:1px solid #3194e8}/* line 152, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu li a{text-decoration:none;color:#d4d4d4;font-weight:200}/* line 159, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu li a i{padding-left:10px;width:20px;padding-right:20px}/* line 165, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu li:hover{border-left:3px solid #ebe88a;background-color:#212933;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;-ms-transition:all 1s ease;transition:all 1s ease}@media (max-width: 767px){/* line 177, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu{position:relative;width:100%;margin-bottom:10px}/* line 182, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu .toggle-btn{display:block;cursor:pointer;position:absolute;right:10px;top:10px;z-index:10 !important;padding:3px;background-color:#3194e8;color:#fff;width:40px;text-align:center}/* line 195, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.brand{text-align:left !important;font-size:22px;padding-left:20px;line-height:50px !important}/* line 201, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-profile-image{display:none}/* line 204, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu li{line-height:50px}/* line 208, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu ul .sub-menu li,.nav-side-menu li .sub-menu li{line-height:43px}}@media (min-width: 767px){/* line 220, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-side-menu .menu-list .menu-content{display:block}/* line 223, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */#main{width:calc(100% - 200px);float:right}/* line 227, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_bootstrap_styling.scss */.nav-profile-image{border-color:black;background-color:black;background-size:0.5em}}@keyframes fadeInAnimation{from{opacity:0}to{opacity:1}}/* line 12, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main{padding:0 2em 0 2em;animation-duration:.38s;animation-fill-mode:both;animation-name:fadeInAnimation}/* line 19, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */body{background:#151515;margin:0;padding:0;height:100%;width:100%}/* line 29, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main h1{font-family:"Ubuntu",Helvetica,Arial,sans-serif;font-size:50px;font-weight:700;color:#3194e8;margin-top:0px}/* line 39, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main h2{font-weight:600;font-size:24px;font-family:"Work Sans",sans-serif;color:#3194e8}/* line 46, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main h3,h4,h5,h6{font-family:"Work Sans",sans-serif;color:#3194e8}/* line 51, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main p{font-family:"Work Sans",sans-serif;font-size:16px;line-height:25px;font-weight:400;color:#d4d4d4}/* line 61, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main strong{font-weight:700;color:#e86231}/* line 66, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main em{font-style:italic}/* line 70, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main hr{height:30px;border-style:solid;border-color:#3194e8;border-width:1px 0 0 0}/* line 77, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main span.highlight{font-weight:700;color:#e86231}/* line 82, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#stopThursdayButton{position:fixed;bottom:10px;left:10px;visibility:hidden;-webkit-box-shadow:none;box-shadow:none;-webkit-transition:none;transition:none;background-image:none;filter:none;border:0 none}/* line 97, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main ul{list-style-position:inside;padding-left:1.5em}/* line 102, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main ul>li{display:block}/* line 106, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main ul>li:before{content:"\e080";font-family:'Glyphicons Halflings';font-size:9px;float:left;margin-top:7px;margin-left:-17px;color:#CCCCCC}/* line 117, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main .img-inline{float:left;margin:0em 2em 1em 0;border-radius:12px;border:solid 2px #3194e8}/* line 126, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */canvas.fullscreenWidget{position:absolute;left:0;top:0;height:100%;width:100%;z-index:1000;pointer-events:none}@media (max-width: 767px){/* line 138, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main h1{text-align:center}/* line 141, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main .img-inline{float:none;margin:auto;margin-bottom:1em;margin-top:1em}}/* line 154, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */code{color:#d4d4d4;background-color:#505050}/* line 162, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main a{color:#ebe88a;text-decoration:none;border-bottom:1px solid #ebe88a;-o-transition:.5s;-ms-transition:.5s;-moz-transition:.5s;-webkit-transition:.5s;transition:.5s}/* line 173, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */#main a:hover{background:#ebe88a;color:#151515}/* line 178, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */.blockHead:after{color:#4D81BF;border-left:20px solid;border-top:20px solid transparent;border-bottom:20px solid transparent;display:inline-block;content:'';position:absolute;right:-20px;top:0}/* line 189, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */.blockHead{background-color:#4D81BF;height:40px;line-height:40px;display:inline-block;position:relative}/* line 197, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */.blocktext{color:white;font-weight:bold;padding-left:10px;font-family:Arial;font-size:11}/* line 210, /Users/jonathancole/Dev/Projects/Web/seieibob.github.io/sass/partials/_theme.scss */li.L1,li.L3,li.L5,li.L7,li.L9{background:#3b3b3b}
+@import url(/vendor/bootstrap/css/bootstrap.min.css);
+@import url(/vendor/bootstrap/css/bootstrap-accessibility.css);
+@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+.nav-side-menu {
+  overflow: auto;
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: #151515;
+  position: fixed;
+  top: 0px;
+  width: 200px;
+  height: 100%;
+  color: #d4d4d4;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none; }
 
-/*# sourceMappingURL=style.css.map */
+.nav-side-menu .brand {
+  background-color: #3194e8;
+  color: #fff;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  user-select: none;
+  cursor: default; }
+
+.nav-side-menu .brand a {
+  color: #fff;
+  text-decoration: none; }
+
+.nav-side-menu .toggle-btn {
+  display: none; }
+
+.nav-side-menu ul,
+.nav-side-menu li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 35px;
+  cursor: pointer; }
+  .nav-side-menu ul .collapsed .arrow:before,
+  .nav-side-menu li .collapsed .arrow:before {
+    font-family: FontAwesome;
+    content: "\f053";
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+    float: right; }
+
+.nav-side-menu ul:not(collapsed) .arrow:before,
+.nav-side-menu li:not(collapsed) .arrow:before {
+  font-family: FontAwesome;
+  content: "\f078";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+  float: right; }
+
+.nav-side-menu ul .active,
+.nav-side-menu li .active {
+  border-left: 3px solid #ebe88a;
+  background-color: #212933; }
+
+.nav-side-menu ul .sub-menu li.active,
+.nav-side-menu li .sub-menu li.active {
+  color: #ebe88a; }
+
+.nav-side-menu ul .sub-menu li.active a,
+.nav-side-menu li .sub-menu li.active a {
+  color: #ebe88a; }
+
+.nav-side-menu ul .sub-menu li,
+.nav-side-menu li .sub-menu li {
+  background-color: #101315;
+  border: none;
+  line-height: 28px;
+  border-bottom: 1px solid #3194e8;
+  margin-left: 0px; }
+
+.nav-side-menu ul .sub-menu li:hover,
+.nav-side-menu li .sub-menu li:hover {
+  background-color: #212933; }
+
+.nav-side-menu ul .sub-menu li:before,
+.nav-side-menu li .sub-menu li:before {
+  font-family: FontAwesome;
+  content: "\f105";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle; }
+
+.nav-side-menu li {
+  padding-left: 0px;
+  border-left: 3px solid #151515;
+  border-bottom: 1px solid #3194e8; }
+
+.nav-side-menu li a {
+  text-decoration: none;
+  color: #d4d4d4;
+  font-weight: 200; }
+
+.nav-side-menu li a i {
+  padding-left: 10px;
+  width: 20px;
+  padding-right: 20px; }
+
+.nav-side-menu li:hover {
+  border-left: 3px solid #ebe88a;
+  background-color: #212933;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease; }
+
+@media (max-width: 767px) {
+  .nav-side-menu {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px; }
+  .nav-side-menu .toggle-btn {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10 !important;
+    padding: 3px;
+    background-color: #3194e8;
+    color: #fff;
+    width: 40px;
+    text-align: center; }
+  .brand {
+    text-align: left !important;
+    font-size: 22px;
+    padding-left: 20px;
+    line-height: 50px !important; }
+  .nav-profile-image {
+    display: none; }
+  .nav-side-menu li {
+    line-height: 50px; }
+  .nav-side-menu ul .sub-menu li,
+  .nav-side-menu li .sub-menu li {
+    line-height: 43px; } }
+
+@media (min-width: 767px) {
+  .nav-side-menu .menu-list .menu-content {
+    display: block; }
+  .main {
+    width: calc(100% - 200px);
+    float: right; }
+  .nav-profile-image {
+    border-color: black;
+    background-color: black;
+    background-size: 0.5em; } }
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.main {
+  padding: 0 2em 0 2em;
+  animation-duration: .38s;
+  animation-fill-mode: both;
+  animation-name: fadeInAnimation; }
+  .main h1 {
+    font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #3194e8;
+    margin-top: 0px; }
+
+body {
+  background: #151515;
+  /*    background-image: url(/resources/Images/dark_embroidery.png);*/
+  /*    background-repeat: repeat;*/
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%; }
+
+.main h1 {
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: #3194e8;
+  margin-top: 0px; }
+
+.main h2 {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: "Work Sans", sans-serif;
+  color: #3194e8; }
+
+.main h3, h4, h5, h6 {
+  font-family: "Work Sans", sans-serif;
+  color: #3194e8; }
+
+.main p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #d4d4d4; }
+
+.main strong {
+  font-weight: 700;
+  color: #e86231; }
+
+.main em {
+  font-style: italic; }
+
+.main hr {
+  height: 30px;
+  border-style: solid;
+  border-color: #3194e8;
+  border-width: 1px 0 0 0; }
+
+.main span.highlight {
+  font-weight: 700;
+  color: #e86231; }
+
+#stopThursdayButton {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  visibility: hidden;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: none;
+  transition: none;
+  background-image: none;
+  filter: none;
+  border: 0 none; }
+
+.main ul {
+  list-style-position: inside;
+  padding-left: 1.5em; }
+
+.main ul > li {
+  display: block; }
+
+.nav-side-menu .main ul > li:before {
+  /*Using a Bootstrap glyphicon as the bullet point*/
+  content: "\e080";
+  font-family: 'Glyphicons Halflings';
+  font-size: 9px;
+  float: left;
+  margin-top: 7px;
+  margin-left: -17px;
+  color: #CCCCCC; }
+
+.main .img-inline {
+  float: left;
+  margin: 0em 2em 1em 0;
+  border-radius: 12px;
+  border: solid 2px #3194e8; }
+
+canvas.fullscreenWidget {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  pointer-events: none; }
+
+@media (max-width: 767px) {
+  .main h1 {
+    text-align: center; }
+  .main .img-inline {
+    float: none;
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: 1em; } }
+
+code {
+  color: #d4d4d4;
+  background-color: #505050; }
+
+.main a {
+  color: #ebe88a;
+  text-decoration: none;
+  border-bottom: 1px solid #ebe88a;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s; }
+
+.main a:hover {
+  background: #ebe88a;
+  color: #151515; }
+
+.blockHead:after {
+  color: #4D81BF;
+  border-left: 20px solid;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  display: inline-block;
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 0; }
+
+.blockHead {
+  background-color: #4D81BF;
+  /*width: 150px; */
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  position: relative; }
+
+.blocktext {
+  color: white;
+  font-weight: bold;
+  padding-left: 10px;
+  font-family: Arial;
+  font-size: 11; }
+
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  /* Custom color for desert style*/
+  background: #3b3b3b; }

@@ -3,3 +3,4 @@ Disallow: /widgets/
 Disallow: /dist/
 Disallow: /resources/
 Disallow: /common/
+Disallow: /docs/
