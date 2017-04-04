@@ -1,0 +1,213 @@
+@keyframes fadeInAnimation {
+    from {
+        //transform: translate3d(0, 10px, 0);
+        opacity: 0;
+    }
+    to {
+        //transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+#main {
+    padding: 0 2em 0 2em;
+    animation-duration: .38s;
+    animation-fill-mode: both;
+    animation-name: fadeInAnimation;
+}
+
+body {
+    background: $theme_background_color;
+/*    background-image: url(/resources/Images/dark_embroidery.png);*/
+/*    background-repeat: repeat;*/
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#main h1 {
+    //text-align: center;
+    font-family: $title-font;
+    font-size: 50px;
+    //line-height: 65px;
+    font-weight: 700;
+    color: $primary_color;
+    margin-top:0px;
+}
+
+#main h2 {
+    font-weight: 600;
+    font-size: 24px;
+    font-family: $header-font;
+    color: $primary_color;
+}
+
+#main h3, h4, h5, h6 {
+    font-family: $header-font;
+    color: $primary_color;
+}
+ 
+#main p {
+    //font-family: 'Ubuntu', Helvetica, Arial, serif;
+    font-family: $body-font;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight:400;
+    color: $primary_text_color;
+    //text-align: justify;
+}
+
+#main strong {
+    font-weight: 700;
+    color: $bold_text_color;
+}
+
+#main em {
+    font-style: italic;
+}
+
+#main hr {
+    height: 30px;
+    border-style: solid;
+    border-color: $primary_color;//#6a6a6a;
+    border-width: 1px 0 0 0;
+}
+
+#main span.highlight {
+    font-weight: 700;
+    color: $bold_text_color;
+}
+
+#stopThursdayButton {
+    position:fixed;
+    bottom:10px;
+    left:10px;
+    visibility: hidden;
+    
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+    background-image: none;
+    filter: none;
+    border: 0 none;
+}
+
+#main ul {
+    list-style-position: inside;
+    padding-left:1.5em;
+}
+
+#main ul > li {
+    display: block;
+}
+
+.nav-side-menu #main ul > li:before {
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e080";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    float: left;
+    margin-top: 7px;
+    margin-left: -17px;
+    color: #CCCCCC;
+}
+
+#main .img-inline {
+    float:left;
+    margin: 0em 2em 1em 0;
+    border-radius: 12px;
+    border: solid 2px $primary_color;
+//    width: 50%;
+//    height: 50%;
+}
+
+canvas.fullscreenWidget {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    pointer-events:none;
+}
+
+// Sidebar is collapsed
+@media (max-width: 767px) {
+    #main h1 {
+        text-align: center;
+    }
+    #main .img-inline {
+        float:none;
+        margin:auto;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+}
+
+// Sidebar is enabled
+@media (min-width: 767px) {
+
+}
+
+code {
+    //font-family: $code_font;
+    color: $primary_text_color;
+
+    //color: $code_snippet_text_color;
+    background-color: $code_snippet_background_color;
+}
+
+#main a {
+	color: $link_color;
+    text-decoration: none;
+    border-bottom: 1px solid $link_color;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+#main a:hover{
+    background: $link_color;
+    color: $theme_background_color;
+}
+
+.blockHead:after {
+  color: #4D81BF;
+  border-left: 20px solid;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  display: inline-block;
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 0;
+}
+.blockHead {
+  background-color: #4D81BF;
+  /*width: 150px; */
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  position: relative;
+}
+.blocktext {
+  color: white;
+  font-weight: bold;
+  padding-left: 10px;
+  font-family: Arial;
+  font-size: 11;
+}
+
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+    /* Custom color for desert style*/
+    background: #3b3b3b;
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+<!--
+   .-~~^-.
+ .'  O    \
+(_____,    \
+ `----.     \
+       \     \
+        \     \
+         \     `.             _ _
+          \       ~- _ _ - ~       ~ - .
+           \                              ~-.
+            \                                `.
+             \    /               /       \    \
+              `. |         }     |         }    \
+                `|        /      |        /       \
+                 |       /       |       /          \
+                 |      /`- _ _ _|      /.- ~ ^-.     \
+                 |     /         |     /          `.    \
+                 |     |         |     |             -.   ` . _ _ _ _ _ _
+                 |_____|         |_____|                ~ . _ _ _ _ _ _ _ >
+
+I'm sure I look like a bit of a hypocrite talking about formatting things properly here
+when HTML forces me to format the code snippets so badly. Rest assured, I was upset about it.
+-->
+    
+<head>
+    <!-- The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon info -->
+    <link rel="apple-touch-icon" href="resources/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="resources/favicon/favicon-96x96.png">
+    <!-- Page meta info -->
+    <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    <meta name="author" content="Jonathan Cole">
+    <meta name="description" content="Help for COS220/221 students.">
+    <meta name="keywords" content="UMaine, Maine, COS220, Student, Help">
+    <title>COS220/221 Help and Tips</title>
+
+    <!-- Load web fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Ubuntu:700', 'Work Sans:400,500', 'Fira Mono:400,700']
+        }
+      });
+    </script>
+
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <link href="/dist/prismjs/prism.css" rel="stylesheet">
+    <script src="/dist/prismjs/prism.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+    
+    <!--<div id="loadingIcon"></div>-->
+    
+    <!-- Header injected here -->
+    <div id="commonHeader"></div>
+
+    <main class="container" id="main" role="main"> <!-- BEGIN MAIN CONTAINER -->
+    <article>
+
+        <h1>COS220/221 Help and Tips</h1>
+        
+        <p>This page is intended as a resource to help you avoid common point deductions as a COS220 or COS221 student.
+        </p>
+        <p>
+            While I have your attention: <strong>pick up your homework!</strong> I made this page because every semester many students do not do this, and they miss my notes. Help me help you!<br>
+        </p>
+        
+        <section id="general">
+            <h2>General Assignment Notes</h2>
+            <ul>
+                <li><p>All assignments must start with a comment stating your name and the name and purpose of the assignment.</p></li>
+                <li><p>Global variables are forbidden unless specifically requested or needed. The only time you'll need to do this is when more than one function needs to reference a variable that you for whatever reason can't pass in as an argument. When in doubt, don't.</p></li>
+                <li><p>When you start writing functions, you must include PRE and POST comments on both your function prototypes and definitions. Not doing this at all typically results in a "no credit".</p></li>
+                <li><p>You must submit your assignment with screenshots of the <strong>console</strong> showing what is asked for in the assignment. You will not receive credit if this is not done.</p></li>
+                <li><p>If you submit a screenshot of your code instead of printing it out, you will not receive credit. Code files are more or less just .txt files with a different extension, and Visual Studio has a print option. Similarly, please don't paste your code into Word and print it from there; it will mangle your formatting. If you can't print from your IDE, paste the code into Notepad on Windows or TextEdit on OSX and print from there.</p></li>
+                <li><p>Excessively messy code will not be accepted. This includes excessive word wrap and improper indentation/bracket placement. See <a href="#formatting">"Pay attention to formatting"</a> below.</p></li>
+            </ul>
+        </section>
+        
+        <section id="style">
+            <h2>Recommended Code Style</h2>
+            <p>It's important to maintain a consistent set of rules for how you name certain types of variables. Establishing and keeping to your own set of rules for this will help you see at a glance what a named token does in your code. See <a href="https://msdn.microsoft.com/en-us/library/x2dbyw72(v=vs.71).aspx">Microsoft's page on casing</a> for definitions of Pascal and Camel Casing.</p>
+            <p>Rules of thumb:</p>
+            <ul>
+                <li><p>ALL_CAPS for const names (you'll lose points if you don't do this one)</p></li>
+                <li><p>PascalCasing for function names</p></li>
+                <li><p>camelCasing for variable and parameter names (and everything else)</p></li>
+            </ul>
+            <p>An example of each:</p>
+<pre><code class="language-cpp line-numbers">int someNumber = 0;             //Variable name is camelCased
+float someOtherNumber = 5.5;    //Variable name is camelCased
+const int SOME_CONSTANT = 5;    //Const name is all caps, with underscores separating words
+
+//Function name is PascalCased, parameter name is camelCased
+void SomeFunction(int someParameter){
+    //Some code here
+}
+</code></pre>
+            <p>Now if we encounter <code>someNumber</code> anywhere else in the code, we know that it's a variable without needing to look at its declaration. Similarly, we now know at a glance that <code>SOME_CONSTANT</code> is a constant variable from its casing. Reducing the amount of things you need to mentally juggle is very useful, so take advantage of this!</p>
+        </section>
+        
+        <section id="naming">
+            <h2>Give your variables descriptive names</h2>
+            <p>Suppose in the following code we have to choose a name from one of these lines to represent the average weight of a group of packages. Which one would you pick?</p>
+<pre><code class="language-cpp line-numbers">float n;
+float apw;
+float avgPkgWt;
+float averagePackageWeight;
+</code></pre>
+            <p>We want line 4, or <code>averagePackageWeight</code> as the name. <code>n</code> is a bad name for any variable unless you're doing some mathematical formula or using it as a counting variable (e.g. <code>for(int i=0; i&lt;10; i++){ ... }</code>). <code>apw</code> is getting there, but it's still impossible to tell what it is from the name alone. <code>avgPkgWt</code> is better still, and it would be fine accompanied by a good comment. However, <code>averagePackageWeight</code> is the most desirable because it's <em>self-documenting</em>; that is, you can tell what the variable does without having to look at the comment next to its declaration. <strong>When in doubt, go with plain English</strong>. If the variable name ends up being very long, it's fine to abbreviate.</p>
+        </section>
+        
+        <section id="declarations">
+            <h2>Comment your variable declarations</h2>
+            <p>It's boring, but you need to do it to keep yourself organized. The less you have to think while programming, the better; the benefit of commenting your code well is that you don't have to worry about forgetting what certain things do. <strong>Comment as you go -- it will help you as you do the work and you won't have to take the time to go back through and do it when you're done.</strong></p>
+            <p><strong>You must comment all of your variable declarations on homework assignments.</strong> See the following:</p>
+<pre><code class="language-cpp line-numbers">int mediumPackageCount;       //The total number of medium-sized packages
+int largePackageCount;        //The total number of large-sized packages
+</code></pre>
+            <p>Note that the comments tell you what the variables are <em>for</em>. For example:</p>
+<pre><code class="language-cpp line-numbers">float averagePackageWeight;   //Average                           //Bad comment
+float averagePackageWeight;   //Number                            //Really bad comment
+float averagePackageWeight;   //Average of all package weights    //Good comment
+</code></pre>
+        </section>
+        
+        <section id="formatting">
+            <h2>Pay attention to formatting</h2>
+            <p>Curly brackets should get their own lines, with nothing else on them. Everything between each set of them should be indented. Consider the following, where each level of indentation (tab) is shown with a <code>&#10233;</code>:</p>
+<pre><code class="language-cpp line-numbers">void SomeFunction(int a, int b)
+{
+&#10233;int x = 0;
+&#10233;int y = 0;
+&#10233;
+&#10233;if(a &lt;= b)
+&#10233;{
+&#10233;&#10233;x = 1;
+&#10233;&#10233;if(a == b)
+&#10233;&#10233;{
+&#10233;&#10233;&#10233;y = 1;
+&#10233;&#10233;}
+&#10233;}
+&#10233;else
+&#10233;{
+&#10233;&#10233;//Some other code here
+&#10233;}
+&#10233;
+&#10233;int w = 3;
+}
+</code></pre>
+            <p>Line 1 defines the function name and parameters. After the parentheses comes a set of curly brackets (lines 2 and 20), in between which you put the body of the function. Note that here <strong>each bracket gets its own line</strong>, and everything "inside" of these brackets gets one more level of indentation than the brackets. We can now see visually without having to look at the brackets that lines 3-19 compose the body of the function.</p>
+            <p>You may also write your opening brackets on the same line as the parentheses:</p>
+<pre><code class="language-cpp line-numbers">if(x == 0){
+    //Some code here
+}
+</code></pre>
+            <p>Personally I prefer this, but there are arguments for both ways of doing it and I'm not going to deduct points for your choice. <strong>The important thing is to be consistent.</strong> Choose a rule and follow it every time. As an aside, the IDE you're using will probably try to enforce some type of formatting whenever you make a new line or perform an autocomplete, which is great! Let it do its thing.</p>
+        </section>
+        
+        <section id="prototypes">
+            <h2>Function definitions go after the main() function</h2>
+            <p>We want the <code>main()</code> function to appear in a code file before any other functions. However, the compiler has to "see" these functions before <code>main()</code> is evaluated in order to build the program correctly. To give it a hint, so to speak, we use <em>function prototypes</em>. These tell the compiler that the function does indeed exist, but that its behavior will be defined elsewhere. Put simply, you declare your prototypes before the main function, and then define them after the main function. An example:</p>
+<pre><code class="language-cpp line-numbers">#include &lt;string&gt;
+
+int someFunction(const int x, int y); //Prototype declaration
+
+int main() {
+    int result = someFunction(2, 3);
+    return 0;
+}
+
+int someFunction(const int x, int y){ //Prototype definition
+    return x + y;
+}
+</code></pre>
+            <p>Without the prototype, this program will not build. The compiler will tell you that the function does not exist when it tries to read line 6 -- this is why we must declare the prototype in advance. <strong>The prototype is used so that you can use your function anywhere in your code, regardless of where it is defined.</strong></p>
+            <p>The reason for all this is that eventually you will be working with header files. Line 1 is an example of an imported header. When you write your own header, you can declare your prototypes there and import them with one line at the beginning of the file, just like in line 1. This is an important detail and will become necessary as you start working with classes and object-oriented programming.</p>
+        </section>
+
+        <section id="tips">
+            <h2>Tips</h2>
+            <ul>
+                <li><p>When using a function that asks for a path string, the path you give is (usually) relative to your executable. So if you're in the debug configuration and your path is "someFile.txt", it's going to look for a file with that name in the debug directory (depending on your IDE).</p></li>
+                <li><p>Don't be afraid to Google functions if you don't know what they do. Coding languages as a whole are very, very well documented online.</p></li>
+                <li><p><strong>Read the assignment carefully</strong>. If you're asked to implement functions given on the page or described in class and you don't do it, it typically results in you needing to resubmit with changes to get credit for that portion of the assignment.</p></li>
+                <li><p>Comment your code as you go. If you write some code and think "that was complicated", that's a good indicator that you should leave a comment for your future self.</p></li>
+            </ul>
+        </section>
+        
+
+    </article>
+    </main> <!-- END MAIN CONTAINER -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Load JQuery first -->
+    <script src="/dist/jquery/jquery-3.1.0.js"></script>
+    <script defer src="/dist/bootstrap/js/bootstrap.min.js"></script>
+    <script defer src="/dist/bootstrap/js/bootstrap-accessibility.min.js"></script>
+    
+    <!-- Jon's JavaScript
+    ================================================== -->
+
+    <script>
+        $("#commonHeader").load("/common/header.html");
+    </script> 
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-76112806-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script>
+    //Scroll to clicked anchor
+    var $root = $('html, body');
+    $('a').click(function(){
+        var href = $.attr(this, 'href');
+        $root.animate({
+            scrollTop: $(href).offset().top
+        }, 500, function (){
+            window.location.hash = href;
+        });
+        return false;
+    });
+    //Scroll to url anchor
+    $(document).ready(function(){
+        if($(location.hash).length && location.hash != "#"){ //If the tag actually exists
+            $('html, body, section').animate({
+                'scrollTop': $(location.hash).offset().top
+            }, 500);
+        }
+    });
+    </script>
+    
+</body>
+    
+    
+</html>

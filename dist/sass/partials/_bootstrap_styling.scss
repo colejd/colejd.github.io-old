@@ -1,0 +1,234 @@
+//Default theme
+//$cell-color: #2e353d;
+//$accent-color: #23282e;
+//$cell-highlighted-color: #4f5b69;
+//$cell-highlighted-accent-color: #d19b3d;
+//$cell-text-color: #e1ffff;
+//$subcell-color: #181c20;
+//$subcell-highlighted-color: #020203;
+//$brand-text-color: #primary_text_color;
+
+//Dark theme
+$cell-color: $theme_background_color;
+$accent-color: $primary_color;//#23282e;
+$cell-highlighted-color: #212933;//#4f5b69;
+$cell-highlighted-accent-color: $secondary_color;//#d19b3d;
+$cell-text-color: $primary_text_color;//#e1ffff;
+$subcell-color: #101315;
+$subcell-highlighted-color: $cell_highlighted_color;
+$divider-color: $primary_color;
+$brand-text-color: #fff;
+
+//Light theme
+//$cell-color: $theme_background_color;
+//$accent-color: $primary_color;//#23282e;
+//$cell-highlighted-color: #4f5b69;
+//$cell-highlighted-accent-color: #d19b3d;
+//$cell-text-color: $primary_text_color;//#e1ffff;
+//$subcell-color: #181c20;
+//$subcell-highlighted-color: #020203;
+//$divider-color: $primary_color;
+//$brand-text-color: #fff;
+
+
+//Sidebar stuff
+.nav-side-menu {
+    overflow: auto;
+    //font-family: verdana;
+    font-family: $body-font;
+    font-size: 12px;
+    font-weight: 200;
+    background-color: $cell-color;
+    position: fixed;
+    top: 0px;
+    width: 200px;
+    height: 100%;
+    color: $cell-text-color;
+    
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.nav-side-menu .brand {
+    background-color: $accent-color;
+    color: $brand-text-color;
+    line-height: 50px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    user-select: none;
+    cursor: default;
+}
+
+.nav-side-menu .brand a {
+    color: $brand-text-color;
+    text-decoration: none;
+}
+
+.nav-side-menu .toggle-btn {
+    display: none;
+}
+
+.nav-side-menu ul,
+.nav-side-menu li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    line-height: 35px;
+    cursor: pointer;
+    .collapsed{
+       .arrow:before{
+                 font-family: FontAwesome;
+                 content: "\f053";
+                 display: inline-block;
+                 padding-left:10px;
+                 padding-right: 10px;
+                 vertical-align: middle;
+                 float:right;
+            }
+     }
+}
+
+.nav-side-menu ul:not(collapsed) .arrow:before,
+.nav-side-menu li:not(collapsed) .arrow:before {
+    font-family: FontAwesome;
+    content: "\f078";
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+    float: right;
+}
+
+.nav-side-menu ul .active,
+.nav-side-menu li .active {
+    border-left: 3px solid $cell-highlighted-accent-color;
+    background-color: $cell-highlighted-color;
+}
+
+.nav-side-menu ul .sub-menu li.active,
+.nav-side-menu li .sub-menu li.active {
+    color: $cell-highlighted-accent-color;
+}
+
+.nav-side-menu ul .sub-menu li.active a,
+.nav-side-menu li .sub-menu li.active a {
+    color: $cell-highlighted-accent-color;
+}
+
+.nav-side-menu ul .sub-menu li,
+.nav-side-menu li .sub-menu li {
+    background-color: $subcell-color;
+    border: none;
+    line-height: 28px;
+    border-bottom: 1px solid $accent-color;
+    margin-left: 0px;
+}
+
+.nav-side-menu ul .sub-menu li:hover,
+.nav-side-menu li .sub-menu li:hover {
+    background-color: $subcell-highlighted-color;
+}
+
+.nav-side-menu ul .sub-menu li:before,
+.nav-side-menu li .sub-menu li:before {
+    font-family: FontAwesome;
+    content: "\f105";
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.nav-side-menu li {
+    padding-left: 0px;
+    border-left: 3px solid $cell-color;
+    border-bottom: 1px solid $accent-color;
+}
+
+.nav-side-menu li a {
+    text-decoration: none;
+    color: $cell-text-color;
+    font-weight: 200;
+
+}
+
+.nav-side-menu li a i {
+    padding-left: 10px;
+    width: 20px;
+    padding-right: 20px;
+}
+
+.nav-side-menu li:hover {
+    border-left: 3px solid $cell-highlighted-accent-color;
+    background-color: $cell-highlighted-color;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+// Sidebar is collapsed
+@media (max-width: 767px) {
+    .nav-side-menu {
+        position: relative;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .nav-side-menu .toggle-btn {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 10 !important;
+        padding: 3px;
+        background-color: $primary_color;
+        color: $brand_text_color;
+        width: 40px;
+        text-align: center;
+    }
+    .brand {
+        text-align: left !important;
+        font-size: 22px;
+        padding-left: 20px;
+        line-height: 50px !important;
+    }
+    .nav-profile-image {
+        display: none;
+    }
+    .nav-side-menu li {
+        line-height: 50px;
+    }
+    .nav-side-menu ul .sub-menu li,
+    .nav-side-menu li .sub-menu li {
+        line-height: 43px;
+    }
+
+}
+
+// Sidebar is enabled
+@media (min-width: 767px) {
+    .nav-side-menu {
+//        padding-right: 20px;
+//        border-right: solid $divider-color 10px;
+    }
+    .nav-side-menu .menu-list .menu-content {
+        display: block;
+    }
+    #main {
+        width: calc(100% - 200px);
+        float: right;
+    }
+    .nav-profile-image {
+        border-color: black;
+        background-color: black;
+        background-size: 0.5em;
+        //border-radius: 12px;
+        //margin: 1em;
+    }
+}
