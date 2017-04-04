@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+<!--
+                         .       .
+                        / `.   .' \
+                .---.  <    > <    >  .---.
+                |    \  \ - ~ ~ - /  /    |
+                 ~-..-~             ~-..-~
+             \~~~\.'                    `./~~~/
+   .-~~^-.    \__/                        \__/
+ .'  O    \     /               /       \  \
+(_____,    `._.'               |         }  \/~~~/
+ `----.          /       }     |        /    \__/
+       `-.      |       /      |       /      `. ,~~|
+           ~-.__|      /_ - ~ ^|      /- _      `..-'   f: f:
+                |     /        |     /     ~-.     `-. _||_||_
+                |_____|        |_____|         ~ - . _ _ _ _ _>
+
+I'm sure I look like a bit of a hypocrite talking about formatting things properly here
+when HTML forces me to format the code snippets so badly. Rest assured, I was upset about it.
+-->
+    
+<head>
+    <!-- The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon info -->
+    <link rel="apple-touch-icon" href="resources/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="resources/favicon/favicon-96x96.png">
+    <!-- Page meta info -->
+    <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    <meta name="author" content="Jonathan Cole">
+    <meta name="description" content="Help page for COS120 students.">
+    <meta name="keywords" content="UMaine, Maine, COS120, Student, Help">
+    <title>COS120 Help and Tips</title>
+
+    <!-- Load web fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Ubuntu:700', 'Work Sans:400,500', 'Fira Mono:400,700']
+        }
+      });
+    </script>
+
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/dist/prismjs/prism.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+    
+    <!--<div id="loadingIcon"></div>-->
+    
+    <!-- Header injected here -->
+    <div id="commonHeader"></div>
+
+    <main class="container" id="main" role="main"> <!-- BEGIN MAIN CONTAINER -->
+    <article>
+
+        <h1>COS120 Help and Tips</h1>
+        
+        <p>
+            This page is intended as a resource to help you avoid common point deductions as a COS120 student.
+        </p>
+        <p>
+            While I have your attention: <strong>pick up your homework!</strong> I made this page because every semester many students do not do this, and they miss my notes. Help me help you!<br>
+        </p>
+        
+        <section id="general">
+            <h2>General Assignment Notes</h2>
+            <ul>
+                <li><p>All assignments must start with a comment stating your name.</p></li>
+                <li><p>You must submit your assignment with screenshots of the <strong>console</strong> showing what is asked for in the assignment. You will not receive credit if this is not done.</p></li>
+                <li><p>If you submit a screenshot of your code instead of printing it out, you will not receive credit. Code files are more or less just .txt files with a different extension, and Visual Studio has a print option just like Word. Similarly, please don't paste your code into Word and print it from there.</p></li>
+                <li><p>When using a StreamReader <code>sr</code>, you must close it with <code>sr.Close()</code> when you are done with it (at the end of the program).</p></li>
+            </ul>
+        </section>
+        
+        <section id="naming">
+            <h2>Give your variables descriptive names</h2>
+            <p>Suppose in the following code we have to choose a name from one of these lines to represent the average weight of a group of packages. Which one would you pick?</p>
+<pre><code class="language-vb line-numbers">Dim n as Double
+Dim apw as Double
+Dim avgPkgWt as Double
+Dim averagePackageWeight as Double
+</code></pre>
+            <p>We want line 4, or <code>averagePackageWeight</code>, as the name. <code>n</code> is a bad name for any variable unless you're doing some mathematical formula or using it as a counting variable (in a loop, for example). <code>apw</code> is getting there, but it's still impossible to tell what it is from the name alone. <code>avgPkgWt</code> is better still, and it would be fine accompanied by a good comment. However, <code>averagePackageWeight</code> is the most desirable because it's <em>self-documenting</em>; that is, you can tell what the variable does without having to look at the comment next to its declaration. <strong>When in doubt, go with plain English</strong>. If the variable name ends up being very long, it's fine to abbreviate.</p>
+        </section>
+        
+        <section id="declarations">
+            <h2>Comment your variable declarations</h2>
+            <p>It's boring, but you need to do it to keep yourself organized. The less you have to think while programming, the better; the benefit of commenting your code well is that you don't have to worry about forgetting what certain things do. <strong>Comment as you go -- it will help you as you do the work and you won't have to take the time to go back through and do it when you're done.</strong></p>
+            <p><strong>You must comment all of your variable declarations on homework assignments.</strong> See the following:</p>
+<pre><code class="language-vb line-numbers">Dim mediumPackageCount as Integer           'The total number of medium-sized packages
+Dim sr as IO.StreamReader                   'Stream reader for file
+</code></pre>
+            <p>Note that the comments tell you what the variables are <em>for</em>. For example let's see some comments we might write for a variable representing the sum of the weights of a set of packages:</p>
+<pre><code class="language-vb line-numbers">Dim sumOfWeights as Double          'Sum                           'Bad comment
+Dim sumOfWeights as Double          'Number                        'Really bad comment
+Dim sumOfWeights as Double          'Sum of all package weights    'Good comment
+</code></pre>
+        </section>
+        
+        <section id="class-variables">
+            <h2>Don't make variables class-level unless they have to be</h2>
+            <p>Consider the following code example. We have two buttons, <code>btnCompute</code> and <code>btnPrint</code>. <code>btnCompute</code> computes some data, and <code>btnPrint</code> does something with that computed data.</p>
+<pre><code class="language-vb line-numbers">Public Class Form1
+    Dim classLevelNumber As Integer       'Class-level variable
+    Dim y As Integer                      'Unnecessary class-level variable
+
+    Private Sub buttonCompute_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCompute.Click
+        classLevelNumber = 5
+    End Sub
+
+    Private Sub buttonPrint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrint.Click
+        Dim x As Integer
+        x = classLevelNumber
+        y = classLevelNumber
+    End Sub
+
+End Class
+</code></pre>
+            <p><code>classLevelNumber</code> is an example of a variable that should be class-level. It is used in both <code>buttonCompute_Click</code> and <code>buttonPrint_Click</code>, so it cannot be declared in either of those functions. The only other place you can declare it is at the class level.</p>
+            <p><code>y</code> is an example of a number that should not be class-level. It's only assigned to inside of <code>buttonPrint_Click</code>, so the declaration of <code>y</code> should be in that function, similar to how <code>x</code> is declared in the same spot.</p>
+        </section>
+        
+        <section id="formatting">
+            <h2>Pay attention to formatting</h2>
+            <p>When you create a new level of scope, you must indent. To review scope, see <a href="https://msdn.microsoft.com/en-us/library/1t0wsc67.aspx">Microsoft's page on the subject</a>. Consider the following, where each level of indentation (tab) is shown with a <code>&#10233;</code>:</p>
+<pre><code class="language-vb line-numbers">Private Sub SomeFunction()
+&#10233;Dim x as Integer = 0
+&#10233;Dim y as Integer = 0
+&#10233;Dim z as Integer = 0
+&#10233;
+&#10233;If x = 0 Then
+&#10233;&#10233;y = 0
+&#10233;&#10233;If z = 0 Then
+&#10233;&#10233;&#10233;'Some code here
+&#10233;&#10233;End If
+&#10233;Else
+&#10233;&#10233;'Some other code here
+&#10233;End If
+End Sub
+</code></pre>
+            <p>Each <code>If/ElseIf/Else</code> block creates a new level of scope. After the first <code>If</code>, all lines are indented once until we reach <code>Else</code>. Same from <code>Else</code> to <code>EndIf</code>. This lets you visually see that lines 7-9 will only execute if the <code>If x = 0</code> statement is true, and that line 12 will only execute if that statement evaluates to false. <strong>Points will be taken for excessively messy submissions</strong>. Visual Studio automatically indents for you, so take advantage of it!</p>
+        </section>
+        
+        <section id="casting">
+            <h2>Cast strings as numeric types when using them as numbers</h2>
+            <p>Consider the following code:</p>
+<pre><code class="language-vb line-numbers">Dim someText as String = "5"
+Dim x as Integer
+
+x = someText            'Incorrect (someText is implicitly cast as integer)
+y = CInt(someText)      'Correct (someText is explicitly cast as integer)
+</code></pre>
+            <p><code>x</code> (an integer) is set to the value of <code>someText</code>, which is <code>"5"</code> (a string). The problem is that the types aren't the same. Here, Visual Basic will do something called <em>type coercion</em>; it will try to get an integer from <code>someText</code>, which it will then assign as the value of <code>x</code>. It's nice that it does this for you, but <strong>in this course, type casting must be done explicitly with CInt, CDbl, etc</strong>. This is because doing it this way makes it much more obvious what the code is doing at first glance; additionally, if you're getting the string from an input field, it ensures that the value you're getting from what the user entered is of the type that you expected.
+            </p>
+            <p>You can read more about implicit and explicit conversions on <a href="https://msdn.microsoft.com/en-us/library/kca3w8x6.aspx">Microsoft's page on the topic</a>.</p>
+        </section>
+
+        <section id="tips">
+            <h2>Tips</h2>
+            <ul>
+            <li><p>Don't be afraid to Google functions if you don't know what they do. Coding languages as a whole are very, very well documented online.</p></li>
+            <li><p><strong>Read the assignment carefully</strong>. If you're asked to implement functions given on the page or described in class and you don't do it, it typically results in you needing to resubmit with changes to get credit for that portion of the assignment.</p></li>
+            <li><p>Comment your code as you go. If you write some code and think "that was complicated", that's a good indicator that you should leave a comment for your future self.</p></li>
+            <li><p>If you absolutely have to email your code somewhere to print it out, just attach your source files to the email, and then open and print them on the other computer with Notepad. Don't copy the code and paste it into the email. It mangles the formatting and makes it extremely hard to read the code.</p></li>
+            <li><p>When using a StreamReader, the path you give to your text file is relative to your executable. So if you're in the debug configuration and your path is "someFile.txt", it's going to look for a file with that name in the debug directory. This is true of most (if not all) functions that take a path string in Visual Basic.</p></li>
+            </ul>
+        </section>
+
+
+    </article>
+    </main> <!-- END MAIN CONTAINER -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Load JQuery first -->
+    <script src="/dist/jquery/jquery-3.1.0.js"></script>
+    <script defer src="/dist/bootstrap/js/bootstrap.min.js"></script>
+    <script defer src="/dist/bootstrap/js/bootstrap-accessibility.min.js"></script>
+    
+    <!-- Jon's JavaScript
+    ================================================== -->
+    <script src="/dist/prismjs/prism.js"></script>
+    
+    <script>
+        $("#commonHeader").load("/common/header.html");
+    </script> 
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-76112806-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script>
+    //Scroll to clicked anchor
+    var $root = $('html, body');
+    $('a').click(function(){
+        var href = $.attr(this, 'href');
+        $root.animate({
+            scrollTop: $(href).offset().top
+        }, 500, function (){
+            window.location.hash = href;
+        });
+        return false;
+    });
+    //Scroll to url anchor
+    $(document).ready(function(){
+        if($(location.hash).length && location.hash != "#"){ //If the tag actually exists
+            $('html, body, section').animate({
+                'scrollTop': $(location.hash).offset().top
+            }, 500);
+        }
+    });
+    </script>
+    
+</body>
+    
+    
+</html>

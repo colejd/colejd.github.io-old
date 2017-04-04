@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+
+Ankylosaur
+                            /~~~~~~~~~~~~\_
+        _+=+_             _[~  /~~~~~~~~~~~~\_
+       {''|''}         [~~~    [~   /~~~~~~~~~\_
+        ''':-'~[~[~'~[~  ((++     [~  _/~~~~~~~~\_
+             '=_   [    ,==, ((++    [    /~~~~~~~\-~~~-.
+                ~-_ _=+-(   )/   ((++  .~~~.[~~~~(  {@} \`.
+                        /   }\ /     (     }     (   .   ''}
+                       (  .+   \ /  //     )    / .,  ''''/
+                       \\  \     \ (   .+~~\_  /.= /'''''
+                       <'_V_'>      \\  \    ~~~~~~\\  \
+                                     \\  \          \\  \
+                                     <'_V_'>        <'_V_'>
+
+-->
+
+<head>
+    <!-- The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon info -->
+    <link rel="apple-touch-icon" href="resources/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="resources/favicon/favicon-96x96.png">
+    <!-- Page meta info -->
+    <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    <meta name="author" content="Jonathan Cole">
+    <meta name="description" content="Waldorf - Media Ecology Project">
+    <title>Waldorf - Media Ecology Project</title>
+
+    <!-- Load web fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Ubuntu:700', 'Work Sans:400,500', 'Fira Mono:400,700']
+        }
+      });
+    </script>
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- Header injected here -->
+    <div id="commonHeader"></div>
+
+    <!-- Page Content -->
+    <main class="container" id="main" role="main">
+        <article>
+
+        <div class="row">
+
+            <div class="col-md-10">
+                <h1>Waldorf - Media Ecology Project</h1>
+                
+                <br>
+                
+                <section id="Main">
+                <p>
+                    Waldorf is a system for creating and viewing rich crowd-sourced annotations on video around the Web. This work is created by me at the <a href="vemilab.org">VEMILab</a> for the <a href="https://sites.dartmouth.edu/mediaecology/">Media Ecology Project</a> at Dartmouth University, and is sponsored under an <a href="http://www.knightfoundation.org/grants/20102605/">NEH Grant</a>.
+                </p>
+                <p>
+                    The source is available on <a href="https://www.github.com/seieibob/Waldorf">GitHub</a>.
+                </p>
+                </section>
+            </div>
+            
+            <div class="col-md-10">
+                <video width="640" height="480">
+                    <source src="http://sachinchoolur.github.io/lightGallery/static/videos/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div> <!-- end row -->
+
+        </article>
+
+    </main>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Load JQuery first -->
+    <script src="/dist/jquery/jquery-3.1.0.js"></script>
+    <script src="/dist/bootstrap/js/bootstrap.min.js"></script>
+    <script defer src="/dist/bootstrap/js/bootstrap-accessibility.min.js"></script>
+
+    <!-- Jon's JavaScript
+    ================================================== -->
+    <script>
+        $("#commonHeader").load("/common/header.html");
+    </script>
+
+    <!-- Include Annotator at the bottom of the page so it doesn't block loading -->
+    <!-- Import JQueryUI -->
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Annotator Core -->
+    <script type="text/javascript" src="annotator-frontend.js"></script>
+    <link rel="stylesheet" href="annotator-frontend.css">
+    <script>
+        var serverAddress = "http://ec2-52-88-72-190.us-west-2.compute.amazonaws.com:3000";
+        var tagsAddress = "https://onomy.org/published/83/json";
+        $("video").first().annotate(serverAddress, tagsAddress);
+    </script>
+
+</body>
+
+</html>
