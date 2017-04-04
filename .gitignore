@@ -1,5 +1,7 @@
 
 .publish/
+dist/docs/
+.vscode/
 
 # Created by https://www.gitignore.io/api/node
 
