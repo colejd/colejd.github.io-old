@@ -20,7 +20,18 @@ html
             block headinfo
 
             // Load JQuery first
-            script(src='/dist/jquery/jquery-3.1.0.js')
+            script(src='https://code.jquery.com/jquery-3.2.1.min.js', 
+                integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', 
+                crossorigin='anonymous')
+            
+            // Load vendor CSS
+            link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet")
+            link(href="/dist/bootstrap/css/bootstrap-accessibility.css", rel="stylesheet")
+            link(href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css", rel="stylesheet")
+
+            // Bootstrap core
+            script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+            script(src='/dist/bootstrap/js/bootstrap-accessibility.min.js')
 
             // Load web fonts
             script(src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js")
@@ -30,9 +41,6 @@ html
                     families: ['Work Sans:400,500', 'Ubuntu:700', 'Rye']
                 }
                 });
-
-            // Custom styles for this template
-            link(href="/css/style.css", rel="stylesheet")
 
             // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
             <!--[if lt IE 9]>
@@ -55,10 +63,6 @@ html
                     block content
 
             block after-content
-
-            // Bootstrap core
-            script(defer='', src='/dist/bootstrap/js/bootstrap.min.js')
-            script(defer='', src='/dist/bootstrap/js/bootstrap-accessibility.min.js')
 
             // Page JavaScript
             script.
@@ -83,6 +87,9 @@ html
                         }, 500);
                     }
                 });
+
+            // Custom styles for this template
+            link(href="/css/style.css", rel="stylesheet")
 
 
     foot
