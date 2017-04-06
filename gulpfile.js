@@ -1,9 +1,10 @@
 var gulp = require("gulp");
 var deploy = require("gulp-gh-pages");
 var sass = require("gulp-sass");
-var minifyCSS = require('gulp-minify-css');
-var browserSync = require('browser-sync').create();
-var pug = require('gulp-pug');
+var minifyCSS = require("gulp-minify-css");
+var browserSync = require("browser-sync").create();
+var pug = require("gulp-pug");
+var gulpIf = require("gulp-if");
 
 
 // Static Server + watching scss/html files
@@ -16,6 +17,9 @@ gulp.task("preview", ["build"], function() {
     gulp.watch("./sass/**/*.scss", ["sass"]);
     gulp.watch("./page/**/*.pug", ["pug"]);
     gulp.watch("./partials/**/*.pug", ["pug"]);
+
+    // Reload upon changes to generated html or css
+    gulp.watch("./dist/**/*.css").on('change', browserSync.reload);
     gulp.watch("./dist/**/*.html").on('change', browserSync.reload);
 });
 
@@ -34,11 +38,13 @@ gulp.task("sass", function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task("copy-vendor-files", function() {
-    gulp.src(['./vendor/**/*']).pipe(gulp.dest('./dist/dist'));
-})
+gulp.task("transform", [], function(){
+    gulp.src(['./page/**/*'])
+        .pipe(gulpIf(/\.pug$/, pug()))
+        .pipe(gulp.dest('./dist'));
+});
 
-gulp.task("build", ["copy-vendor-files", "pug", "sass"]);
+gulp.task("build", ["transform", "sass"]);
 
 /**
  * Push build to gh-pages

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!--
+                           <\              _
+                            \\          _/{
+                     _       \\       _-   -_
+                   /{        / `\   _-     - -_
+                 _~  =      ( @  \ -        -  -_
+               _- -   ~-_   \( =\ \           -  -_
+             _~  -       ~_ | 1 :\ \      _-~-_ -  -_
+           _-   -          ~  |V: \ \  _-~     ~-_-  -_
+        _-~   -            /  | :  \ \            ~-_- -_
+     _-~    -   _.._      {   | : _-``               ~- _-_
+  _-~   -__..--~    ~-_  {   : \:}
+=~__.--~~              ~-_\  :  /
+                           \ : /__
+                          //`Y'--\\      
+                         <+       \\
+                          \\      WWW
+                          MMM
+-->
+
+<head>
+    <!-- The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon info -->
+    <link rel="apple-touch-icon" href="resources/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="resources/favicon/favicon-96x96.png">
+    <!-- Page meta info -->
+    <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    <meta name="author" content="Jonathan Cole">
+    <meta name="description" content="Reflector Tester">
+    <title>Reflector Tester</title>
+
+    <!-- Load web fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Ubuntu:700', 'Work Sans:400,500', 'Fira Mono:400,700']
+        }
+      });
+    </script>
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- Header injected here -->
+    <div id="commonHeader"></div>
+
+    <!-- Page Content -->
+    <main class="container main" role="main">
+        <article>
+
+        <div class="row">
+
+            <div class="col-md-10">
+                <h1>Reflector Test</h1>
+                <!-- Content here -->
+                <div class="logo"></div>
+                <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+                <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="640px" width="960px"></canvas>
+                
+                <section>
+                <p>
+                    This is a quick project in Unity to help me explore a problem for Google's Foobar challenge (Bringing a Gun to Guard Fight). If you stumble across this and you're doing the challenge, I hope this helps you out! Note that this isn't anything resembling a solution, but just a way of exploring the math of the thing. If you're not here for this reason, please note that this is deliberately abstract to preserve the secrecy of the challenge's problems.
+                </p>
+                <p>
+                    There's not much in the way of functionality here; mouse over any intersection on the grid to see information about the path of the laser. You can toggle collision for the laser on both the player and the guard. You can click to place a "breadcrumb" on any spot to help you keep track of which angles will constitute a valid bearing.
+                </p>
+                </section>
+                
+                
+            </div>
+
+        </div> <!-- end row -->
+
+        </article>
+
+    </main>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Load JQuery first -->
+    <script src="/dist/jquery/jquery-3.1.0.js"></script>
+    <script src="/dist/bootstrap/js/bootstrap.min.js"></script>
+    <script defer src="/dist/bootstrap/js/bootstrap-accessibility.min.js"></script>
+
+    <!-- Jon's JavaScript
+    ================================================== -->
+    <script>
+        $("#commonHeader").load("/common/header.html");
+    </script>
+    
+    <script type='text/javascript'>
+        var Module = {
+            TOTAL_MEMORY: 268435456,
+            errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+            compatibilitycheck: null,
+            backgroundColor: "#222C36",
+            splashStyle: "Light",
+            dataUrl: "Release/Test1.data",
+            codeUrl: "Release/Test1.js",
+            asmUrl: "Release/Test1.asm.js",
+            memUrl: "Release/Test1.mem",
+        };
+    </script>
+    <script src="Release/UnityLoader.js"></script>
+    
+    
+
+</body>
+
+</html>

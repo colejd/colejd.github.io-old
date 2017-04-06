@@ -1,0 +1,67 @@
+#reaction-diffusion-container {
+    position:relative;
+    width: 100%;
+    height: 512px;
+    max-width: 512px;
+    max-height: 512px;
+/*    display: block;*/
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    background: #000000;
+/*    background: rgb(186, 255, 155);*/
+    cursor: default; /* Prevent caret from appearing when click-dragging */
+/*    border: 1px;*/
+/*    border-color: white;*/
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.no-webgl-support {
+    position: relative;
+    color: white;
+    background: black;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    text-align: center;
+}
+
+/* Style dat.GUI container */
+.dg {
+    text-shadow: none !important;
+}
+
+.dg.main .close-button {
+    background-color: #3194e8;
+    color:white;
+}
+
+.dg.main .close-button:hover {
+    background-color: #44abda;
+}
+
+.dg li.title {
+    color: white;
+    background: #3194e8 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;
+}
+
+.dg li.title:hover {
+    background-color: #44abda;
+}
+
+.dg .c .slider-fg {
+    background: #3194e8;
+}
+
+.dg .c input[type=text] {
+    font-family: monospace;
+    color: white !important;
+    height: 100%;
+}

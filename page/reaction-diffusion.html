@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+					                    O_
+				                       /  >
+                                      -  >   ^\
+				                     /   >  ^ /
+				                    (O)  > ^ /   / / /
+       _____                        |       /    \\|//
+      /  __ \                      _/      /     / _/
+     /  /  | |                    /       /     / /
+   _/  |___/ /			       _/      ------_/ /
+ ==_|  \____/    	          _/       /  ______/
+     \   \                 __/           |\
+      |   \_          ____/              / \      _
+       \    \________/                  |\  \----/_V
+        \_                              / \_______ V
+          \__                /       \ /          V
+             \               \        \
+              \______         \_       \
+                     \__________\_      \
+                        /    /    \_    |
+                       |   _/       \   |
+                      /  _/          \  |
+                     |  /            |  |
+                     \  \__          |   \__
+                     /\____=\       /\_____=\
+-->
+
+<head>
+    <!-- The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon info -->
+    <link rel="apple-touch-icon" href="resources/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="resources/favicon/favicon-96x96.png">
+    <!-- Page meta info -->
+    <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    <meta name="author" content="Jonathan Cole">
+    <meta name="description" content="Reaction-Diffusion simulation using Three.js.">
+    <meta name="keywords" content="GPGPU, Reaction, Diffusion, Simulator, Gray, Scott, Three">
+
+    <title>Reaction-Diffusion Simulator</title>
+
+    <!-- Load web fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Ubuntu:700', 'Work Sans:400,500', 'Fira Mono:400,700']
+        }
+      });
+    </script>
+
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Header injected here -->
+    <div id="commonHeader"></div>
+
+    <main class="container main" role="main"> <!-- BEGIN MAIN CONTAINER -->
+        <article>
+            <object>
+                <div id="reaction-diffusion-container" aria-hidden="true"></div>
+            </object>
+            <p style="text-align:center"><strong>Epilepsy Warning:</strong> Some settings can cause bright flashing.</p>
+            <hr>
+            <section>
+                <h1>Reaction-Diffusion Simulator</h1>
+                <p>Made with <a href="http://threejs.org" target="_blank">three.js</a>.</p>
+                <p>
+                    This utilizes the <a href="http://mrob.com/pub/comp/xmorphia/">Gray-Scott</a> model to visualize the reaction and diffusion of two chemicals in in 2D. You can mess with the options in the upper-right.
+                    <br>
+                    <a href="https://github.com/seieibob/Reaction-Diffusion-ThreeJS">See the code on GitHub.</a>
+                    <br>
+                    <br>
+                    Note: This only works on iOS with half the usual precision, so some of these configurations will not behave in the same way as they do on a desktop platform.
+                </p>
+            </section>
+        </article>
+
+        <br>
+        <hr>
+        <!-- Disqus Stuff -->
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_config = function () {
+            this.page.url = "http://www.joncole.me/reaction-diffusion.html";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "reaction-diffusion"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '//joncole.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </main> <!-- END MAIN CONTAINER -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Load JQuery first -->
+    <script src="/dist/jquery/jquery-3.1.0.js"></script>
+    <script defer src="/dist/bootstrap/js/bootstrap.min.js"></script>
+    <script defer src="/dist/bootstrap/js/bootstrap-accessibility.min.js"></script>
+
+    <script>
+        $("#commonHeader").load("/common/header.html");
+    </script>
+
+    <!-- Jon's JavaScript
+    ================================================== -->
+    <script type="text/javascript" src="/dist/three.js"></script>
+    <script src="/widgets/reaction-diffusion/lib/stats.min.js"></script>
+    <script src="/widgets/reaction-diffusion/lib/dat.gui.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/widgets/reaction-diffusion/css/reaction-diffusion.css">
+    <script async type="text/javascript" src="/widgets/reaction-diffusion/js/ReactionDiffusion.js"></script>
+
+</body>
+
+
+</html>
+
+
+
+
+

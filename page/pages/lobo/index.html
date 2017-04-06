@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!--
+                             *                    .-=-.               *                 
+             *   .                 +           .-"     "-.                   *          
+   +.                `   +                    :           :                             
+            ,                             '  :             :         *       *          
+                     *           ,           :             :                            
+      ,                   -              ,    :           :                             
+                                               '.       .'     +                        
+                                                 '-._.-'              '                 
+                      `            `                                                    
+                                                                                        
+                                                                 ./=/-.\                
+     ,.=.__'i '=\._  /-' -.._.i'- .__=^.^/+._ =\._  /=,__.-=/..-'        '-.            
+ .-'\=    '=.  .-' '/       ._y._     ./     _ ._.-' '            ._            - .     
+'                  .._+  .=\  ._=/   \=. \=.  '                    \'-. ._=/'-..        
+    '.__/='     .-t    '-.'       /-         '-      .-'""-.    /\=..-/=  p ._"         
+             \.=   '\=.                           .-'       :     '. . /()'. -\         
+     =/    ='             _.--.._               .'         o o     =/()   : \=.-=       
+   .'  '-/'           .--'       '--..       .-'   ..--._     :   /=   \ / ()=\  '      
+                    .'                '-.._.'    .'      '_   :  =/()  : :  ()\=        
+                  .'                           .'          :__.   '    \ /              
+                 :                          .-'                       :   :             
+                :                        .-'                           \ /              
+         /=,.   :                       :             .,\=      .; i   : :              
+ fsc            :                     .'          ,--'      /=-.    .  \ /              
+          'j    '     _            .-:    ,-=/        =\.          t  :   :             
+            '.   \  !  :--..__.   : !                                  \ /              
+             :    :  :  '.     \  ! '-.      .'\           ,f'         : :              
+         ,\=.'    :.  '.u'      i  '-.u                   '   :=/      \ /    o         
+  .               '.uuu'         '.uu'              .-=/           .  :   :  '|v'       
+/' '.-;\.  ,-/=                                                  '\|.- \ /              
+                       .=       \=,_      /[-'            '/=              ()           
+                   .-'/   /='  '[       '
+
+-->
+
+<head>
+    <!-- The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon info -->
+    <link rel="apple-touch-icon" href="resources/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="resources/favicon/favicon-96x96.png">
+    <!-- Page meta info -->
+    <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    <meta name="author" content="Jonathan Cole">
+    <meta name="description" content="LOBO Buoy Visualizer">
+    <title>LOBO Buoy Vizualizer</title>
+
+    <!-- Load web fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Ubuntu:700', 'Work Sans:400,500', 'Fira Mono:400,700']
+        }
+      });
+    </script>
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- Header injected here -->
+    <div id="commonHeader"></div>
+
+    <!-- Page Content -->
+    <main class="container main" role="main">
+        <article>
+
+        <div class="row">
+
+            <div class="col-md-10" id="unity-container">
+                <h1>LOBO Buoy Visualizer</h1>
+                <!-- Content here -->
+                <div class="logo"></div>
+                <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+                <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" width=960 height=600></canvas>
+                
+                <section>
+                    <p>
+                        This is a visualization of time series analysis of streaming data from <a href="http://maine.loboviz.com/">LOBO</a>'s buoys on the Damariscotta River. They took the buoys out of the river without warning on 11/18/2016, so this program emulates the passage of time over historical data (at an accelerated rate).
+                    </p>
+                    <p>
+                        For more information, visit <a href="http://maine.loboviz.com/">UMaine Land/Ocean Biogeochemical Observatory</a>.
+                    </p>
+                </section>
+                
+                
+            </div>
+
+        </div> <!-- end row -->
+
+        </article>
+
+    </main>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Load JQuery first -->
+    <script src="/dist/jquery/jquery-3.1.0.js"></script>
+    <script src="/dist/bootstrap/js/bootstrap.min.js"></script>
+    <script defer src="/dist/bootstrap/js/bootstrap-accessibility.min.js"></script>
+
+    <!-- Jon's JavaScript
+    ================================================== -->
+    <script>
+        $("#commonHeader").load("/common/header.html");
+    </script>
+    
+    <script type='text/javascript'>
+        var Module = {
+            TOTAL_MEMORY: 268435456,
+            errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+            compatibilitycheck: null,
+            backgroundColor: "#222C36",
+            splashStyle: "Light",
+            dataUrl: "Release/Test Build.data",
+            codeUrl: "Release/Test Build.js",
+            asmUrl: "Release/Test Build.asm.js",
+            memUrl: "Release/Test Build.mem",
+        };
+    </script>
+    <script src="Release/UnityLoader.js"></script>
+    
+    <!-- Scale Unity window for high DPI screens -->
+    <script type='text/javascript'>
+//        var canvas = document.getElementById("canvas");
+//        var parent = document.getElementById("unity-container");
+//        console.log("Width: " + parent.width);
+//        canvas.width = parent.width;
+        //canvas.width = canvas.clientWidth * window.devicePixelRatio;
+        //canvas.height = canvas.clientHeight * window.devicePixelRatio;
+    </script>
+    
+    
+
+</body>
+
+</html>
