@@ -7,50 +7,50 @@
   to {
     opacity: 1; } }
 
-.main {
+.main-content {
   padding: 0 2em 0 2em;
   animation-duration: .38s;
   animation-fill-mode: both;
   animation-name: fadeInAnimation; }
-  .main h1 {
+  .main-content h1 {
     font-family: "Ubuntu", Helvetica, Arial, sans-serif;
     font-size: 50px;
     font-weight: 700;
     color: #3194e8;
     margin-top: 0px; }
-  .main h2 {
+  .main-content h2 {
     font-weight: 600;
     font-size: 24px;
     font-family: "Work Sans", sans-serif;
     color: #3194e8; }
-  .main h3, .main h4, .main h5, .main h6 {
+  .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
     font-family: "Work Sans", sans-serif;
     color: #3194e8; }
-  .main p {
+  .main-content p {
     font-family: "Work Sans", sans-serif;
     font-size: 16px;
     line-height: 25px;
     font-weight: 400;
     color: #d4d4d4; }
-  .main strong {
+  .main-content strong {
     font-weight: 700;
     color: #e86231; }
-  .main em {
+  .main-content em {
     font-style: italic; }
-  .main hr {
+  .main-content hr {
     height: 30px;
     border-style: solid;
     border-color: #3194e8;
     border-width: 1px 0 0 0; }
-  .main span.highlight {
+  .main-content span.highlight {
     font-weight: 700;
     color: #e86231; }
-  .main ul {
+  .main-content ul {
     list-style-position: inside;
     padding-left: 1.5em; }
-    .main ul > li {
+    .main-content ul > li {
       display: block; }
-      .main ul > li:before {
+      .main-content ul > li:before {
         /*Using a Bootstrap glyphicon as the bullet point*/
         content: "\e080";
         font-family: 'Glyphicons Halflings';
@@ -59,17 +59,17 @@
         margin-top: 7px;
         margin-left: -17px;
         color: #CCCCCC; }
-  .main .img-inline {
+  .main-content .img-inline {
     float: left;
     margin: 0em 2em 1em 0;
     border-radius: 12px;
     border: solid 2px #3194e8; }
-  .main a {
+  .main-content a {
     color: #ebe88a;
     text-decoration: none;
     border-bottom: 1px solid #ebe88a;
     transition: .5s; }
-    .main a:hover {
+    .main-content a:hover {
       background: #ebe88a;
       color: #151515; }
 
@@ -105,9 +105,9 @@ canvas.fullscreenWidget {
   pointer-events: none; }
 
 @media (max-width: 767px) {
-  .main h1 {
+  .main-content h1 {
     text-align: center; }
-  .main .img-inline {
+  .main-content .img-inline {
     float: none;
     margin: auto;
     margin-bottom: 1em;
@@ -279,7 +279,7 @@ li.L9 {
 @media (min-width: 767px) {
   .nav-side-menu .menu-list .menu-content {
     display: block; }
-  .main {
+  .main-content {
     width: calc(100% - 220px);
     float: right; }
   .nav-profile-image {

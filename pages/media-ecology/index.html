@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!--
-
+<!DOCTYPE html><html><!--~
 Ankylosaur
                             /~~~~~~~~~~~~\_
         _+=+_             _[~  /~~~~~~~~~~~~\_
@@ -16,106 +12,49 @@ Ankylosaur
                        <'_V_'>      \\  \    ~~~~~~\\  \
                                      \\  \          \\  \
                                      <'_V_'>        <'_V_'>
+--><head><!-- The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags--><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- Icon info--><link rel="apple-touch-icon" href="resources/favicon/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="resources/favicon/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="96x96" href="resources/favicon/favicon-96x96.png"><!-- Page meta info--><meta name="author" content="Jonathan Cole"><meta name="ROBOTS" content="INDEX, FOLLOW"><meta name="description" content="Waldorf - Media Ecology Project"><title>Waldorf - Media Ecology Project</title><!-- Load JQuery first--><script src="/dist/jquery/jquery-3.1.0.js"></script><!-- Load web fonts--><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script><script>WebFont.load({
+google: {
+    families: ['Work Sans:400,500', 'Ubuntu:700', 'Rye']
+}
+});
+</script><!-- Custom styles for this template--><link href="/css/style.css" rel="stylesheet"><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries--><!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]--><!-- Custom scripts hook--></head><body><!-- Include sidebar--><div><!-- Add skip button for users with screen readers--><a class="sr-only sr-only-focusable" href="#main">Skip to main content</a><!-- https://www.codeply.com/go/RmXlEZfi8z--><!-- Sidebar--><nav><div class="nav-side-menu" id="sidebar" role="navigation"><div class="brand"><a href="/index.html">Jonathan Cole</a></div><i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i><div class="menu-list"><ul class="menu-content collapse out" id="menu-content"><li><a class="page-link" title="Home" href="/index.html"><i class="fa fa-fw fa-home" aria-hidden="true"> </i>Home</a></li><li><a class="page-link" title="About Me" href="/about.html"><i class="fa fa-fw fa-user" aria-hidden="true"> </i>About</a></li><li><a class="page-link" title="GitHub" href="https://www.github.com/seieibob"><i class="fa fa-fw fa-github-square" aria-hidden="true"> </i>GitHub</a></li><li class="collapsed" data-toggle="collapse" data-target="#projects"><a><i class="fa fa-fw fa-code" aria-hidden="true"> </i>Projects<span class="arrow"></span></a></li><ul class="sub-menu collapse" id="projects"><li><a class="page-link" title="Media Ecology Project" href="/pages/media-ecology/"> </a>Media Ecology Project</li><li><a class="page-link" title="Reaction-Diffusion" href="/pages/reaction-diffusion/"> </a>Reaction-Diffusion</li><li><a class="page-link" title="Buoy Data Visualization" href="/pages/lobo/"> </a>Buoy Data Visualization</li><li><a class="page-link" title="Spurious (Spatial) Correlations" href="/pages/spurious-spatial-correlations/"> </a>Spurious (Spatial) Correlations</li><li><a class="page-link" title="Reflector" href="/pages/reflector/"> </a>Reflector</li></ul></ul></div></div></nav><!-- Make each cell of the sidebar clickable to visit its link--><script>$(".nav-side-menu li").click(function(){
+    //event.preventDefault();
+    var clicked = $(this).find("a").attr("href");
+    if(clicked !== undefined && clicked.length){
+        window.location = clicked;
+    }
+    return true;
+});</script></div><main class="container main-content" role="main"><article><div class="row"><h1>Waldorf - Media Ecology Project</h1><div class="col-md-10"><video width="640" height="480"><source src="http://sachinchoolur.github.io/lightGallery/static/videos/video2.mp4" type="video/mp4"></video></div><div class="col-md-10"><section id="Main"><p>Waldorf is a system for creating and viewing rich crowd-sourced annotations on video 
+around the Web. This work is created by me at the <a href='vemilab.org'>VEMILab</a>
+for the <a href='https://sites.dartmouth.edu/mediaecology/'>Media Ecology Project</a>
+at Dartmouth University, and is sponsored under an 
+<a href='http://www.knightfoundation.org/grants/20102605/'>NEH Grant</a>.</p><p>The source is available on <a href='https://www.github.com/seieibob/Waldorf'>GitHub</a>.
 
--->
+</p></section></div></div></article></main><!-- Bootstrap core--><script defer="" src="/dist/bootstrap/js/bootstrap.min.js"></script><script defer="" src="/dist/bootstrap/js/bootstrap-accessibility.min.js"></script><!-- Page JavaScript--><script>//Scroll to clicked anchor links
+var $root = $('html, body');
+$('a').click(function(){
+    var href = $.attr(this, 'href');
+    if(href == null) return;
+    if(href[0] != "#") return;
+    $root.animate({
+        scrollTop: $(href).offset().top
+    }, 500, function (){
+        window.location.hash = href;
+    });
+    return false;
+});
+//Scroll to url anchor
+$(document).ready(function(){
+    if($(location.hash).length && location.hash != "#"){ //If the tag actually exists on the page
+        $('html, body, section').animate({
+            'scrollTop': $(location.hash).offset().top
+        }, 500);
+    }
+});
 
-<head>
-    <!-- The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Icon info -->
-    <link rel="apple-touch-icon" href="resources/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="resources/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="resources/favicon/favicon-96x96.png">
-    <!-- Page meta info -->
-    <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-    <meta name="author" content="Jonathan Cole">
-    <meta name="description" content="Waldorf - Media Ecology Project">
-    <title>Waldorf - Media Ecology Project</title>
-
-    <!-- Load web fonts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-    <script>
-      WebFont.load({
-        google: {
-          families: ['Ubuntu:700', 'Work Sans:400,500', 'Fira Mono:400,700']
-        }
-      });
-    </script>
-
-    <!-- CSS -->
-    <link href="/css/style.css" rel="stylesheet">
-
-
-</head>
-
-<body>
-
-    <!-- Header injected here -->
-    <div id="commonHeader"></div>
-
-    <!-- Page Content -->
-    <main class="container main" role="main">
-        <article>
-
-        <div class="row">
-
-            <div class="col-md-10">
-                <h1>Waldorf - Media Ecology Project</h1>
-                
-                <br>
-                
-                <section id="Main">
-                <p>
-                    Waldorf is a system for creating and viewing rich crowd-sourced annotations on video around the Web. This work is created by me at the <a href="vemilab.org">VEMILab</a> for the <a href="https://sites.dartmouth.edu/mediaecology/">Media Ecology Project</a> at Dartmouth University, and is sponsored under an <a href="http://www.knightfoundation.org/grants/20102605/">NEH Grant</a>.
-                </p>
-                <p>
-                    The source is available on <a href="https://www.github.com/seieibob/Waldorf">GitHub</a>.
-                </p>
-                </section>
-            </div>
-            
-            <div class="col-md-10">
-                <video width="640" height="480">
-                    <source src="http://sachinchoolur.github.io/lightGallery/static/videos/video2.mp4" type="video/mp4">
-                </video>
-            </div>
-
-        </div> <!-- end row -->
-
-        </article>
-
-    </main>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- Load JQuery first -->
-    <script src="/dist/jquery/jquery-3.1.0.js"></script>
-    <script src="/dist/bootstrap/js/bootstrap.min.js"></script>
-    <script defer src="/dist/bootstrap/js/bootstrap-accessibility.min.js"></script>
-
-    <!-- Jon's JavaScript
-    ================================================== -->
-    <script>
-        $("#commonHeader").load("/common/header.html");
-    </script>
-
-    <!-- Include Annotator at the bottom of the page so it doesn't block loading -->
-    <!-- Import JQueryUI -->
-    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!-- Annotator Core -->
-    <script type="text/javascript" src="annotator-frontend.js"></script>
-    <link rel="stylesheet" href="annotator-frontend.css">
-    <script>
-        var serverAddress = "http://ec2-52-88-72-190.us-west-2.compute.amazonaws.com:3000";
-        var tagsAddress = "https://onomy.org/published/83/json";
-        $("video").first().annotate(serverAddress, tagsAddress);
-    </script>
-
-</body>
-
-</html>
+</script><!-- Include Annotator at the bottom of the page so it doesn't block loading--><!-- Import JQueryUI--><script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!-- Annotator Core--><script type="text/javascript" src="annotator-frontend.js"></script><link rel="stylesheet" href="annotator-frontend.css"><script>var serverAddress = "http://ec2-52-88-72-190.us-west-2.compute.amazonaws.com:3000";
+var tagsAddress = "https://onomy.org/published/83/json";
+$("video").first().annotate(serverAddress, tagsAddress);</script></body><foot></foot></html>
