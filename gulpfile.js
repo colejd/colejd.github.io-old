@@ -7,12 +7,14 @@ var pug = require("gulp-pug");
 var gulpIf = require("gulp-if");
 var sitemap = require("gulp-sitemap");
 
+// Pug with configured options
 doPug = function() {
     return pug({
         basedir: "./"
     });
 }
 
+// Automatically generate a sitemap from the built website
 gulp.task("sitemap", ["build"], function(){
     gulp.src('dist/**/*.html', {
             read: false
@@ -23,7 +25,8 @@ gulp.task("sitemap", ["build"], function(){
         .pipe(gulp.dest('dist/'));
 })
 
-// Static Server + watching scss/html files
+// BrowserSync (preview built page in web browser,
+// live reload changes)
 gulp.task("preview", ["build"], function() {
 
     browserSync.init({
@@ -39,6 +42,7 @@ gulp.task("preview", ["build"], function() {
     gulp.watch("./dist/**/*.html").on('change', browserSync.reload);
 });
 
+// Convert Pug to HTML
 gulp.task("pug", function() {
     return gulp.src("./page/**/*.pug")
         .pipe(doPug())
@@ -54,6 +58,8 @@ gulp.task("sass", function() {
         .pipe(browserSync.stream());
 });
 
+// Copy everything into the destination, applying
+// functions to each file if applicable.
 gulp.task("transform", [], function(){
     gulp.src(['./page/**/*'])
         .pipe(gulpIf(/\.pug$/, doPug()))
@@ -62,9 +68,7 @@ gulp.task("transform", [], function(){
 
 gulp.task("build", ["transform", "sass"]);
 
-/**
- * Push build to gh-pages
- */
+// Push build to GitHub Pages
 gulp.task('deploy', ["build", "sitemap"], function () {
     return gulp.src("./dist/**/*")
         .pipe(deploy({
