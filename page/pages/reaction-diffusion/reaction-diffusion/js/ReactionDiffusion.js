@@ -101,7 +101,7 @@ function ReactionDiffusionSimulator($container, initImageURL) {
 
         //Load shader strings from files
         signalLoadStarted();
-        loadFiles(['/widgets/reaction-diffusion/shaders/display-frag.glsl', '/widgets/reaction-diffusion/shaders/compute-frag.glsl', '/widgets/reaction-diffusion/shaders/compute-vert.glsl'], function (shaderText) {
+        loadFiles(['reaction-diffusion/shaders/display-frag.glsl', 'reaction-diffusion/shaders/compute-frag.glsl', 'reaction-diffusion/shaders/compute-vert.glsl'], function (shaderText) {
             display_frag_source = shaderText[0];
             compute_frag_source = shaderText[1];
             compute_vert_source = shaderText[2];
@@ -115,7 +115,7 @@ function ReactionDiffusionSimulator($container, initImageURL) {
 
         //Load presets object from JSON
         signalLoadStarted();
-        $.getJSON("/widgets/reaction-diffusion/js/Presets.js", function (result) {
+        $.getJSON("reaction-diffusion/js/Presets.js", function (result) {
             presets = result;
             signalLoadFinished();
         });
