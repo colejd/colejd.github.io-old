@@ -5,13 +5,23 @@ var minifyCSS = require("gulp-minify-css");
 var browserSync = require("browser-sync").create();
 var pug = require("gulp-pug");
 var gulpIf = require("gulp-if");
-
+var sitemap = require("gulp-sitemap");
 
 doPug = function() {
     return pug({
         basedir: "./"
     });
 }
+
+gulp.task("sitemap", ["build"], function(){
+    gulp.src('dist/**/*.html', {
+            read: false
+        })
+        .pipe(sitemap({
+            siteUrl: 'http://www.joncole.me'
+        }))
+        .pipe(gulp.dest('dist/'));
+})
 
 // Static Server + watching scss/html files
 gulp.task("preview", ["build"], function() {
@@ -55,7 +65,7 @@ gulp.task("build", ["transform", "sass"]);
 /**
  * Push build to gh-pages
  */
-gulp.task('deploy', ["build"], function () {
+gulp.task('deploy', ["build", "sitemap"], function () {
     return gulp.src("./dist/**/*")
         .pipe(deploy({
             branch: "master"
