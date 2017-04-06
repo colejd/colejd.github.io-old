@@ -44,7 +44,16 @@ google: {
         window.location = clicked;
     }
     return true;
-});</script></div><main class="container main-content" role="main"><article><object><div id="reaction-diffusion-container" aria-hidden="true"></div></object><p style="text-align:center;"><strong>Epilepsy Warning:</strong> Some settings can cause bright flashing.</p><hr><section><h1>Reaction-Diffusion Simulator</h1><p>Made with <a href="http://threejs.org" target="_blank">three.js</a>.</p><p>This utilizes the <a href="http://mrob.com/pub/comp/xmorphia/">Gray-Scott</a> model to visualize the reaction and diffusion of two chemicals in in 2D. You can mess with the options in the upper-right.<br><a href="https://github.com/seieibob/Reaction-Diffusion-ThreeJS">See the code on GitHub.</a><br><br>Note: This only works on iOS with half the usual precision, so some of these configurations will not behave in the same way as they do on a desktop platform.</p></section><!-- Disqus Stuff--></article></main><!-- Page JavaScript--><script>//Scroll to clicked anchor links
+});</script></div><main class="container main-content" role="main"><article><object><div id="reaction-diffusion-container" aria-hidden="true"></div></object><p style="text-align:center;"><strong>Epilepsy Warning:</strong> Some settings can cause bright flashing.</p><hr><section><h1>Reaction-Diffusion Simulator</h1><p>Made with <a href="http://threejs.org" target="_blank">three.js</a>.</p><p>This utilizes the <a href="http://mrob.com/pub/comp/xmorphia/">Gray-Scott</a> model to visualize the reaction and diffusion of two chemicals in in 2D. You can mess with the options in the upper-right.<br><a href="https://github.com/seieibob/Reaction-Diffusion-ThreeJS">See the code on GitHub.</a><br><br>Note: This only works on iOS with half the usual precision, so some of these configurations will not behave in the same way as they do on a desktop platform.</p></section><!-- Disqus Stuff--><div id="disqus_thread"></div><script>var disqus_config = function () {
+this.page.url = "http://www.joncole.me/reaction-diffusion.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "reaction-diffusion"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//joncole.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></article></main><!-- Page JavaScript--><script>//Scroll to clicked anchor links
 var $root = $('html, body');
 $('a').click(function(){
     var href = $.attr(this, 'href');
@@ -66,4 +75,4 @@ $(document).ready(function(){
     }
 });
 
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.js"></script><script src="/widgets/reaction-diffusion/lib/stats.min.js"></script><script src="/widgets/reaction-diffusion/lib/dat.gui.min.js"></script><link rel="stylesheet" type="text/css" href="/widgets/reaction-diffusion/css/reaction-diffusion.css"><script async="" type="text/javascript" src="/widgets/reaction-diffusion/js/ReactionDiffusion.js"></script></body><foot></foot></html>
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.js"></script><script src="reaction-diffusion/lib/stats.min.js"></script><script src="reaction-diffusion/lib/dat.gui.min.js"></script><link rel="stylesheet" type="text/css" href="reaction-diffusion/css/reaction-diffusion.css"><script async="" type="text/javascript" src="reaction-diffusion/js/ReactionDiffusion.js"></script></body><foot></foot></html>
