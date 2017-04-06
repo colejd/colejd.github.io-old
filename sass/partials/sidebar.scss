@@ -214,7 +214,7 @@ $navbar-width: 220px;
     .nav-side-menu .menu-list .menu-content {
         display: block;
     }
-    .main {
+    .main-content {
         width: calc(100% - #{$navbar-width});
         float: right;
     }

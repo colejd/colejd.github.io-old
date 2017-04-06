@@ -1,0 +1,87 @@
+extends /partials/layout.pug 
+
+block dinosaur
+    //
+        ~
+                                            O_
+                                           /  >
+                                          -  >   ^\
+                                         /   >  ^ /
+                                        (O)  > ^ /   / / /
+           _____                        |       /    \\|//
+          /  __ \                      _/      /     / _/
+         /  /  | |                    /       /     / /
+       _/  |___/ /                  _/      ------_/ /
+     ==_|  \____/                 _/       /  ______/
+         \   \                 __/           |\
+          |   \_          ____/              / \      _
+           \    \________/                  |\  \----/_V
+            \_                              / \_______ V
+              \__                /       \ /          V
+                 \               \        \
+                  \______         \_       \
+                         \__________\_      \
+                            /    /    \_    |
+                           |   _/       \   |
+                          /  _/          \  |
+                         |  /            |  |
+                         \  \__          |   \__
+                         /\____=\       /\_____=\
+
+
+append headinfo
+    meta(name='ROBOTS', content='INDEX, FOLLOW')
+    meta(name='description', content='Reaction-Diffusion simulation using Three.js.')
+    meta(name='keywords', content='GPGPU, Reaction, Diffusion, Simulator, Gray, Scott, Three')
+
+    title Reaction-Diffusion Simulator
+
+
+append content
+    object
+        #reaction-diffusion-container(aria-hidden='true')
+    p(style='text-align:center')
+        strong Epilepsy Warning:
+        |  Some settings can cause bright flashing.
+    hr
+    section
+        h1 Reaction-Diffusion Simulator
+        p
+            | Made with 
+            a(href='http://threejs.org', target='_blank') three.js
+            | .
+        p
+            | This utilizes the 
+            a(href='http://mrob.com/pub/comp/xmorphia/') Gray-Scott
+            |  model to visualize the reaction and diffusion of two chemicals in in 2D. You can mess with the options in the upper-right.
+            br
+            a(href='https://github.com/seieibob/Reaction-Diffusion-ThreeJS') See the code on GitHub.
+            br
+            br
+            | Note: This only works on iOS with half the usual precision, so some of these configurations will not behave in the same way as they do on a desktop platform.
+    
+    // Disqus Stuff
+    //- #disqus_thread
+    //- script.
+    //-     var disqus_config = function () {
+    //-     this.page.url = "http://www.joncole.me/reaction-diffusion.html";  // Replace PAGE_URL with your page's canonical URL variable
+    //-     this.page.identifier = "reaction-diffusion"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    //-     };
+    //-     (function() { // DON'T EDIT BELOW THIS LINE
+    //-     var d = document, s = d.createElement('script');
+    //-     s.src = '//joncole.disqus.com/embed.js';
+    //-     s.setAttribute('data-timestamp', +new Date());
+    //-     (d.head || d.body).appendChild(s);
+    //-     })();
+    //- noscript
+    //-     | Please enable JavaScript to view the 
+    //-     a(href='https://disqus.com/?ref_noscript') comments powered by Disqus.
+
+
+append body
+    script(type='text/javascript', src='/dist/three.js')
+    script(src='/widgets/reaction-diffusion/lib/stats.min.js')
+    script(src='/widgets/reaction-diffusion/lib/dat.gui.min.js')
+    link(rel='stylesheet', type='text/css', href='/widgets/reaction-diffusion/css/reaction-diffusion.css')
+    script(async='', type='text/javascript', src='/widgets/reaction-diffusion/js/ReactionDiffusion.js')
+

@@ -7,6 +7,12 @@ var pug = require("gulp-pug");
 var gulpIf = require("gulp-if");
 
 
+doPug = function() {
+    return pug({
+        basedir: "./"
+    });
+}
+
 // Static Server + watching scss/html files
 gulp.task("preview", ["build"], function() {
 
@@ -25,7 +31,7 @@ gulp.task("preview", ["build"], function() {
 
 gulp.task("pug", function() {
     return gulp.src("./page/**/*.pug")
-        .pipe(pug())
+        .pipe(doPug())
         .pipe(gulp.dest('./dist/'));
 });
 
@@ -40,7 +46,7 @@ gulp.task("sass", function() {
 
 gulp.task("transform", [], function(){
     gulp.src(['./page/**/*'])
-        .pipe(gulpIf(/\.pug$/, pug()))
+        .pipe(gulpIf(/\.pug$/, doPug()))
         .pipe(gulp.dest('./dist'));
 });
 

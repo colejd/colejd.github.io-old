@@ -1,0 +1,112 @@
+extends /partials/layout.pug 
+
+block dinosaur
+
+    //
+        ~
+                                                             ___._
+                                                           .'  <0>'-.._
+                                                          /  /.--.____")
+                                                         |   \   __.-'~
+                                                         |  :  -'/
+                                                        /:.  :.-'
+        __________                                     | : '. |
+        '--.____  '--------.______       _.----.-----./      :/
+                '--.__            `'----/       '-.      __ :/
+                      '-.___           :           \   .'  )/
+                            '---._           _.-'   ] /  _/
+                                 '-._      _/     _/ / _/
+                                     \_ .-'____.-'__< |  \___
+                                       <_______.\    \_\_---.7
+                                      |   /'=r_.-'     _\\ =/
+                                  .--'   /            ._/'>
+                                .'   _.-'
+                               / .--'
+                              /,/
+                              |/`)
+                              'c=,
+
+append headinfo
+    meta(name='ROBOTS', content='INDEX, FOLLOW')
+    meta(name='author', content='Jonathan Cole')
+    meta(name='description', content='Bio and contact information for Jonathan Cole.')
+    meta(name='keywords', content='UMaine, Jonathan, Cole, SIE, Spatial, Computer, Science, VEMI')
+    title About Jon
+
+
+append content
+    h1 About Jon
+    img.img-inline.img-responsive(src='/resources/images/profile_outside.png', style='width: 30%; height: auto;', alt='Portrait of Jon')
+    section#bio
+        p
+            span.highlight Jonathan Cole
+            |  is a software developer and graduate student from Brewer, Maine. He enjoys game design and graphics programming in his spare time. He hopes to present at SIGGRAPH someday.
+    section#work
+        h2 Work
+        ul
+            li
+                p
+                    | VR / AR Developer at the 
+                    a(href='http://www.vemilab.org/') VEMILab
+            li
+                p Graduate Teaching Assistant, Computer Science Department, University of Maine
+    section#education
+        h2 Education
+        ul
+            li
+                p B.S. Computer Science - Spring 2015, University of Maine
+            li
+                p
+                    | M.S. Spatial Information Science and Engineering - Spring 2017 (expected), University of Maine
+    section#skills
+        h2 Skills
+        p
+            | Jon has worked with a variety of languages and tools during his time at the VEMILab, and has worked extensively with Unity. Much of his time has been spent making various VR hardware communicate properly with Unity and other platforms. His academic work includes VR experiment design for human trials. He is effective both independently and in a team, and has worked in teams using Scrum and Kanban methodologies.
+        ul
+            li
+                p
+                    span.highlight Languages:
+                    |  C#, Python, Java, C++, Swift, GLSL, SQL
+            li
+                p
+                    span.highlight Platforms:
+                    |  Unity, iOS, OpenFrameworks, Cinder
+            li
+                p
+                    span.highlight Frameworks:
+                    |  OpenCV, OpenGL
+            li
+                p
+                    span.highlight Domains:
+                    |  Virtual Reality, Augmented Reality, Graphics Programming, iOS Development, Front-End Web Development
+        p
+            | You can see a sample of his public work at his 
+            a(href='https://www.github.com/seieibob') GitHub page
+            | .
+    section#contact
+        h2 Contact
+        p
+            a(href='/resources/Resume_Jonathan_Cole_2017.pdf') Resume (PDF)
+            br
+            a(href='https://www.linkedin.com/in/joncole04412') LinkedIn
+            br
+            // Email hidden with Hivelogic Enkoder
+            script(type='text/javascript').
+                //<![CDATA[
+                <!--
+                var x="function f(x){var i,o=\\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
+                "x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\\"ufcnitnof x({)av" +
+                " r,i=o\\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!05{)rt{y+xx=l;=+;" +
+                "lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\\" +
+                "\\"(2)10\\\\,z\\\"4p00\\\\\\\\27\\\\07\\\\03\\\\\\\\02\\\\0Z\\\\25\\\\05\\\\" +
+                "00\\\\\\\\\XU3U03\\\\\\\\ZX\\\\S\\\\\\\\W\\\\4o03\\\\\\\\34\\\\00\\\\03\\\\\\"+
+                "\\\37\\\\02\\\\03\\\\\\\\DLEHKK4I03\\\\\\\\03\\\\0|\\\\qr2~swuxVp%'&'u!acbn`" +
+                "dg3jsel n=]30\\\\\00\\\\03\\\\\\\\16\\\\03\\\\02\\\\\\\\0Z03\\\\\\\\UD3^03\\" +
+                "\\\\\\\30\\\\06\\\\02\\\\\\\\06\\\\00\\\\03\\\\\\\\02\\\\00\\\\03\\\\\\\\1@0" +
+                "3\\\\\\\\\02\\\\06\\\\01\\\\\\\\07\\\\04\\\\03\\\\\\\\13\\\\00\\\\01\\\\\\\\" +
+                "02\\\\\0\\\\\\\\(\\\"}fo;n uret}r);+)y+^(i)t(eAodrCha.c(xdeCoarChomfrg.intr=" +
+                "So+7;12%=;y=2y*))+y02(1i>f({i+)i+l;i<0;i=r(foh;gten.l=x,l\\\\"\\\\\\\"\\\\o=" +
+                "i,r va){,y(x fontincfu)\\\\"\")"                                              ;
+                while(x=eval(x));
+                //-->
+                //]]>

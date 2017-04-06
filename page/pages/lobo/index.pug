@@ -1,0 +1,87 @@
+extends /partials/layout.pug 
+
+block dinosaur
+
+    //
+        ~
+                                     *                    .-=-.               *                 
+                     *   .                 +           .-"     "-.                   *          
+           +.                `   +                    :           :                             
+                    ,                             '  :             :         *       *          
+                             *           ,           :             :                            
+              ,                   -              ,    :           :                             
+                                                       '.       .'     +                        
+                                                         '-._.-'              '                 
+                              `            `                                                    
+
+                                                                         ./=/-.\                
+             ,.=.__'i '=\._  /-' -.._.i'- .__=^.^/+._ =\._  /=,__.-=/..-'        '-.            
+         .-'\=    '=.  .-' '/       ._y._     ./     _ ._.-' '            ._            - .     
+        '                  .._+  .=\  ._=/   \=. \=.  '                    \'-. ._=/'-..        
+            '.__/='     .-t    '-.'       /-         '-      .-'""-.    /\=..-/=  p ._"         
+                     \.=   '\=.                           .-'       :     '. . /()'. -\         
+             =/    ='             _.--.._               .'         o o     =/()   : \=.-=       
+           .'  '-/'           .--'       '--..       .-'   ..--._     :   /=   \ / ()=\  '      
+                            .'                '-.._.'    .'      '_   :  =/()  : :  ()\=        
+                          .'                           .'          :__.   '    \ /              
+                         :                          .-'                       :   :             
+                        :                        .-'                           \ /              
+                 /=,.   :                       :             .,\=      .; i   : :              
+         fsc            :                     .'          ,--'      /=-.    .  \ /              
+                  'j    '     _            .-:    ,-=/        =\.          t  :   :             
+                    '.   \  !  :--..__.   : !                                  \ /              
+                     :    :  :  '.     \  ! '-.      .'\           ,f'         : :              
+                 ,\=.'    :.  '.u'      i  '-.u                   '   :=/      \ /    o         
+          .               '.uuu'         '.uu'              .-=/           .  :   :  '|v'       
+        /' '.-;\.  ,-/=                                                  '\|.- \ /              
+                               .=       \=,_      /[-'            '/=              ()           
+                           .-'/   /='  '[       '
+                       
+
+append headinfo
+    meta(name='ROBOTS', content='INDEX, FOLLOW')
+    meta(name='author', content='Jonathan Cole')
+    meta(name='description', content='LOBO Buoy Visualizer')
+    title LOBO Buoy Vizualizer
+
+
+append head
+    link(rel='stylesheet', href='TemplateData/style.css')
+    script(src='TemplateData/UnityProgress.js')
+
+
+append content
+    h1 LOBO Buoy Visualizer
+    // Content here
+    .logo
+    .fullscreen
+        img(src='TemplateData/fullscreen.png', width='38', height='38', alt='Fullscreen', title='Fullscreen', onclick='SetFullscreen(1);')
+    canvas#canvas.emscripten(oncontextmenu='event.preventDefault()', width='960', height='600')
+    section
+        p
+            | This is a visualization of time series analysis of streaming data from 
+            a(href='http://maine.loboviz.com/') LOBO
+            | 's buoys on the Damariscotta River. They took the buoys out of the river without warning on 11/18/2016, so this program emulates the passage of time over historical data (at an accelerated rate).
+        p
+            | For more information, visit 
+            a(href='http://maine.loboviz.com/') UMaine Land/Ocean Biogeochemical Observatory
+            | .
+
+
+
+append body
+    script(type='text/javascript').
+        var Module = {
+            TOTAL_MEMORY: 268435456,
+            errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+            compatibilitycheck: null,
+            backgroundColor: "#222C36",
+            splashStyle: "Light",
+            dataUrl: "Release/Test Build.data",
+            codeUrl: "Release/Test Build.js",
+            asmUrl: "Release/Test Build.asm.js",
+            memUrl: "Release/Test Build.mem",
+        };
+    script(src='Release/UnityLoader.js')
+
+

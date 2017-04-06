@@ -1,0 +1,58 @@
+extends /partials/layout.pug 
+
+block dinosaur
+
+    //
+        ~
+        Ankylosaur
+                                    /~~~~~~~~~~~~\_
+                _+=+_             _[~  /~~~~~~~~~~~~\_
+               {''|''}         [~~~    [~   /~~~~~~~~~\_
+                ''':-'~[~[~'~[~  ((++     [~  _/~~~~~~~~\_
+                     '=_   [    ,==, ((++    [    /~~~~~~~\-~~~-.
+                        ~-_ _=+-(   )/   ((++  .~~~.[~~~~(  {@} \`.
+                                /   }\ /     (     }     (   .   ''}
+                               (  .+   \ /  //     )    / .,  ''''/
+                               \\  \     \ (   .+~~\_  /.= /'''''
+                               <'_V_'>      \\  \    ~~~~~~\\  \
+                                             \\  \          \\  \
+                                             <'_V_'>        <'_V_'>
+
+append headinfo
+    meta(name='ROBOTS', content='INDEX, FOLLOW')
+    meta(name='description', content='Waldorf - Media Ecology Project')
+    title Waldorf - Media Ecology Project
+
+
+append content
+    .row
+        h1 Waldorf - Media Ecology Project
+        .col-md-10
+            video(width='640', height='480')
+                source(src='http://sachinchoolur.github.io/lightGallery/static/videos/video2.mp4', type='video/mp4')
+
+        .col-md-10
+            section#Main
+                p.
+                    Waldorf is a system for creating and viewing rich crowd-sourced annotations on video 
+                    around the Web. This work is created by me at the <a href='vemilab.org'>VEMILab</a>
+                    for the <a href='https://sites.dartmouth.edu/mediaecology/'>Media Ecology Project</a>
+                    at Dartmouth University, and is sponsored under an 
+                    <a href='http://www.knightfoundation.org/grants/20102605/'>NEH Grant</a>.
+                p.
+                    The source is available on <a href='https://www.github.com/seieibob/Waldorf'>GitHub</a>.
+
+
+append body
+    // Include Annotator at the bottom of the page so it doesn't block loading
+    // Import JQueryUI
+    script(src='http://code.jquery.com/ui/1.12.1/jquery-ui.min.js')
+    link(rel='stylesheet', href='http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    // Annotator Core
+    script(type='text/javascript', src='annotator-frontend.js')
+    link(rel='stylesheet', href='annotator-frontend.css')
+    script.
+        var serverAddress = "http://ec2-52-88-72-190.us-west-2.compute.amazonaws.com:3000";
+        var tagsAddress = "https://onomy.org/published/83/json";
+        $("video").first().annotate(serverAddress, tagsAddress);
+

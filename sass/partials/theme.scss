@@ -9,7 +9,7 @@
     }
 }
 
-.main {
+.main-content {
     padding: 0 2em 0 2em;
     animation-duration: .38s;
     animation-fill-mode: both;
@@ -147,7 +147,7 @@ canvas.fullscreenWidget {
 
 // Sidebar is collapsed
 @media (max-width: 767px) {
-    .main {
+    .main-content {
         h1{
             text-align: center;
         }

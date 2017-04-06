@@ -1,0 +1,33 @@
+extends /partials/layout.pug 
+
+block dinosaur
+
+    //
+        ~
+                                __.--'~~~~~`--.
+             ..       __.    .-~               ~-.
+             ((\     /   `}.~                     `.
+              \\\  .{     }               /     \   \
+          (\   \\~~       }              |       }   \
+           \`.-~ -@~     }  ,-,.         |       )    \
+           (___     ) _}  (    :        |    / /      `._
+            `----._-~.     _\ \ |_       \   / /-.__     `._
+                   ~~----~~  \ \| ~~--~~~(  + /     ~-._    ~-._
+                             /  /         \  \          ~--.,___~_-_.
+                          __/  /          _\  )
+                        .<___.'         .<___/
+
+append headinfo
+    meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
+    meta(name='description', content='You have attempted to access a page that does not exist!')
+    title 404'd!
+
+
+append content
+    h1 404'd!
+    a(href='/')
+        img.img-responsive(src='resources/images/UnderConstruction.png')
+    p
+        em What year is it?
+        br
+        em Who is the President??

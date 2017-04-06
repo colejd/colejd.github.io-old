@@ -1,0 +1,60 @@
+extends /partials/layout.pug 
+
+block dinosaur
+
+    //
+        ~
+                                   <\              _
+                                    \\          _/{
+                             _       \\       _-   -_
+                           /{        / `\   _-     - -_
+                         _~  =      ( @  \ -        -  -_
+                       _- -   ~-_   \( =\ \           -  -_
+                     _~  -       ~_ | 1 :\ \      _-~-_ -  -_
+                   _-   -          ~  |V: \ \  _-~     ~-_-  -_
+                _-~   -            /  | :  \ \            ~-_- -_
+             _-~    -   _.._      {   | : _-``               ~- _-_
+          _-~   -__..--~    ~-_  {   : \:}
+        =~__.--~~              ~-_\  :  /
+                                   \ : /__
+                                  //`Y'--\\      
+                                 <+       \\
+                                  \\      WWW
+                                  MMM
+
+append headinfo
+    meta(name='ROBOTS', content='INDEX, FOLLOW')
+    meta(name='description', content='Reflector Tester')
+    title Reflector Tester
+
+append head
+    link(rel='stylesheet', href='TemplateData/style.css')
+    script(src='TemplateData/UnityProgress.js')
+
+append content
+    h1 Reflector Test
+    // Content here
+    .logo
+    .fullscreen
+        img(src='TemplateData/fullscreen.png', width='38', height='38', alt='Fullscreen', title='Fullscreen', onclick='SetFullscreen(1);')
+    canvas#canvas.emscripten(oncontextmenu='event.preventDefault()', height='640px', width='960px')
+    section
+        p
+            | This is a quick project in Unity to help me explore a problem for Google's Foobar challenge (Bringing a Gun to Guard Fight). If you stumble across this and you're doing the challenge, I hope this helps you out! Note that this isn't anything resembling a solution, but just a way of exploring the math of the thing. If you're not here for this reason, please note that this is deliberately abstract to preserve the secrecy of the challenge's problems.
+        p
+            | There's not much in the way of functionality here; mouse over any intersection on the grid to see information about the path of the laser. You can toggle collision for the laser on both the player and the guard. You can click to place a "breadcrumb" on any spot to help you keep track of which angles will constitute a valid bearing.
+
+append body
+    script(type='text/javascript').
+        var Module = {
+            TOTAL_MEMORY: 268435456,
+            errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+            compatibilitycheck: null,
+            backgroundColor: "#222C36",
+            splashStyle: "Light",
+            dataUrl: "Release/Test1.data",
+            codeUrl: "Release/Test1.js",
+            asmUrl: "Release/Test1.asm.js",
+            memUrl: "Release/Test1.mem",
+        };
+    script(src='Release/UnityLoader.js')

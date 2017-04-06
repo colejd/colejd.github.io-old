@@ -1,0 +1,82 @@
+extends /partials/layout.pug 
+
+block dinosaur
+
+    //
+        ~
+                                __.--'~~~~~`--.
+             ..       __.    .-~               ~-.
+             ((\     /   `}.~                     `.
+              \\\  .{     }               /     \   \
+          (\   \\~~       }              |       }   \
+           \`.-~ -@~     }  ,-,.         |       )    \
+           (___     ) _}  (    :        |    / /      `._
+            `----._-~.     _\ \ |_       \   / /-.__     `._
+                   ~~----~~  \ \| ~~--~~~(  + /     ~-._    ~-._
+                             /  /         \  \          ~--.,___~_-_.
+                          __/  /          _\  )
+                        .<___.'         .<___/
+
+append headinfo
+    meta(name='ROBOTS', content='INDEX, FOLLOW')
+    meta(name='description', content='Wild speculation about geospatial data trends.')
+    meta(name='keywords', content='UMaine, Maine, Spurious, Spatial, Correlations, Correlation, GIS')
+    title Spurious (Spatial) Correlations
+
+
+append content
+    h1 Spurious (Spatial) Correlations
+    p
+        | This is a project I did for Introduction to GIS at my university. Inspired by 
+        a(href='http://www.tylervigen.com') Tyler Vigen's Spurious Correlations
+        | , I wanted to apply similar techniques to GIS data in the state of Maine. Below are my results.
+    hr
+    section
+        h2 Eagles and K-Cups
+        p
+            | With the exception of Washington County, eagles seem to make their homes in areas where household K-Cup ownership is at or higher than the national average.
+        img.img-responsive.center-block(src='images/EaglesAndKCups.png', alt='')
+    br
+    section
+        h2 Schools and Aquifers
+        p
+            | 589 of Maine’s 795 schools are within 3 km of an aquifer. This means that if you are at a school, there is a 74% chance that you are within walking distance of a significant source of groundwater.
+        img.img-responsive.center-block(src='images/SchoolsAndAquifers.png', alt='')
+    br
+    section
+        h2 U.S. Cellular Coverage and Oil Spill Hotspots
+        p
+            | US Cellular offers great coverage in areas where hazardous oil spills occur the most.
+        img.img-responsive.center-block(src='images/OilSpillsAndUSCellularCoverage.png', alt='')
+    br
+    section
+        h2 Cemeteries and Broadband Coverage
+        p
+            | 3875 of Maine's 3929 cemeteries are located exactly within broadband coverage areas (98.63%).
+        img.img-responsive.center-block(src='images/CemeteriesAndBroadband.png', alt='')
+    br
+    section
+        h2 Red Cross Facilities and Bedrock Formation Eras
+        p
+            | In what I can only consider to be a deliberate move, Red Cross has built their facilities in Maine on top of bedrock formed before the Devonian era. This means that if you got into a time machine and went back to the period at which the bedrock was formed beneath any Red Cross facility, you would not find sharks, ferns, trees, insects, or land vertebrates.
+        img.img-responsive.center-block(src='images/RedCrossAndBedrock.jpg', alt='')
+    br
+    section
+        p
+            b Disclaimer:
+            br
+            |  These datasets are in no way scientifically rigorous.
+        p Sources:
+        ul
+            li
+                a(href='http://www.maine.gov/dep/gis/datamaps/') Maine Department of Environmental Protection
+            li
+                a(href='http://www.maine.gov/megis/catalog/') Maine Office of GIS
+            li
+                a(href='https://usm.maine.edu/gis/digital-atlas') University of Southern Maine's Digital Atlas
+            li
+                p ESRI Online Catalog
+
+
+
+
