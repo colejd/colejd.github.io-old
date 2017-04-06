@@ -6,6 +6,7 @@ var browserSync = require("browser-sync").create();
 var pug = require("gulp-pug");
 var gulpIf = require("gulp-if");
 var sitemap = require("gulp-sitemap");
+var minifyJS = require("gulp-minify");
 
 // Pug with configured options
 doPug = function() {
@@ -63,6 +64,7 @@ gulp.task("sass", function() {
 gulp.task("transform", [], function(){
     gulp.src(['./page/**/*'])
         .pipe(gulpIf(/\.pug$/, doPug()))
+        .pipe(gulpIf(/\.js$/, minifyJS())) // Minify JS
         .pipe(gulp.dest('./dist'));
 });
 
