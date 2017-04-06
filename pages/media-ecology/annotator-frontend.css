@@ -198,6 +198,17 @@
     margin: 0px;
     padding: 10px; }
 
+.annotator-debug-controls {
+  position: relative;
+  background-color: rgba(121, 221, 121, 0.3);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .annotator-debug-controls > * {
+    margin: 5px 5px 5px 5px; }
+
 .annotator-vp-post {
   position: absolute;
   top: 0;
@@ -219,7 +230,6 @@
     padding-top: 5px;
     padding-left: 5px;
     padding-right: 5px;
-    padding-bottom: 5px;
     font: menu;
     font-size: 16px; }
   .annotator-vp-post label {
