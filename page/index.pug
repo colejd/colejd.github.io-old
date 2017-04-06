@@ -1,0 +1,99 @@
+extends ../partials/layout.pug 
+
+block dinosaur
+
+    //
+        ~
+            ,
+           /|
+          / |
+         /  /
+        |   |
+       /    |
+       |    \_
+       |      \__
+       \       __\_______
+        \                 \_
+        | /                 \
+        \/                   \
+         |                    |
+         \                   \|
+         |                    \
+         \                     |
+         /\    \_               \
+        / |      \__ (   )       \
+       /  \      / |\\  /       __\____
+       |  ,     |  /\ \ \__    |       \_
+       \_/|\___/   \   \}}}\__|  (@)    )
+        \)\)\)      \_\---\   \|       \ \
+                      \>\>\>   \   /\__o_o)
+                                | /  VVVVV
+                                \ \    \
+                                 \ \MMMMM                  oh man oh jeez
+                                  \______/         _____ /
+                                                  |  O O|
+                                                 /___|_|/\_
+                                            ==( |          |
+                                                 (o)====(o)
+
+append headinfo
+    meta(name='ROBOTS', content='INDEX, FOLLOW')
+    meta(name='description', content="Jonathan Cole's website.")
+    meta(name='keywords', content='portfolio, about, computer, science, programmer, developer')
+    title Jonathan Cole
+
+append before-content
+    canvas#confettiWidget(aria-hidden='true')
+    link(href='/widgets/isItThursday/confettiWidget.min.css', rel='stylesheet')
+    script(defer='', type='text/javascript', src='/widgets/isItThursday/confettiWidget.js')
+
+
+append body
+    button#stopThursdayButton.btn.btn-danger(type='button') Stop Thursday
+
+append content
+    h1 Hi! I'm Jon.
+    img.img-inline.img-responsive(src='resources/images/profile.png', alt='Portrait of Jon')
+    section
+        p.
+            I'm a graduate student and assistant at the University of Maine at Orono 
+            studying Spatial Information Science and Engineering. My current research interests 
+            are in computer vision and augmented reality's potential for helping overcome 
+            difficulties with sensory perception.
+        p.
+            I work at the <a href='http://www.vemilab.org/'> Virtual Environment and Multimodal 
+            Interaction Laboratory</a>, where I write software for virtual reality, augmented reality, 
+            and computer vision in research and interactive contexts. I work a lot with Unity and 
+            OpenCV. Visit the <a href='/about.html'>About Me</a> page to learn more about what I know.
+
+    // Empty paragraph for spacing
+    p(style='margin-bottom: 10px')
+    
+    section
+        h4 Some things I've worked on:
+        ul
+            li
+                p.
+                    <a href='https://github.com/seieibob/OculusEye'>Oculus Eye</a> - 
+                    A hardware and software project to build an open-source and affordable 
+                    augmented reality headset. In its current form, it resembles the Vive's 
+                    Chaperone feature, though this was written before I knew about it. The 
+                    software leverages OpenCV and is written for maximum performance on an 
+                    average computer. The camera assembly costs ~$30 to build.
+            li
+                p.
+                    Virtual Reality Driving Simulator - I was awarded three consecutive 
+                    <a href='https://cugr.umaine.edu/'>Center for Undergraduate Research</a>
+                    grants spanning two years to pursue this work, which sought to study the 
+                    effects of Age-Related Macular Degeneration on driving ability. The work 
+                    involved creating a VR driving simulator, as well as an automated test 
+                    environment using this simulator that evaluates subject driving performance 
+                    with and without simulated eye disease.
+            li
+                p
+                    a(href='/spuriousspatialcorrelations.html') Spurious (Spatial) Correlations
+            li
+                p
+                    a(href='https://play.google.com/store/apps/details?id=com.jon.msf2016app&hl=en') Maine Science Festival 2016 AR App
+
+

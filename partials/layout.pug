@@ -1,0 +1,90 @@
+doctype html
+html
+    block dinosaur
+    head
+        block head
+            // The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+            meta(charset='utf-8')
+            meta(http-equiv='X-UA-Compatible', content='IE=edge')
+            meta(name='viewport', content='width=device-width, initial-scale=1')
+            // Icon info
+            link(rel='apple-touch-icon', href='resources/favicon/apple-icon-180x180.png')
+            link(rel='icon', type='image/png', sizes='192x192', href='resources/favicon/android-icon-192x192.png')
+            link(rel='icon', type='image/png', sizes='96x96', href='resources/favicon/favicon-96x96.png')
+            // Page meta info
+            meta(name='author', content='Jonathan Cole')
+            
+            block headinfo
+
+            // Load JQuery first
+            script(src='/dist/jquery/jquery-3.1.0.js')
+
+            // Load web fonts
+            script(src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js")
+            script.
+                WebFont.load({
+                google: {
+                    families: ['Work Sans:400,500', 'Ubuntu:700', 'Rye']
+                }
+                });
+
+            // Custom styles for this template
+            link(href="/css/style.css", rel="stylesheet")
+
+            // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+            <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+
+        // Custom scripts hook
+        block scripts
+
+    body
+        block body
+            // Include sidebar
+            include sidebar.pug
+
+            block before-content
+
+            main.container.main(role='main')
+                article
+                    block content
+
+            block after-content
+
+            // Bootstrap core
+            script(defer='', src='/dist/bootstrap/js/bootstrap.min.js')
+            script(defer='', src='/dist/bootstrap/js/bootstrap-accessibility.min.js')
+
+            // Page JavaScript
+            script.
+                //Scroll to clicked anchor links
+                var $root = $('html, body');
+                $('a').click(function(){
+                    var href = $.attr(this, 'href');
+                    if(href == null) return;
+                    if(href[0] != "#") return;
+                    $root.animate({
+                        scrollTop: $(href).offset().top
+                    }, 500, function (){
+                        window.location.hash = href;
+                    });
+                    return false;
+                });
+                //Scroll to url anchor
+                $(document).ready(function(){
+                    if($(location.hash).length && location.hash != "#"){ //If the tag actually exists on the page
+                        $('html, body, section').animate({
+                            'scrollTop': $(location.hash).offset().top
+                        }, 500);
+                    }
+                });
+
+
+    foot
+        block footer
+
+        
+
+

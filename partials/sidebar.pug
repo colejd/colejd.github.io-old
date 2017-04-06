@@ -1,0 +1,58 @@
+mixin cell(title, text, icon, href)
+    li
+        a.page-link(title=title, href=href)
+            i(class="fa fa-fw " + icon, aria-hidden="true") 
+            | #{text}
+            
+mixin subcell(text, href)
+    li
+        a.page-link(title=text, href=href) 
+        | #{text}
+
+mixin collapsible(title, icon, target_id, items)
+    li.collapsed(data-toggle='collapse', data-target="#" + target_id)
+        a
+            i(class="fa fa-fw " + icon, aria-hidden="true") 
+            | #{title}
+            span.arrow
+    ul(id=target_id, class="sub-menu collapse")
+        each item in items.length ? items : []
+            +subcell(item[0], item[1])
+
+div
+    // Add skip button for users with screen readers
+    a.sr-only.sr-only-focusable(href='#main') Skip to main content
+    // https://www.codeply.com/go/RmXlEZfi8z
+
+    // Sidebar
+    nav
+        #sidebar.nav-side-menu(role='navigation')
+            .brand
+                a(href='/index.html') Jonathan Cole
+            i.fa.fa-bars.fa-2x.toggle-btn(data-toggle='collapse', data-target='#menu-content')
+            .menu-list
+                ul#menu-content.menu-content.collapse.out
+                    +cell("Home", "Home", "fa-home", "/index.html")
+                    +cell("About Me", "About", "fa-user", "/about.html")
+                    +cell("GitHub", "GitHub", "fa-github-square", "https://www.github.com/seieibob")
+
+                    -
+                        var project_cells = [
+                            ["Media Ecology Project", '/pages/media-ecology/'],
+                            ['Reaction-Diffusion', '/reaction-diffusion.html'],
+                            ['Buoy Data Visualization', '/pages/lobo/'],
+                            ['Spurious (Spatial) Correlations', '/spuriousspatialcorrelations.html'],
+                            ['Reflector', '/pages/reflector/']
+                        ]
+                    +collapsible("Projects", "fa-code", "projects", project_cells)
+
+    // Make each cell of the sidebar clickable to visit its link
+    script.
+        $(".nav-side-menu li").click(function(){
+            //event.preventDefault();
+            var clicked = $(this).find("a").attr("href");
+            if(clicked !== undefined && clicked.length){
+                window.location = clicked;
+            }
+            return true;
+        });
