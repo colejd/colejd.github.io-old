@@ -267,4 +267,20 @@
   .annotator-confirm-button:hover {
     color: #8BC34A; }
 
+.annotator-message-overlay {
+  position: absolute;
+  background-color: rgba(52, 52, 52, 0.95);
+  width: 30%;
+  height: 30%;
+  margin: auto;
+  top: 35%;
+  left: 35%;
+  z-index: 100;
+  pointer-events: none;
+  border-radius: 15px; }
+  .annotator-message-overlay p {
+    color: white;
+    vertical-align: middle;
+    text-align: center; }
+
 /*# sourceMappingURL=annotator-frontend.css.map */
