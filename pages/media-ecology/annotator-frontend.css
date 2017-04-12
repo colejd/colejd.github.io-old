@@ -289,4 +289,7 @@
     text-align: center;
     margin: 15px; }
 
+.annotator-message-overlay-error {
+  background-color: rgba(255, 30, 30, 0.95); }
+
 /*# sourceMappingURL=annotator-frontend.css.map */
