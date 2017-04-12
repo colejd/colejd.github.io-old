@@ -268,23 +268,26 @@
     color: #8BC34A; }
 
 .annotator-message-overlay {
-  position: absolute;
   background-color: rgba(52, 52, 52, 0.95);
+  position: absolute;
   margin: auto;
   top: 0;
   left: 0;
-  z-index: 100;
-  pointer-events: none;
   border-radius: 15px;
   text-align: center;
   display: inline-block;
+  z-index: 100;
+  pointer-events: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
   .annotator-message-overlay p {
-    display: inline-block;
     color: white;
+    font: menu;
+    display: inline-block;
     position: relative;
-    text-align: center; }
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px; }
 
 /*# sourceMappingURL=annotator-frontend.css.map */
