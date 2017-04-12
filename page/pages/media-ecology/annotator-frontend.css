@@ -270,17 +270,21 @@
 .annotator-message-overlay {
   position: absolute;
   background-color: rgba(52, 52, 52, 0.95);
-  width: 30%;
-  height: 30%;
   margin: auto;
-  top: 35%;
-  left: 35%;
+  top: 0;
+  left: 0;
   z-index: 100;
   pointer-events: none;
-  border-radius: 15px; }
+  border-radius: 15px;
+  text-align: center;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
   .annotator-message-overlay p {
+    display: inline-block;
     color: white;
-    vertical-align: middle;
+    position: relative;
     text-align: center; }
 
 /*# sourceMappingURL=annotator-frontend.css.map */
