@@ -15,9 +15,5 @@ html
         script.
             var serverAddress = "http://ec2-52-88-72-190.us-west-2.compute.amazonaws.com:3000";
             var tagsAddress = "https://onomy.org/published/83/json";
-            $("video").first().annotate(serverAddress, tagsAddress);
-
-        p.
-            You'll need to log in to add, remove, or edit annotations.<br>
-            <b>Username:</b> testuser <br>
-            <b>Password:</b> 1234 <br>
+            var apiKey = "a3ab0030-77f9-41b3-b78f-d7405c50b028";
+            $("video").first().annotate(serverAddress, tagsAddress, apiKey);
