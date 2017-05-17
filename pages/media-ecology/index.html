@@ -64,4 +64,5 @@ $(document).ready(function(){
 
 </script><!-- Include Annotator at the bottom of the page so it doesn't block loading--><!-- Import JQueryUI--><script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!-- Annotator Core--><script type="text/javascript" src="annotator-frontend.js"></script><link rel="stylesheet" href="annotator-frontend.css"><script>var serverAddress = "http://ec2-52-88-72-190.us-west-2.compute.amazonaws.com:3000";
 var tagsAddress = "https://onomy.org/published/83/json";
-$("video").first().annotate(serverAddress, tagsAddress);</script></body><foot></foot></html>
+var apiKey = "a3ab0030-77f9-41b3-b78f-d7405c50b028";
+$("video").first().annotate(serverAddress, tagsAddress, apiKey);</script></body><foot></foot></html>
