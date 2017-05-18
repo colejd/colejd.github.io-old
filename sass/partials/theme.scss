@@ -1,3 +1,5 @@
+$content-max-width: 900px;
+
 @keyframes fadeInAnimation {
     from {
         //transform: translate3d(0, 10px, 0);
@@ -14,7 +16,8 @@
     animation-duration: .38s;
     animation-fill-mode: both;
     animation-name: fadeInAnimation;
-    max-width: 768px;
+    max-width: $content-max-width;
+    margin-bottom: 4em;  // Some padding on the bottom for breathing room
 
     h1 {
         //text-align: center;
@@ -64,6 +67,7 @@
         border-width: 1px 0 0 0;
     }
 
+    p.highlight,
     span.highlight {
         font-weight: 700;
         color: $bold_text_color;
