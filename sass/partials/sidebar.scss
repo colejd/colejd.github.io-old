@@ -217,7 +217,8 @@ $navbar-width: 220px;
     }
     .main-content {
         width: calc(100% - #{$navbar-width});
-        float: right;
+        position: absolute;
+        left: #{$navbar-width};
         // img.img-inline.img-responsive {
         //     width: 30% !important;
         // }
