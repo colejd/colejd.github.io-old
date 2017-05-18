@@ -34,24 +34,35 @@ append headinfo
 
 
 append content
-    h1 About Jon
+    h1 About Me
+
     img.img-inline.img-responsive(src='/resources/images/profile_outside.png', style='width: 30%; height: auto;', alt='Portrait of Jon')
+
     section#bio
         p.
-            I'm a software developer and graduate student from Brewer, Maine. I like doing game design and 
-            creative coding in my spare time. Someday, I'd like to present at SIGGRAPH.
+            I'm a software developer and graduate student based in Orono, Maine. I really enjoy
+            creative coding; I've done projects all over the place, from fluid simulation to 
+            articulatory speech synthesis. I like learning new things. Someday, I'd like to 
+            present at SIGBOVIK or SIGGRAPH.
+        p.
+            Currently, I'm working toward my Master's degree in Spatial Information Science
+            and Engineering. My work focuses on the use of augmented reality technology
+            to help people with sensory impairments to navigate.
+
     section#work
         h2 Work
-        p #[b Current:]
+        p.highlight #[b Current:]
         ul.arrow-marks
             li
                 p VR / AR / everything else developer at the #[a(href='http://www.vemilab.org/') VEMILab]
             li
                 p Graduate Assistant, Computer Science Department, University of Maine
-        p #[b Past:]
-        ul
+        p.highlight #[b Past:]
+        ul.arrow-marks
             li
                 p Interactive Kiosk - #[i Sea What Grows Exhibit - Maine Discovery Museum]
+            li
+                p VR Installation - #[i Maine Discovery Museum]
         
     section#education
         h2 Education
