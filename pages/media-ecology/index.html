@@ -17,7 +17,7 @@ Ankylosaur
 --><head><!-- The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags--><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- Icon info--><link rel="apple-touch-icon" href="resources/favicon/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="resources/favicon/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="96x96" href="resources/favicon/favicon-96x96.png"><!-- Page meta info--><meta name="author" content="Jonathan Cole"><meta name="ROBOTS" content="INDEX, FOLLOW"><meta name="description" content="Waldorf - Media Ecology Project"><title>Waldorf - Media Ecology Project</title><!-- Set background color of CSS to prevent white flashing before everything has loaded--><style type="text/css">body {
     background-color: #000000;
 }
-</style><!-- Load JQuery first--><script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script><!-- Load vendor CSS--><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><link href="/dist/bootstrap/css/bootstrap-accessibility.css" rel="stylesheet"><link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"><!-- Bootstrap Core--><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/dist/bootstrap/js/bootstrap-accessibility.min.js"></script><!-- Load web fonts--><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script><script>WebFont.load({
+</style><!-- Load JQuery first--><script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script><!-- Load vendor CSS--><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><link href="/dist/bootstrap/css/bootstrap-accessibility.css" rel="stylesheet"><link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"><!-- Bootstrap Core--><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/dist/bootstrap/js/bootstrap-accessibility.min.js"></script><!-- Load web fonts--><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script><script>WebFont.load({
 google: {
     families: ['Work Sans:400,500', 'Ubuntu:700', 'Rye']
 }
@@ -32,11 +32,11 @@ google: {
         window.location = clicked;
     }
     return true;
-});</script></div><main class="container main-content" role="main"><article><div class="row"><div class="col-md-12"><h1>Waldorf - Media Ecology Project</h1></div><div class="col-md-10"><video width="640" height="480" playsinline><source src="http://sachinchoolur.github.io/lightGallery/static/videos/video2.mp4" type="video/mp4"></video></div><div class="col-md-10"><section id="Main"><p>Waldorf is a system for creating and viewing rich crowd-sourced annotations on video 
+});</script></div><main class="container main-content" role="main"><article><div class="row"><div class="col-md-12"><h1>Waldorf - Media Ecology Project</h1></div><div class="col-md-10"><video width="640" height="480" playsinline><source src="https://sachinchoolur.github.io/lightGallery/static/videos/video2.mp4" type="video/mp4"></video></div><div class="col-md-10"><section id="Main"><p>Waldorf is a system for creating and viewing rich crowd-sourced annotations on video 
 around the Web. I did this work at the <a href='vemilab.org'>VEMILab</a>
 for the <a href='https://sites.dartmouth.edu/mediaecology/'>Media Ecology Project</a>
 at Dartmouth University. This work was sponsored under an 
-<a href='http://www.knightfoundation.org/grants/20102605/'>NEH Grant</a>.</p><p>The source is available on <a href='https://www.github.com/seieibob/Waldorf'>GitHub</a>.</p><p>Please use Chrome on this page for now.
+<a href='https://www.knightfoundation.org/grants/20102605/'>NEH Grant</a>.</p><p>The source is available on <a href='https://www.github.com/seieibob/Waldorf'>GitHub</a>.</p><p>Please use Chrome on this page for now.
 Isolating my own plugin styling from arbitrary page styling is an ongoing effort.
 If my code isn't working perfectly, please have a look at the 
 <a href='./raw.html'>emergency test page</a>. Please do not look directly at the bugs.
@@ -63,7 +63,7 @@ $(document).ready(function(){
     }
 });
 
-</script><!-- Include Annotator at the bottom of the page so it doesn't block loading--><!-- Import JQueryUI--><script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!-- Annotator Core--><script type="text/javascript" src="annotator-frontend.js"></script><link rel="stylesheet" href="annotator-frontend.css"><script>var serverAddress = "http://ec2-52-88-72-190.us-west-2.compute.amazonaws.com:3000";
+</script><!-- Include Annotator at the bottom of the page so it doesn't block loading--><!-- Import JQueryUI--><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!-- Annotator Core--><script type="text/javascript" src="annotator-frontend.js"></script><link rel="stylesheet" href="annotator-frontend.css"><script>var serverAddress = "https://ec2-52-88-72-190.us-west-2.compute.amazonaws.com:3000";
 var tagsAddress = "https://onomy.org/published/83/json";
 var apiKey = "a3ab0030-77f9-41b3-b78f-d7405c50b028";
 $("video").first().annotate(serverAddress, tagsAddress, apiKey);</script></body><foot></foot></html>
