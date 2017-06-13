@@ -48,7 +48,8 @@
   opacity: 0;
   background-color: #e2e2e2;
   cursor: default;
-  vertical-align: middle; }
+  vertical-align: middle;
+  z-index: 20; }
   .video-player-toolbar p {
     display: inline;
     vertical-align: middle;
@@ -143,10 +144,8 @@
     opacity: 1.0; }
 
 .annotator-container {
-  position: relative;
-  height: auto;
-  display: inline-block;
-  max-width: 100%; }
+  height: auto !important;
+  display: inline-block !important; }
 
 .annotator-video-overlay {
   position: absolute;
@@ -298,5 +297,35 @@
 
 .annotator-message-overlay-error {
   background-color: rgba(255, 30, 30, 0.95); }
+
+.session-modal label, .session-modal input {
+  display: block; }
+.session-modal input.text {
+  margin-bottom: 12px;
+  width: 95%;
+  padding: .4em; }
+.session-modal fieldset {
+  padding: 0;
+  border: 0;
+  margin-top: 25px; }
+.session-modal h1 {
+  font-size: 1.2em;
+  margin: .6em 0; }
+.session-modal div#users-contain {
+  width: 350px;
+  margin: 20px 0; }
+  .session-modal div#users-contain table {
+    margin: 1em 0;
+    border-collapse: collapse;
+    width: 100%; }
+    .session-modal div#users-contain table td, .session-modal div#users-contain table th {
+      border: 1px solid #eee;
+      padding: .6em 10px;
+      text-align: left; }
+.session-modal .ui-dialog .ui-state-error {
+  padding: .3em; }
+.session-modal .validateTips {
+  border: 1px solid transparent;
+  padding: 0.3em; }
 
 /*# sourceMappingURL=annotator-frontend.css.map */
