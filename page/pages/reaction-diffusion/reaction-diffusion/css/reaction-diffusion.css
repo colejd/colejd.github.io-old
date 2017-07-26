@@ -36,6 +36,7 @@
 /* Style dat.GUI container */
 .dg {
     text-shadow: none !important;
+    z-index: 100000;
 }
 
 .dg.main .close-button {
