@@ -1,0 +1,32 @@
+/* Style dat.GUI container */
+.dg {
+    text-shadow: none !important;
+}
+
+.dg.main .close-button {
+    background-color: #3194e8;
+    color:white;
+}
+
+.dg.main .close-button:hover {
+    background-color: #44abda;
+}
+
+.dg li.title {
+    color: white;
+    background: #3194e8 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;
+}
+
+.dg li.title:hover {
+    background-color: #44abda;
+}
+
+.dg .c .slider-fg {
+    background: #3194e8;
+}
+
+.dg .c input[type=text] {
+    font-family: monospace;
+    color: white !important;
+    height: 100%;
+}
