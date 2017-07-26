@@ -1,0 +1,88 @@
+extends /partials/layout.pug 
+
+block dinosaur
+
+    //
+        ~
+           .-~~^-.
+         .'  O    \
+        (_____,    \
+         `----.     \
+               \     \
+                \     \
+                 \     `.             _ _
+                  \       ~- _ _ - ~       ~ - .
+                   \                              ~-.
+                    \                                `.
+                     \    /               /       \    \
+                      `. |         }     |         }    \
+                        `|        /      |        /       \
+                         |       /       |       /          \
+                         |      /`- _ _ _|      /.- ~ ^-.     \
+                         |     /         |     /          `.    \
+                         |     |         |     |             -.   ` . _ _ _ _ _ _
+                         |_____|         |_____|                ~ . _ _ _ _ _ _ _ >
+
+
+append headinfo
+    meta(name='ROBOTS', content='INDEX, FOLLOW')
+    meta(name='description', content='Dust')
+    title Dust
+
+append scripts
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.4/dat.gui.min.js')
+    script(src='./dist/js/dust.min.js')
+
+append head
+    style.
+        div#dust-container {
+            width: 512px;
+            height: 512px;
+            margin-top: 1.0em;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 3.0em;
+        }
+
+
+
+
+append content
+    .row
+        h1 Dust
+        .col-md-10
+            p(style='text-align:center')
+                strong Epilepsy Warning:
+                |  Some settings can cause bright flashing.
+            // Required: main container into which dust will render.
+            #dust-container
+
+
+        .col-md-10
+            section#Main
+                p.
+                    Dust is a WebGL-based simulator / renderer for various Cellular Automata. The simulation 
+                    is largely based on <a href="https://sanojian.github.io/cellauto/">CellAuto</a>, and many 
+                    of the automata came from there (see the repo for this project on <a href="https://github.com/seieibob/Dust">GitHub</a> 
+                    for more information). My goals with this are to add interactivity and graphical features 
+                    as time goes on.
+                p. 
+                    Planned features:
+                ul.arrow-marks
+                    li 
+                        p Brushes
+                    li 
+                        p Creatures (automata with lifetimes and behaviors)
+                    li 
+                        p <a href="http://thomasdiewald.com/blog/?p=2949">Global Line Radiosity</a>
+                    li 
+                        p More automata
+
+
+append body
+    script(src='js/dust.min.js')
+    link(rel='stylesheet', type='text/css', href='dat-gui.css')
+
