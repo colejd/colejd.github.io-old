@@ -14,3 +14,7 @@ gulp preview
 ```
 
 Publish to GitHub with `gulp deploy`.
+
+
+## Credit
+Sidebar modified from code at https://bootsnipp.com/snippets/featured/responsive-navigation-menu
