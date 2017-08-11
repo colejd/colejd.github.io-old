@@ -64,7 +64,8 @@ gulp.task("sass", function() {
 gulp.task("transform", [], function(){
     gulp.src(['./page/**/*'])
         .pipe(gulpIf(/\.pug$/, doPug()))
-        .pipe(gulpIf(/\.js$/, minifyJS())) // Minify JS
+        // Minify JS (turned off; modules should be responsible for minifying themselves)
+        //.pipe(gulpIf(/\.js$/, minifyJS()))
         .pipe(gulp.dest('./dist'));
 });
 

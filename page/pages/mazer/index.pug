@@ -1,0 +1,73 @@
+extends /partials/layout.pug 
+
+block dinosaur
+
+    //
+        ~
+            Pterodactyl
+                                       <\              _
+                                        \\          _/{
+                                 _       \\       _-   -_
+                               /{        / `\   _-     - -_
+                             _~  =      ( @  \ -        -  -_
+                           _- -   ~-_   \( =\ \           -  -_
+                         _~  -       ~_ | 1 :\ \      _-~-_ -  -_
+                       _-   -          ~  |V: \ \  _-~     ~-_-  -_
+                    _-~   -            /  | :  \ \            ~-_- -_
+                 _-~    -   _.._      {   | : _-``               ~- _-_
+              _-~   -__..--~    ~-_  {   : \:}
+            =~__.--~~              ~-_\  :  /
+                                       \ : /__
+                                       /`Y'--\\
+                                     <+       \\
+                                      \\      WWW
+            
+
+append headinfo
+    meta(name='ROBOTS', content='INDEX, FOLLOW')
+    meta(name='description', content='Mazer')
+    title Mazer
+
+append head
+    style.
+        #mazer-container {
+            max-width: 512px;
+            max-height: 512px;
+            width: 80vw;
+            height: 80vw;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5em;
+            margin-bottom: 1.5em;
+            position: relative;
+        }
+
+        #mazer-container > canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }  
+
+
+append content
+    .row
+        h1 Mazer
+        .col-md-10
+            #mazer-container
+
+        .col-md-10
+            section#Main
+                p.
+                    This is a little program that generates and solves various types
+                    of mazes. I will be revisiting this in the future when I have more 
+                    time, with more maze shapes and generation algorithms.
+                p.
+                    While developing this, I found myself in need of a better UI
+                    system, so I made <a href="https://github.com/colejd/guify">Guify</a>, which you see here. 
+                    You can get it on <a href="https://www.npmjs.com/package/guify">npm</a>
+                    if you want to use it in your own projects!
+
+
+append body
+    script(src='mazer.min.js')
+
