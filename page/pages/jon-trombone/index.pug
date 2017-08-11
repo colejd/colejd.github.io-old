@@ -36,28 +36,38 @@ append scripts
 
 append head
     style.
-        div#jon-trombone-container {
-            width: 512px;
-            height: 512px;
-            margin-top: 3.0em;
+        #jon-trombone-container {
+            max-width: 512px;
+            max-height: 512px;
+            width: 80vw;
+            height: 80vw;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            margin-top: 5em;
+            margin-bottom: 1.5em;
+            position: relative;
         }
+
+        #jon-trombone-container > canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }  
 
 
 
 
 append content
     .row
-        h1 Jon Trombone
         .col-md-10
             // Required: main container into which jon-trombone will render.
             #jon-trombone-container
+            hr
 
 
         .col-md-10
             section#Main
+                h1 Jon Trombone
                 p.
                     This is what happens when I have too much free time. This is a 3D scan of me hooked
                     up to a modified version of <a href="https://dood.al/pinktrombone/">Pink Trombone</a>, 

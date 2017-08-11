@@ -84,21 +84,26 @@ append headinfo
     title Dust
 
 append scripts
-
     script(src='https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.4/dat.gui.min.js')
 
 append head
     style.
-        div#dust-container {
-            width: 100%;
-            height: auto;
-            margin-top: 1.0em;
+        #dust-container {
+            max-width: 512px;
+            max-height: 512px;
+            width: 80vw;
+            height: 80vw;
             display: block;
-            margin-left: 0.0em;
-            margin-right: 1.0em;
-            margin-bottom: 3.0em;
-            cursor: default; /* Prevent caret from appearing when click-dragging */
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5em;
+            margin-bottom: 1.5em;
+            position: relative;
+        }
+
+        #dust-container > canvas {
+            width: 100% !important;
+            height: 100% !important;
         }
 
 
@@ -106,17 +111,20 @@ append head
 
 append content
     .row
-        h1 Dust
         .col-md-10
+            object
+                // Required: main container into which dust will render.
+                #dust-container
             p(style='text-align:center')
                 strong Epilepsy Warning:
                 |  Some settings can cause bright flashing.
-            // Required: main container into which dust will render.
-            #dust-container
+
+            hr
 
 
         .col-md-10
             section#Main
+            h1 Dust
                 p.
                     Dust is a WebGL-based simulator / renderer for various Cellular Automata. The simulation 
                     is largely based on <a href="https://sanojian.github.io/cellauto/">CellAuto</a>, and many 
@@ -138,5 +146,4 @@ append content
 
 append body
     script(src='js/dust.min.js')
-    link(rel='stylesheet', type='text/css', href='dat-gui.css')
 
