@@ -36,6 +36,7 @@ gulp.task("preview", ["build"], function() {
 
     gulp.watch("./sass/**/*.scss", ["sass"]);
     gulp.watch("./page/**/*.pug", ["pug"]);
+    gulp.watch("./page/**/*.js", ["transform"])
     gulp.watch("./partials/**/*.pug", ["pug"]);
 
     // Reload upon changes to generated html or css
