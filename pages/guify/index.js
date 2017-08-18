@@ -55,6 +55,7 @@ var gui = new guify.GUI({
     barMode: getParameterByName('barmode') || 'above', // none, overlay, above, offset
     opacity: 0.95,
     root: container,
+    open: true
 });
 
 // Populate the GUI
