@@ -129,6 +129,7 @@ $navbar-width: 220px;
         background-color: $subcell-highlighted-color;
     }
 
+    // Arrows before submenu items
     ul .sub-menu li:before,
     li .sub-menu li:before {
         font-family: FontAwesome;

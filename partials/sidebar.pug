@@ -10,7 +10,7 @@ mixin subcell(text, href)
         | #{text}
 
 mixin collapsible(title, icon, target_id, items)
-    li.collapsed(data-toggle='collapse', data-target="#" + target_id)
+    li.collapsed(data-toggle="collapse", data-target="#" + target_id)
         a
             i(class="fa fa-fw " + icon, aria-hidden="true") 
             | #{title}
@@ -21,15 +21,15 @@ mixin collapsible(title, icon, target_id, items)
 
 div
     // Add skip button for users with screen readers
-    a.sr-only.sr-only-focusable(href='#main') Skip to main content
+    a.sr-only.sr-only-focusable(href="#main") Skip to main content
     // https://www.codeply.com/go/RmXlEZfi8z
 
     // Sidebar
     nav
-        #sidebar.nav-side-menu(role='navigation')
+        #sidebar.nav-side-menu(role="navigation")
             .brand
-                a(href='/index.html') Jonathan Cole
-            i.fa.fa-bars.fa-2x.toggle-btn(data-toggle='collapse', data-target='#menu-content')
+                a(href="/index.html") Jonathan Cole
+            i.fa.fa-bars.fa-2x.toggle-btn(data-toggle="collapse", data-target="#menu-content")
             .menu-list
                 ul#menu-content.menu-content.collapse.out
                     +cell("Home", "Home", "fa-home", "/index.html")
@@ -38,14 +38,15 @@ div
 
                     -
                         var project_cells = [
-                            ["Media Ecology Project", '/pages/media-ecology/'],
-                            ['Reaction-Diffusion', '/pages/reaction-diffusion/'],
-                            ["Jon Trombone", '/pages/jon-trombone/'],
-                            ["Dust", '/pages/dust/'],
-                            ["Mazer", '/pages/mazer/'],
-                            ['Buoy Data Visualization', '/pages/lobo/'],
-                            ['Spurious (Spatial) Correlations', '/pages/spurious-spatial-correlations/'],
-                            ['Reflector', '/pages/reflector/']
+                            ["Media Ecology Project", "/pages/media-ecology/"],
+                            ["Guify", "/pages/guify/"],
+                            ["Reaction-Diffusion", "/pages/reaction-diffusion/"],
+                            ["Jon Trombone", "/pages/jon-trombone/"],
+                            ["Dust", "/pages/dust/"],
+                            ["Mazer", "/pages/mazer/"],
+                            ["Buoy Data Visualization", "/pages/lobo/"],
+                            ["Spurious (Spatial) Correlations", "/pages/spurious-spatial-correlations/"],
+                            ["Reflector", "/pages/reflector/"]
                         ]
                     +collapsible("Projects", "fa-code", "projects", project_cells)
 
