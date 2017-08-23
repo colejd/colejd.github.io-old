@@ -36,10 +36,25 @@ append headinfo
 
     title Reaction-Diffusion Simulator
 
+append head
+    style.
+        #reaction-diffusion-container {
+            max-width: 512px;
+            max-height: 512px;
+            width: 80vw;
+            height: 80vw;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5em;
+            margin-bottom: 1.5em;
+            position: relative;
+        }
+
 
 append content
     object
-        #reaction-diffusion-container(aria-hidden='true')
+        #reaction-diffusion-container
     p(style='text-align:center')
         strong Epilepsy Warning:
         |  Some settings can cause bright flashing.
@@ -79,9 +94,6 @@ append content
 
 
 append body
-    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.js')
-    script(src='reaction-diffusion/lib/stats.min.js')
-    script(src='reaction-diffusion/lib/dat.gui.min.js')
-    link(rel='stylesheet', type='text/css', href='reaction-diffusion/css/reaction-diffusion.css')
-    script(async='', type='text/javascript', src='reaction-diffusion/js/ReactionDiffusion.js')
+    script(src='https://unpkg.com/guify')
+    script(src='dist/reaction-diffusion.min.js')
 

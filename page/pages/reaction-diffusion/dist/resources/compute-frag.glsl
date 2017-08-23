@@ -119,7 +119,7 @@ vec4 react(vec4 pixel, vec4 convolution, float da, float db) {
 
     float deltaB = (db * convolution.g) //Diffusion term
                     + reactionRate //Reaction rate
-                    - (((kill + feed) - (c * biasStrength)) * b); //Diminishment term, scaled so b >= 0, must not be greater than replenishment
+                    - ((feed + kill) * b); //Diminishment term, scaled so b >= 0, must not be greater than replenishment
                     //- ((kill + feed) * b);
 
     float finalB = b + (deltaB * timestep);
@@ -150,7 +150,7 @@ void main() {
 
     //// Draw a circle around interactPos
     float newB = 0.0;
-    float droppedValue = 1.0; //Value placed within circle
+    float droppedValue = 0.9; //Value placed within circle
     float dist = distance(v_uv / texelSize, interactPos);
 
     float distBranch = when_lt(dist, dropperSize);
@@ -168,10 +168,10 @@ void main() {
     //// Apply the final color
     gl_FragColor = final * doPass;
 
-    //// Destroy any chemicals near the border (oh, my)
-    if(gl_FragCoord.x == 0.5 || gl_FragCoord.y == 0.5 || gl_FragCoord.x == resolution.x - 0.5 || gl_FragCoord.y == resolution.y - 0.5){
-        gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
-    }
+    //// Destroy any chemicals near the border
+    // if(gl_FragCoord.x == 0.5 || gl_FragCoord.y == 0.5 || gl_FragCoord.x == resolution.x - 0.5 || gl_FragCoord.y == resolution.y - 0.5){
+    //     gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+    // }
 
 
     //// Optionally do test stuff
