@@ -43,7 +43,7 @@ append head
             display: block;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 5em;
+            margin-top: 3em;
             margin-bottom: 1.5em;
             position: relative;
         }
@@ -57,19 +57,17 @@ append head
     script(src='https://unpkg.com/guify')
 
 
-
-
+append title
+    | Jon-Trombone
+    
 append content
     .row
         .col-md-10
             // Required: main container into which jon-trombone will render.
             #jon-trombone-container
-            hr
-
 
         .col-md-10
             section#Main
-                h1 Jon Trombone
                 p.
                     This is what happens when I have too much free time. This is a 3D scan of me hooked
                     up to a modified version of <a href="https://dood.al/pinktrombone/">Pink Trombone</a>, 

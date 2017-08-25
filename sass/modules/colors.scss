@@ -3,30 +3,30 @@ $linkedin: #0073b2;
 $gmail: #d64937;
 
 // Dark theme
-$primary_color: #3194e8;
-$secondary_color: #ebe88a;//#e86231;
-
-$theme_background_color: #151515;
-$theme_container_color: transparent;
-
-$primary_text_color: #d4d4d4;
-$bold_text_color: #e86231;
-$link_color: $secondary_color;
-
-$code_snippet_background_color: #505050;
-$code_snippet_text_color: #ff8900;
-
-//Light theme
 // $primary_color: #3194e8;
 // $secondary_color: #ebe88a;//#e86231;
 
-// $theme_background_color: #fff;
+// $theme_background_color: #151515;
 // $theme_container_color: transparent;
 
-// $primary_text_color: #000;
+// $primary_text_color: #d4d4d4;
 // $bold_text_color: #e86231;
-// $link_color: #2b56e5;
+// $link_color: $secondary_color;
 
 // $code_snippet_background_color: #505050;
 // $code_snippet_text_color: #ff8900;
+
+//Light theme
+$primary_color: #3194e8;
+$secondary_color: #ebe88a;//#e86231;
+
+$theme_background_color: #F8F8F8;
+$theme_container_color: transparent;
+
+$primary_text_color: #000;
+$bold_text_color: #e86231;
+$link_color: #2b56e5;
+
+$code_snippet_background_color: #505050;
+$code_snippet_text_color: #ff8900;
 

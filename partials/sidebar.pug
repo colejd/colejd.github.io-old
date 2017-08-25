@@ -1,37 +1,34 @@
 mixin cell(title, text, icon, href)
     li
-        a.page-link(title=title, href=href)
-            i(class="fa fa-fw " + icon, aria-hidden="true") 
-            | #{text}
-            
-mixin subcell(text, href)
-    li
-        a.page-link(title=text, href=href) 
-        | #{text}
+        a(title=title, href=href)
+            div.cell-icon-container
+                span(class=`fa fa-fw ${icon}`, aria-hidden="true") 
+            div.cell-text #{text}
 
 mixin collapsible(title, icon, target_id, items)
-    li.collapsed(data-toggle="collapse", data-target="#" + target_id)
-        a
-            i(class="fa fa-fw " + icon, aria-hidden="true") 
-            | #{title}
-            span.arrow
+    li.collapsed(data-toggle="collapse", data-target=`#${target_id}`)
+        a(href="#")
+            div.cell-icon-container
+                span(class=`fa fa-fw ${icon}`, aria-hidden="true")
+            div.cell-text #{title}
+            span.arrow(aria-hidden="true")
     ul(id=target_id, class="sub-menu collapse")
         each item in items.length ? items : []
-            +subcell(item[0], item[1])
+            li
+                a(title=item[0], href=item[1]) #{item[0]}
 
 div
-    // Add skip button for users with screen readers
-    a.sr-only.sr-only-focusable(href="#main") Skip to main content
-    // https://www.codeply.com/go/RmXlEZfi8z
-
-    // Sidebar
     nav
-        #sidebar.nav-side-menu(role="navigation")
+        #sidebar(role="navigation")
+            // Add skip button for users with screen readers
+            a.sr-only.sr-only-focusable(href="#body-container") Skip to main content
+            // https://www.codeply.com/go/RmXlEZfi8z
+
             .brand
                 a(href="/index.html") Jonathan Cole
-            i.fa.fa-bars.fa-2x.toggle-btn(data-toggle="collapse", data-target="#menu-content")
-            .menu-list
-                ul#menu-content.menu-content.collapse.out
+            div.fa.fa-bars.fa-2x.toggle-btn(role="button", tabindex="0", data-toggle="collapse", data-target="#sidebar-cells")
+            #sidebar-cells.collapse.out
+                ul
                     +cell("Home", "Home", "fa-home", "/index.html")
                     +cell("About Me", "About", "fa-user", "/about.html")
                     +cell("GitHub", "GitHub", "fa-github-square", "https://www.github.com/colejd")
@@ -43,20 +40,20 @@ div
                             ["Reaction-Diffusion", "/pages/reaction-diffusion/"],
                             ["Jon Trombone", "/pages/jon-trombone/"],
                             ["Dust", "/pages/dust/"],
-                            ["Mazer", "/pages/mazer/"],
+                            ["Mazer", "/pages/mazer/"]
+                        ]
+                    +collapsible("Projects", "fa-code", "projects-section", project_cells)
+
+                    -
+                        var unity_cells = [
                             ["Buoy Data Visualization", "/pages/lobo/"],
-                            ["Spurious (Spatial) Correlations", "/pages/spurious-spatial-correlations/"],
                             ["Reflector", "/pages/reflector/"]
                         ]
-                    +collapsible("Projects", "fa-code", "projects", project_cells)
+                    +collapsible("Unity", "fa-gamepad", "unity-section", unity_cells)
 
-    // Make each cell of the sidebar clickable to visit its link
-    script.
-        $(".nav-side-menu li").click(function(){
-            //event.preventDefault();
-            var clicked = $(this).find("a").attr("href");
-            if(clicked !== undefined && clicked.length){
-                window.location = clicked;
-            }
-            return true;
-        });
+                    -
+                        var article_cells = [
+                            ["Spurious (Spatial) Correlations", "/pages/spurious-spatial-correlations/"]
+                        ]
+                    +collapsible("Articles", "fa-file-text-o", "articles-section", article_cells)
+                    

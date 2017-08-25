@@ -42,17 +42,39 @@ append headinfo
     meta(name='keywords', content='portfolio, about, computer, science, programmer, developer')
     title Jonathan Cole
 
-append before-content
-    canvas#confettiWidget(aria-hidden='true')
+prepend body
+    canvas#confetti-container(aria-hidden='true')
     link(href='/widgets/isItThursday/confettiWidget.min.css', rel='stylesheet')
     script(defer='', type='text/javascript', src='/widgets/isItThursday/confettiWidget.js')
 
-append body
-    button#stopThursdayButton.btn.btn-danger(type='button') Stop Thursday
+append title
+    | Hi! I'm Jon.
+append title-header-hook
+    button#thursday-button.btn.btn-danger(type='button') It's Thursday
 
 append content
-    h1 Hi! I'm Jon.
-    img.img-inline.img-responsive(src='resources/images/profile.png', alt='Portrait of Jon')
+    // Inline style for profile image
+    style.
+        /* Sidebar enabled style (desktop) */
+        @media(min-width: 481px) {
+            .about-image {
+                width: 250px; 
+                height: auto;
+            }
+        }
+        /* Sidebar disabled style (mobile) */
+        @media(max-width: 480px) {
+            .about-image {
+                width: 70%; 
+                max-width: 250px !important;
+                height: auto;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+        }
+
+    img.about-image.img-inline.img-responsive(src='resources/images/profile.png', alt='Portrait of Jon')
     section
         p.
             I'm a graduate student and assistant at the University of Maine at Orono 
@@ -63,13 +85,13 @@ append content
             I work at the <a href='http://www.vemilab.org/'> Virtual Environment and Multimodal 
             Interaction Laboratory</a>, where I write software for virtual reality, augmented reality, 
             and computer vision in research and interactive contexts. I work a lot with Unity and 
-            OpenCV. Visit the <a href='/about.html'>About Me</a> page to learn more about what I know.
+            OpenCV. Visit <a href='/about.html'>About Me</a> to learn more about what I know.
 
     // Empty paragraph for spacing
     p(style='margin-bottom: 10px')
     
     section
-        h4 Some things I've worked on:
+        h4 Some things I've made:
         ul.arrow-marks
             li
                 p.

@@ -57,7 +57,7 @@ append head
             display: block;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 5em;
+            margin-top: 3em;
             margin-bottom: 1.5em;
             position: relative;
         }
@@ -77,7 +77,9 @@ append head
             font-family: monospace;
         }
         
-
+append title
+    | Guify
+    
 append content
     .row
         .col-md-10
@@ -95,11 +97,9 @@ append content
                 <br>
                 Menu Bar: <a href="javascript:void(0);" onclick="onBarmodeChange('above');">Enable</a> - 
                 <a href="javascript:void(0);" onclick="onBarmodeChange('none');">Disable</a>
-            hr
 
         .col-md-10
             section#Main
-                h1 Guify
                 p.
                     Guify is a GUI system you can use in your JavaScript projects to modify variables and trigger actions.
                     I initially used <a href="https://workshop.chromeexperiments.com/examples/gui">dat.GUI</a>

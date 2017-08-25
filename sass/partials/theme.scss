@@ -1,4 +1,5 @@
 $content-max-width: 900px;
+$title-header-height: 50px;
 
 @keyframes fadeInAnimation {
     from {
@@ -11,32 +12,52 @@ $content-max-width: 900px;
     }
 }
 
+body {
+    color: black;
+}
+
+.title-header {
+    width: 100%;
+    min-height: $title-header-height;
+    background-color: #262626;
+    color: #fff;
+    font-family: $title-font;
+    font-size: 35px;
+    line-height: $title-header-height;
+    padding: 0 0.75em;
+    //text-align: right;
+
+    font-weight: lighter;
+
+    @include mobile {
+        text-align: center;
+        padding: 0;
+    }
+    
+}
+
 .main-content {
+    width: 100%;
     padding: 0 2em 0 2em;
     animation-duration: .38s;
     animation-fill-mode: both;
     animation-name: fadeInAnimation;
     max-width: $content-max-width;
     margin-bottom: 4em;  // Some padding on the bottom for breathing room
+    margin-left: 0;
 
-    h1 {
-        //text-align: center;
-        font-family: $title-font;
-        font-size: 50px;
-        //line-height: 65px;
-        font-weight: 700;
-        color: $primary_color;
-        margin-top:0px;
+    .row {
+        margin: 0;
     }
 
-    h2 {
-        font-weight: 600;
-        font-size: 24px;
+    h1 {
+        font-weight: 300;
+        font-size: 30px;
         font-family: $header-font;
         color: $primary_color;
     }
 
-    h3, h4, h5, h6 {
+    h2, h3, h4, h5, h6 {
         font-family: $header-font;
         color: $primary_color;
     }
@@ -92,13 +113,17 @@ $content-max-width: 900px;
         }
     }
 
-    .img-inline {
-        float:left;
-        margin: 0em 2em 1em 0;
-        border-radius: 12px;
-        border: solid 2px $primary_color;
-    //    width: 50%;
-    //    height: 50%;
+    img {
+        max-width: 80%;
+        
+        &.img-inline {
+            float:left;
+            margin: 0em 2em 1em 0;
+            //border-radius: 12px;
+            //border: solid 2px $primary_color;
+        //    width: 50%;
+        //    height: 50%;
+        }
     }
 
     a {
@@ -125,19 +150,26 @@ body {
     width: 100%;
 }
 
-#stopThursdayButton {
-    position:fixed;
-    bottom:10px;
-    left:10px;
+#thursday-button {
+    $button-height: 30px;
+
+    position: absolute;
+    top: ($title-header-height - $button-height) / 2;
+    right: ($title-header-height - $button-height) / 2;
+    height: $button-height;
+    line-height: $button-height;
+    padding: 0 1rem; // Remove padding for Chrome
+
     visibility: hidden;
-    
-    -webkit-box-shadow: none;
     box-shadow: none;
-    -webkit-transition: none;
     transition: none;
     background-image: none;
     filter: none;
     border: 0 none;
+
+    @include mobile {
+        right: 40px + 10px + 10px;
+    }
 }
 
 canvas.fullscreenWidget {
@@ -151,7 +183,7 @@ canvas.fullscreenWidget {
 }
 
 // Sidebar is collapsed
-@media (max-width: 767px) {
+@include mobile {
     .main-content {
         h1{
             text-align: center;
@@ -169,6 +201,6 @@ canvas.fullscreenWidget {
 }
 
 // Sidebar is enabled
-@media (min-width: 767px) {
+@include desktop {
 
 }

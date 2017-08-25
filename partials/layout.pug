@@ -28,7 +28,7 @@ html
             // Set background color of CSS to prevent white flashing before everything has loaded
             style(type='text/css').
                 body {
-                    background-color: #000000;
+                    background-color: #fff;
                 }
 
             // Load JQuery first
@@ -50,7 +50,7 @@ html
             script.
                 WebFont.load({
                 google: {
-                    families: ['Work Sans:400,500', 'Ubuntu:700', 'Rye']
+                    families: ['Lato:300,400,500', 'Work+Sans:500,700', 'Rye']
                 }
                 });
 
@@ -67,17 +67,23 @@ html
         block scripts
 
     body
+            
         block body
             // Include sidebar
             include sidebar.pug
 
-            block before-content
+            div#body-container
+                div.title-header
+                    block title
+                    block title-header-hook
 
-            main.container.main-content(role='main')
-                article
-                    block content
+                block before-content
 
-            block after-content
+                main.container.main-content(role='main')
+                    article
+                        block content
+
+                block after-content
 
             // Page JavaScript
             script.
@@ -87,6 +93,7 @@ html
                     var href = $.attr(this, 'href');
                     if(href == null) return;
                     if(href[0] != "#") return;
+                    if(href.length <= 1) return;
                     $root.animate({
                         scrollTop: $(href).offset().top
                     }, 500, function (){

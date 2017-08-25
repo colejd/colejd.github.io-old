@@ -7,6 +7,7 @@ var pug = require("gulp-pug");
 var gulpIf = require("gulp-if");
 var sitemap = require("gulp-sitemap");
 var minifyJS = require("gulp-minify");
+var autoprefixer = require("gulp-autoprefixer");
 
 // Pug with configured options
 doPug = function() {
@@ -55,6 +56,10 @@ gulp.task("pug", function() {
 gulp.task("sass", function() {
     gulp.src("./sass/style.scss")
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
         .pipe(minifyCSS()) // Optional minify step
         .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream());
