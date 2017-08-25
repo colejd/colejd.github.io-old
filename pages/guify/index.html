@@ -38,11 +38,11 @@ This page was auto-generated with Pug. See https://github.com/seieibob/seieibob.
 
 
 --><head><!-- The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags--><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- Icon info--><link rel="apple-touch-icon" href="resources/favicon/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="resources/favicon/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="96x96" href="resources/favicon/favicon-96x96.png"><!-- Page meta info--><meta name="author" content="Jonathan Cole"><meta name="ROBOTS" content="INDEX, FOLLOW"><meta name="description" content="Guify"><title>Guify</title><!-- Set background color of CSS to prevent white flashing before everything has loaded--><style type="text/css">body {
-    background-color: #000000;
+    background-color: #fff;
 }
 </style><!-- Load JQuery first--><script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script><!-- Load vendor CSS--><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><link href="/dist/bootstrap/css/bootstrap-accessibility.css" rel="stylesheet"><link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"><!-- Bootstrap Core--><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/dist/bootstrap/js/bootstrap-accessibility.min.js"></script><!-- Load web fonts--><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script><script>WebFont.load({
 google: {
-    families: ['Work Sans:400,500', 'Ubuntu:700', 'Rye']
+    families: ['Lato:300,400,500', 'Work+Sans:500,700', 'Rye']
 }
 });
 </script><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries--><!--[if lt IE 9]>
@@ -56,7 +56,7 @@ google: {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5em;
+    margin-top: 3em;
     margin-bottom: 1.5em;
     position: relative;
 }
@@ -75,21 +75,14 @@ google: {
 #content-text {
     font-family: monospace;
 }
-
-</style><!-- Custom scripts hook--></head><body><!-- Include sidebar--><div><!-- Add skip button for users with screen readers--><a class="sr-only sr-only-focusable" href="#main">Skip to main content</a><!-- https://www.codeply.com/go/RmXlEZfi8z--><!-- Sidebar--><nav><div class="nav-side-menu" id="sidebar" role="navigation"><div class="brand"><a href="/index.html">Jonathan Cole</a></div><i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i><div class="menu-list"><ul class="menu-content collapse out" id="menu-content"><li><a class="page-link" title="Home" href="/index.html"><i class="fa fa-fw fa-home" aria-hidden="true"> </i>Home</a></li><li><a class="page-link" title="About Me" href="/about.html"><i class="fa fa-fw fa-user" aria-hidden="true"> </i>About</a></li><li><a class="page-link" title="GitHub" href="https://www.github.com/colejd"><i class="fa fa-fw fa-github-square" aria-hidden="true"> </i>GitHub</a></li><li class="collapsed" data-toggle="collapse" data-target="#projects"><a><i class="fa fa-fw fa-code" aria-hidden="true"> </i>Projects<span class="arrow"></span></a></li><ul class="sub-menu collapse" id="projects"><li><a class="page-link" title="Media Ecology Project" href="/pages/media-ecology/"> </a>Media Ecology Project</li><li><a class="page-link" title="Guify" href="/pages/guify/"> </a>Guify</li><li><a class="page-link" title="Reaction-Diffusion" href="/pages/reaction-diffusion/"> </a>Reaction-Diffusion</li><li><a class="page-link" title="Jon Trombone" href="/pages/jon-trombone/"> </a>Jon Trombone</li><li><a class="page-link" title="Dust" href="/pages/dust/"> </a>Dust</li><li><a class="page-link" title="Mazer" href="/pages/mazer/"> </a>Mazer</li><li><a class="page-link" title="Buoy Data Visualization" href="/pages/lobo/"> </a>Buoy Data Visualization</li><li><a class="page-link" title="Spurious (Spatial) Correlations" href="/pages/spurious-spatial-correlations/"> </a>Spurious (Spatial) Correlations</li><li><a class="page-link" title="Reflector" href="/pages/reflector/"> </a>Reflector</li></ul></ul></div></div></nav><!-- Make each cell of the sidebar clickable to visit its link--><script>$(".nav-side-menu li").click(function(){
-    //event.preventDefault();
-    var clicked = $(this).find("a").attr("href");
-    if(clicked !== undefined && clicked.length){
-        window.location = clicked;
-    }
-    return true;
-});</script></div><main class="container main-content" role="main"><article><div class="row"><div class="col-md-10"><object><div id="guify-container"><div id="guify-container-content"><div id="content-text">[content]</div></div></div></object><br><p style="text-align: center;">Themes: 
+</style><!-- Custom scripts hook--></head><body><!-- Include sidebar--><div><nav><div id="sidebar" role="navigation"><!-- Add skip button for users with screen readers--><a class="sr-only sr-only-focusable" href="#body-container">Skip to main content</a><!-- https://www.codeply.com/go/RmXlEZfi8z--><div class="brand"><a href="/index.html">Jonathan Cole</a></div><div class="fa fa-bars fa-2x toggle-btn" role="button" tabindex="0" data-toggle="collapse" data-target="#sidebar-cells"></div><div class="collapse out" id="sidebar-cells"><ul><li><a title="Home" href="/index.html"><div class="cell-icon-container"><span class="fa fa-fw fa-home" aria-hidden="true"> </span></div><div class="cell-text">Home</div></a></li><li><a title="About Me" href="/about.html"><div class="cell-icon-container"><span class="fa fa-fw fa-user" aria-hidden="true"> </span></div><div class="cell-text">About</div></a></li><li><a title="GitHub" href="https://www.github.com/colejd"><div class="cell-icon-container"><span class="fa fa-fw fa-github-square" aria-hidden="true"> </span></div><div class="cell-text">GitHub</div></a></li><li class="collapsed" data-toggle="collapse" data-target="#projects-section"><a href="#"><div class="cell-icon-container"><span class="fa fa-fw fa-code" aria-hidden="true"></span></div><div class="cell-text">Projects</div><span class="arrow" aria-hidden="true"></span></a></li><ul class="sub-menu collapse" id="projects-section"><li><a title="Media Ecology Project" href="/pages/media-ecology/">Media Ecology Project</a></li><li><a title="Guify" href="/pages/guify/">Guify</a></li><li><a title="Reaction-Diffusion" href="/pages/reaction-diffusion/">Reaction-Diffusion</a></li><li><a title="Jon Trombone" href="/pages/jon-trombone/">Jon Trombone</a></li><li><a title="Dust" href="/pages/dust/">Dust</a></li><li><a title="Mazer" href="/pages/mazer/">Mazer</a></li></ul><li class="collapsed" data-toggle="collapse" data-target="#unity-section"><a href="#"><div class="cell-icon-container"><span class="fa fa-fw fa-gamepad" aria-hidden="true"></span></div><div class="cell-text">Unity</div><span class="arrow" aria-hidden="true"></span></a></li><ul class="sub-menu collapse" id="unity-section"><li><a title="Buoy Data Visualization" href="/pages/lobo/">Buoy Data Visualization</a></li><li><a title="Reflector" href="/pages/reflector/">Reflector</a></li></ul><li class="collapsed" data-toggle="collapse" data-target="#articles-section"><a href="#"><div class="cell-icon-container"><span class="fa fa-fw fa-file-text-o" aria-hidden="true"></span></div><div class="cell-text">Articles</div><span class="arrow" aria-hidden="true"></span></a></li><ul class="sub-menu collapse" id="articles-section"><li><a title="Spurious (Spatial) Correlations" href="/pages/spurious-spatial-correlations/">Spurious (Spatial) Correlations</a></li></ul></ul></div></div></nav></div><div id="body-container"><div class="title-header">Guify</div><main class="container main-content" role="main"><article><div class="row"><div class="col-md-10"><object><div id="guify-container"><div id="guify-container-content"><div id="content-text">[content]</div></div></div></object><br><p style="text-align: center;">Themes: 
 <a href="javascript:void(0);" onclick="onThemeChange('light');">Light</a> - 
 <a href="javascript:void(0);" onclick="onThemeChange('dark');">Dark</a> - 
 <a href="javascript:void(0);" onclick="onThemeChange('yorha');">YoRHa</a>
 <br>
 Menu Bar: <a href="javascript:void(0);" onclick="onBarmodeChange('above');">Enable</a> - 
-<a href="javascript:void(0);" onclick="onBarmodeChange('none');">Disable</a></p><hr></div><div class="col-md-10"><section id="Main"><h1>Guify</h1><p>Guify is a GUI system you can use in your JavaScript projects to modify variables and trigger actions.
+<a href="javascript:void(0);" onclick="onBarmodeChange('none');">Disable</a>
+</p></div><div class="col-md-10"><section id="Main"><p>Guify is a GUI system you can use in your JavaScript projects to modify variables and trigger actions.
 I initially used <a href="https://workshop.chromeexperiments.com/examples/gui">dat.GUI</a>
 while working on the other JavaScript projects on this website, but I was frustrated
 with its limitations and wanted something better.</p><p>Guify is my solution. It's easy to use on mobile, easy to customize visually and functionally,
@@ -97,12 +90,13 @@ and it's built with accessibility in mind.</p><p>You can find more information o
 and you can get the latest version yourself as an <a href="https://www.npmjs.com/package/guify">NPM package</a> 
 or for browser embedding through a CDN at <a href="https://unpkg.com/guify">unpkg.com/guify</a>.
 
-</p></section></div></div></article></main><!-- Page JavaScript--><script>//Scroll to clicked anchor links
+</p></section></div></div></article></main></div><!-- Page JavaScript--><script>//Scroll to clicked anchor links
 var $root = $('html, body');
 $('a').click(function(){
     var href = $.attr(this, 'href');
     if(href == null) return;
     if(href[0] != "#") return;
+    if(href.length <= 1) return;
     $root.animate({
         scrollTop: $(href).offset().top
     }, 500, function (){
