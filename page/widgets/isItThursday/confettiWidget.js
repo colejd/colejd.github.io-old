@@ -451,12 +451,8 @@ function StartThursday() {
     }
 
     confettiInstance.start();
+    audio.play();
 
-    //Load looping audio
-    audio = new Audio('/resources/audio/mariachi.ogg');
-    audio.volume = 0.1;
-    audio.loop = true;
-    audio.autoplay = true;
     //audio.addEventListener('ended', function () {
     //    this.currentTime = 0;
     //    this.play();
@@ -522,6 +518,11 @@ function Init() {
     if(simulated) document.getElementById('thursday-button').innerHTML = "Simulate Thursday";
 
     if(thursday === true) {
+        //Load looping audio
+        audio = new Audio('/resources/audio/mariachi.ogg');
+        audio.volume = 0.1;
+        audio.loop = true;
+
         document.getElementById('thursday-button').style.visibility = "visible";
     }
 

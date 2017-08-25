@@ -78,13 +78,10 @@ block dinosaur
                                   /  ###\          /  ###\       /  ##\     
         
 
-append headinfo
+append meta
     meta(name='ROBOTS', content='INDEX, FOLLOW')
     meta(name='description', content='Dust')
-    title Dust
-
-append scripts
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js')
+    title Dust  
 
 append head
     style.
@@ -103,6 +100,8 @@ append head
 
     // Get latest version of Guify off of NPM
     script(src='https://unpkg.com/guify')
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js')
 
 append title
     | Dust

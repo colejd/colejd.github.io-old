@@ -36,23 +36,11 @@ block dinosaur
                                             ==( |          |
                                                  (o)====(o)
 
-append headinfo
+append meta
     meta(name='ROBOTS', content='INDEX, FOLLOW')
     meta(name='description', content="Jonathan Cole's website.")
     meta(name='keywords', content='portfolio, about, computer, science, programmer, developer')
     title Jonathan Cole
-
-append head
-    script.
-        WebFont.load({
-            google: {
-                families: ['Rye']
-            }
-        });
-
-append after-content
-    canvas#confetti-container(aria-hidden='true')
-    script(defer='', type='text/javascript', src='/widgets/isItThursday/confettiWidget.js')
 
 append title
     | Hi! I'm Jon.
@@ -124,4 +112,12 @@ append content
                 p
                     a(href='https://play.google.com/store/apps/details?id=com.jon.msf2016app&hl=en') Maine Science Festival 2016 AR App
 
-
+append body
+    script.
+        WebFont.load({
+            google: {
+                families: ['Rye']
+            }
+        });
+    canvas#confetti-container(aria-hidden='true')
+    script(defer='', type='text/javascript', src='/widgets/isItThursday/confettiWidget.js')

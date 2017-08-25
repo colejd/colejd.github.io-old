@@ -24,14 +24,10 @@ block dinosaur
                          |_____|         |_____|                ~ . _ _ _ _ _ _ _ >
 
 
-append headinfo
+append meta
     meta(name='ROBOTS', content='INDEX, FOLLOW')
     meta(name='description', content='Jon Trombone')
     title Jon Trombone
-
-append scripts
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js')
-    script(src='dependencies/OrbitControls.js')
 
 append head
     style.
@@ -55,6 +51,9 @@ append head
 
     // Get latest version of Guify off of NPM
     script(src='https://unpkg.com/guify')
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js')
+    script(src='dependencies/OrbitControls.js')
 
 
 append title

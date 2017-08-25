@@ -8,114 +8,97 @@ html
         Website by Jonathan Cole
         This page was auto-generated with Pug. See https://github.com/seieibob/seieibob.github.io/tree/dev
 
+    //- Insertion point for dinosaur ASCII
     block dinosaur
     
     head
+        //- Import sitewide head info
+        include head.pug
+
+        //- Hook for individual page meta info
+        block meta
+
+        // Set background color of CSS to prevent white flashing before everything has loaded
+        style(type='text/css').
+            body {
+                background-color: #fff;
+            }
+
+        // Load web fonts
+        script(src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js")
+        script.
+            WebFont.load({
+            google: {
+                families: ['Lato:300,400,500', 'Work+Sans:500,700']
+            }
+            });
+
+        // Load JQuery first
+        script(src='https://code.jquery.com/jquery-3.2.1.min.js', 
+            integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', 
+            crossorigin='anonymous')
+        
+        // Load vendor CSS
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet")
+        link(href="/dist/bootstrap/css/bootstrap-accessibility.css", rel="stylesheet")
+        link(href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css", rel="stylesheet")
+
+        // Bootstrap Core
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+        script(src='/dist/bootstrap/js/bootstrap-accessibility.min.js')
+
+        // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        // Custom styles for this template
+        link(href="/css/style.css", rel="stylesheet")
+
+        // Custom head hook
         block head
-            // The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags
-            meta(charset='utf-8')
-            meta(http-equiv='X-UA-Compatible', content='IE=edge')
-            meta(name='viewport', content='width=device-width, initial-scale=1')
-            // Icon info
-            link(rel='apple-touch-icon', href='resources/favicon/apple-icon-180x180.png')
-            link(rel='icon', type='image/png', sizes='192x192', href='resources/favicon/android-icon-192x192.png')
-            link(rel='icon', type='image/png', sizes='96x96', href='resources/favicon/favicon-96x96.png')
-            // Page meta info
-            meta(name='author', content='Jonathan Cole')
-            
-            block headinfo
 
-            // Set background color of CSS to prevent white flashing before everything has loaded
-            style(type='text/css').
-                body {
-                    background-color: #fff;
-                }
-
-            // Load barba.js
-            <script src="barba.min.js" type="text/javascript"></script>
-
-            // Load web fonts
-            script(src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js")
-            script.
-                WebFont.load({
-                google: {
-                    families: ['Lato:300,400,500', 'Work+Sans:500,700']
-                }
-                });
-
-            // Load JQuery first
-            script(src='https://code.jquery.com/jquery-3.2.1.min.js', 
-                integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', 
-                crossorigin='anonymous')
-            
-            // Load vendor CSS
-            link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet")
-            link(href="/dist/bootstrap/css/bootstrap-accessibility.css", rel="stylesheet")
-            link(href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css", rel="stylesheet")
-
-            // Bootstrap Core
-            script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-            script(src='/dist/bootstrap/js/bootstrap-accessibility.min.js')
-
-            // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
-            <!--[if lt IE 9]>
-                <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-            <![endif]-->
-
-            // Custom styles for this template
-            link(href="/css/style.css", rel="stylesheet")
-
-        // Custom scripts hook
-        block scripts
-
-    body
-            
+    body 
         block body
-            // Include sidebar
-            include sidebar.pug
 
-            #barba-wrapper
-                #barba-container
-                    div#body-container
-                        div.title-header
-                            block title
-                            block title-header-hook
+        //- Include sidebar
+        include sidebar.pug
 
-                        block before-content
+        //- All page content should go in here
+        div#body-container
+            div.title-header
+                block title
+                block title-header-hook
 
-                        main.container.main-content(role='main')
-                            article
-                                block content
+            main.container.main-content(role='main')
+                article
+                    block content
 
-                        block after-content
-
-            // Page JavaScript
-            script.
-                //Scroll to clicked anchor links
-                var $root = $('html, body');
-                $('a').click(function(){
-                    var href = $.attr(this, 'href');
-                    if(href == null) return;
-                    if(href[0] != "#") return;
-                    if(href.length <= 1) return;
-                    $root.animate({
-                        scrollTop: $(href).offset().top
-                    }, 500, function (){
-                        window.location.hash = href;
-                    });
-                    return false;
+        script.
+            // Scroll to url anchor
+            $(document).ready(function(){
+                if($(location.hash).length && location.hash != "#"){ // If the tag actually exists on the page
+                    $('html, body, section').animate({
+                        'scrollTop': $(location.hash).offset().top
+                    }, 500);
+                }
+            });
+            
+            //Scroll to clicked anchor links
+            var $root = $('html, body');
+            $('a').click(function(){
+                var href = $.attr(this, 'href');
+                if(href == null) return;
+                if(href[0] != "#") return;
+                if(href.length <= 1) return;
+                $root.animate({
+                    scrollTop: $(href).offset().top
+                }, 500, function (){
+                    window.location.hash = href;
                 });
-                //Scroll to url anchor
-                $(document).ready(function(){
-                    Barba.Pjax.start();
-                    Barba.Prefetch.init();
-                    if($(location.hash).length && location.hash != "#"){ //If the tag actually exists on the page
-                        $('html, body, section').animate({
-                            'scrollTop': $(location.hash).offset().top
-                        }, 500);
-                    }
-                });
+                return false;
+            });
 
 
     foot
