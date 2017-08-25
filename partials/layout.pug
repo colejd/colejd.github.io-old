@@ -31,6 +31,15 @@ html
                     background-color: #fff;
                 }
 
+            // Load web fonts
+            script(src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js")
+            script.
+                WebFont.load({
+                google: {
+                    families: ['Lato:300,400,500', 'Work+Sans:500,700', 'Rye']
+                }
+                });
+
             // Load JQuery first
             script(src='https://code.jquery.com/jquery-3.2.1.min.js', 
                 integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', 
@@ -44,15 +53,6 @@ html
             // Bootstrap Core
             script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
             script(src='/dist/bootstrap/js/bootstrap-accessibility.min.js')
-
-            // Load web fonts
-            script(src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js")
-            script.
-                WebFont.load({
-                google: {
-                    families: ['Lato:300,400,500', 'Work+Sans:500,700', 'Rye']
-                }
-                });
 
             // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
             <!--[if lt IE 9]>
