@@ -7,7 +7,7 @@ mixin cell(title, text, icon, href)
 
 mixin collapsible(title, icon, target_id, items)
     li.collapsed(data-toggle="collapse", data-target=`#${target_id}`)
-        a(href="#")
+        a(href="javascript:void(0);")
             div.cell-icon-container
                 span(class=`fa fa-fw ${icon}`, aria-hidden="true")
             div.cell-text #{title}
