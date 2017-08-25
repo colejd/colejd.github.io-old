@@ -42,9 +42,16 @@ append headinfo
     meta(name='keywords', content='portfolio, about, computer, science, programmer, developer')
     title Jonathan Cole
 
-prepend body
+append head
+    script.
+        WebFont.load({
+            google: {
+                families: ['Rye']
+            }
+        });
+
+append after-content
     canvas#confetti-container(aria-hidden='true')
-    link(href='/widgets/isItThursday/confettiWidget.min.css', rel='stylesheet')
     script(defer='', type='text/javascript', src='/widgets/isItThursday/confettiWidget.js')
 
 append title
