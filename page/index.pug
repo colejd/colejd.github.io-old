@@ -113,11 +113,47 @@ append content
                     a(href='https://play.google.com/store/apps/details?id=com.jon.msf2016app&hl=en') Maine Science Festival 2016 AR App
 
 append body
+    script(src="/widgets/IsItThursday/IsItThursday.min.js")
     script.
-        WebFont.load({
-            google: {
-                families: ['Rye']
+
+        function Init() {
+            var message = "It's Thursday"
+            var simulateThursday = false;
+            var running = false;
+            var isThursday = (new Date().getDay() == 4);
+
+            if (window.location.hash && window.location.hash.toLowerCase() == "#thursday") {
+                message += " (Simulated)";
+                isThursday = true;
             }
-        });
-    canvas#confetti-container(aria-hidden='true')
-    script(defer='', type='text/javascript', src='/widgets/isItThursday/confettiWidget.js')
+
+            if(isThursday) {
+                console.log("It's thursday");
+                // Load widget assets
+                var thursday = new this.IsItThursday(message);
+                thursday.Init();
+
+                document.getElementById('thursday-button').style.visibility = "visible";
+                document.getElementById('thursday-button').addEventListener('click', function() {
+                    if (running === false) {
+                        running = true;
+                        thursday.Start();
+                        document.getElementById('thursday-button').innerHTML = 'Stop Thursday';
+                    } else {
+                        running = false;
+                        thursday.Stop();
+                        document.getElementById('thursday-button').innerHTML = "It's Thursday";
+                        
+                    }
+                });
+            }
+
+        }
+
+        if (document.readyState === 'complete') {
+            Init();
+        } else {
+            window.onload = function() {
+                Init();
+            }
+        }
