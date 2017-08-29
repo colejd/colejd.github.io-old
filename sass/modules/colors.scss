@@ -16,17 +16,20 @@ $gmail: #d64937;
 // $code_snippet_background_color: #505050;
 // $code_snippet_text_color: #ff8900;
 
+// #5472B4
+// #DD7676
+
 //Light theme
 $primary_color: #3194e8;
-$secondary_color: #ebe88a;//#e86231;
+$secondary_color: #5472B4; // #e86231;
 
 $theme_background_color: #F8F8F8;
 $theme_container_color: transparent;
 
-$primary_text_color: #000;
-$bold_text_color: #e86231;
-$link_color: #2b56e5;
+$primary_text_color: black;
+$bold_text_color: $secondary_color;
+$link_color: $primary_text_color;
 
 $code_snippet_background_color: #505050;
-$code_snippet_text_color: #ff8900;
+$code_snippet_text_color: #e7771a;
 
