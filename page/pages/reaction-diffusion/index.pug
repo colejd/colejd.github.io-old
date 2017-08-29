@@ -61,27 +61,25 @@ append content
     object
         #reaction-diffusion-container
     p(style='text-align:center')
-        strong Epilepsy Warning:
+        strong(style="color: red;") Epilepsy Warning:
         |  Some settings can cause bright flashing.
 
     section
-        h1 Reaction-Diffusion Simulator
+        p.
+            This project is a GPGPU simulation of a #[a(href='http://mrob.com/pub/comp/xmorphia/') Gray-Scott] Reaction-Diffusion system. 
+            Reaction-Diffusion systems have many interesting properties, and can be used to model various biological, chemical, 
+            and ecological processes.
+            
+            Here, many of the presets you can try develop in a way similar to the formation of 
+            skin pigments in spotted or striped animals.
+            #[a(href="https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system") More reading here].
         p
-            | Made with 
-            a(href='http://threejs.org', target='_blank') three.js
-            | .
+            a(href='https://github.com/colejd/Reaction-Diffusion-ThreeJS') The code for this project is available on my GitHub page.
         p
-            | This utilizes the 
-            a(href='http://mrob.com/pub/comp/xmorphia/') Gray-Scott
-            |  model to visualize the reaction and diffusion of two chemicals in in 2D. You can mess with the options in the upper-right.
-            br
-            a(href='https://github.com/seieibob/Reaction-Diffusion-ThreeJS') See the code on GitHub.
-            br
-            br
-            | Note: This only works on iOS with half the usual precision, so some of these configurations will not behave in the same way as they do on a desktop platform.
+            em Note: This will run at half precision on iOS due to browser limitations, so some of the presets may not behave as intended.
     
     // Disqus Stuff
-    #disqus_thread
+    #disqus_thread(style="margin-top: 2em")
     script.
         var disqus_config = function () {
         this.page.url = "http://www.joncole.me/reaction-diffusion.html";  // Replace PAGE_URL with your page's canonical URL variable

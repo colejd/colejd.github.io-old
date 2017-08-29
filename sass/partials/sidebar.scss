@@ -30,7 +30,7 @@ $cell-border-color: #B4B4B4;
 
     //border-right: 1px solid black;
 
-    @include mobile {
+    @include tablet {
         position: relative;
         width: 100%;
     }
@@ -38,7 +38,7 @@ $cell-border-color: #B4B4B4;
     .toggle-btn {
         display: none;
 
-        @include mobile {
+        @include tablet {
             display: block;
             cursor: pointer;
             position: absolute;
@@ -63,7 +63,7 @@ $cell-border-color: #B4B4B4;
         font-size: 14px;
         font-family: $title-font;
 
-        @include mobile {
+        @include tablet {
             text-align: left;
             font-size: 22px;
             padding-left: 20px;
@@ -78,7 +78,7 @@ $cell-border-color: #B4B4B4;
 
     #sidebar-cells {
         $desktop-cell-height: 35px;
-        $mobile-cell-height: 45px;
+        $tablet-cell-height: 45px;
 
         @include desktop {
             display: block;
@@ -98,10 +98,10 @@ $cell-border-color: #B4B4B4;
             height: $desktop-cell-height;
             line-height: $desktop-cell-height;
 
-            @include mobile {
+            @include tablet {
                 font-size: 16px;
-                line-height: $mobile-cell-height;
-                height: $mobile-cell-height;
+                line-height: $tablet-cell-height;
+                height: $tablet-cell-height;
             }
 
             .cell-icon-container {
@@ -123,7 +123,7 @@ $cell-border-color: #B4B4B4;
                     }
                 }
 
-                @include mobile {
+                @include tablet {
                     font-size: 18px;
                     .span {
                         line-height: 18px;
@@ -147,8 +147,8 @@ $cell-border-color: #B4B4B4;
                 font-weight: 200;
                 height: $desktop-cell-height;
 
-                @include mobile {
-                    height: $mobile-cell-height;
+                @include tablet {
+                    height: $tablet-cell-height;
                 }
 
                 div {
@@ -199,8 +199,8 @@ $cell-border-color: #B4B4B4;
                 border-color: $primary-color;
             }
 
-            @include mobile {
-                line-height: $mobile-cell-height;
+            @include tablet {
+                line-height: $tablet-cell-height;
             }
         }
 
@@ -228,17 +228,5 @@ $cell-border-color: #B4B4B4;
         width: calc(100% - #{$navbar-width});
         position: absolute;
         left: #{$navbar-width};
-    }
-}
-
-@include mobile {
-    .main-content {
-        margin-top: 0.5em;
-    }
-}
-
-@include desktop {
-    .main-content {
-        margin-top: 2em;
     }
 }

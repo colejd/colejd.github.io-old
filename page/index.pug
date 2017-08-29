@@ -68,48 +68,54 @@ append content
             }
         }
 
-    img.about-image.img-inline.img-responsive(src='resources/images/profile.png', alt='Portrait of Jon')
-    section
-        p.
-            I'm a graduate student and assistant at the University of Maine at Orono 
-            studying Spatial Information Science and Engineering. My current research interests 
-            are in computer vision and augmented reality's potential for helping overcome 
-            difficulties with sensory perception.
-        p.
-            I work at the <a href='http://www.vemilab.org/'> Virtual Environment and Multimodal 
-            Interaction Laboratory</a>, where I write software for virtual reality, augmented reality, 
-            and computer vision in research and interactive contexts. I work a lot with Unity and 
-            OpenCV. Visit <a href='/about.html'>About Me</a> to learn more about what I know.
+    .row
+        img.about-image.img-inline.img-responsive(src='resources/images/profile.png', alt='Portrait of Jon')
+        section#intro
+            p.
+                I'm a graduate student and assistant at the University of Maine at Orono 
+                studying Spatial Information Science and Engineering. My current research interests 
+                are in computer vision and augmented reality's potential for helping overcome 
+                difficulties with sensory perception.
+            p.
+                I work at the <a href='http://www.vemilab.org/'> Virtual Environment and Multimodal 
+                Interaction Laboratory</a>, where I write software for virtual reality, augmented reality, 
+                and computer vision in research and interactive contexts. I work a lot with Unity and 
+                OpenCV. Visit <a href='/about.html'>About Me</a> to learn more about what I know.
 
     // Empty paragraph for spacing
-    p(style='margin-bottom: 10px')
+    //- p(style='margin-bottom: 10px')
     
-    section
-        h1 Some things I've made:
-        ul.arrow-marks
-            li
-                p.
-                    <a href='https://github.com/seieibob/OculusEye'>Oculus Eye</a> - 
-                    A hardware and software project to build an open-source and affordable 
-                    augmented reality headset. In its current form, it resembles the Vive's 
-                    Chaperone feature, though this was written before I knew about it. The 
-                    software leverages OpenCV and is written for maximum performance on an 
-                    average computer. The camera assembly costs ~$30 to build.
-            li
-                p.
-                    Virtual Reality Driving Simulator - I was awarded three consecutive 
-                    <a href='https://cugr.umaine.edu/'>Center for Undergraduate Research</a>
-                    grants spanning two years to pursue this work, which sought to study the 
-                    effects of Age-Related Macular Degeneration on driving ability. The work 
-                    involved creating a VR driving simulator, as well as an automated test 
-                    environment using this simulator that evaluates subject driving performance 
-                    with and without simulated eye disease.
-            li
-                p
-                    a(href='/pages/spurious-spatial-correlations') Spurious (Spatial) Correlations
-            li
-                p
-                    a(href='https://play.google.com/store/apps/details?id=com.jon.msf2016app&hl=en') Maine Science Festival 2016 AR App
+    .row
+        section#misc-projects
+            h1 Some things I've worked on:
+            ul.arrow-marks
+                li
+                    p.
+                        <a href='https://github.com/colejd/Kino'>Kino</a> - My graduate thesis project.
+                        A hardware and software project that provides an easy-to-use platform for creating
+                        and testing various augmented reality / computer vision techniques for use in an 
+                        experimental setting.
+                li
+                    p.
+                        Virtual Reality Driving Simulator - I was awarded three consecutive 
+                        <a href='https://cugr.umaine.edu/'>Center for Undergraduate Research</a>
+                        grants spanning two years to pursue this work, which sought to study the 
+                        effects of Age-Related Macular Degeneration on driving ability. The work 
+                        involved creating a VR driving simulator, as well as an automated test 
+                        environment using this simulator that evaluates subject driving performance 
+                        with and without simulated eye disease.
+                li
+                    p.
+                        Many JavaScript projects (see the sidebar!)
+                li 
+                    p.
+                        Installations at the Children's Discovery Museum in Bangor, Maine
+                li
+                    p
+                        a(href='https://marketplace.visualstudio.com/items?itemName=colejd.vscode-language-csjs') CSJS Syntax Highlighter for Visual Studio Code
+                li
+                    p
+                        a(href='https://play.google.com/store/apps/details?id=com.jon.msf2016app&hl=en') Maine Science Festival 2016 AR App
 
 append body
     script(src="/widgets/IsItThursday/IsItThursday.min.js")

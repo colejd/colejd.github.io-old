@@ -52,23 +52,85 @@ append content
                 height: auto;
                 margin-left: auto !important;
                 margin-right: auto !important;
+                margin-bottom: 2em !important;
                 float: none !important;
             }
         }
         
     .row
+        img.about-image.img-inline.img-responsive(src='/resources/images/profile_outside.png', alt='Portrait of Jon')
+    
         section#bio
-            img.about-image.img-inline.img-responsive(src='/resources/images/profile_outside.png', alt='Portrait of Jon')
             p.
-                I'm a software developer and graduate student based in Orono, Maine. I really enjoy
+                I'm a software developer and graduate student based in Orono, Maine. I enjoy
                 creative coding; I've done projects all over the place, from fluid simulation to 
-                articulatory speech synthesis. I like learning new things. Someday, I'd like to 
-                present at SIGBOVIK or SIGGRAPH.
+                articulatory speech synthesis to cellular automata. I like learning new things. 
+                Someday, I'd like to present at SIGBOVIK or SIGGRAPH.
             p.
                 Currently, I'm working toward my Master's degree in Spatial Information Science
                 and Engineering. My work focuses on the use of augmented reality technology
-                to help people with sensory impairments to navigate.
+                to help people with age-related visual impairments with spatial navigation.
+            p.
+                Most of my work is open source and available at my 
+                #[a(href='https://www.github.com/colejd') GitHub page].
 
+    
+    section#skills
+        h1 Skills
+        p.
+            I've worked with a variety of languages and tools during my time at the VEMILab, 
+            and have worked extensively with Unity. Much of my time has been spent making 
+            various VR hardware communicate properly with Unity and other platforms. My 
+            academic work includes VR experiment design for human trials. I'm effective 
+            both independently and in a team as well as remotely, and have worked in teams 
+            using Scrum and Kanban methodologies.
+        p.
+            Don't see the skills you want? I'm a very fast learner. Give me a few weeks and
+            I'll be ready to go.
+        ul.arrow-marks
+            li
+                p
+                    span.highlight Languages:
+                    |  C#, Python, JavaScript, Java, C++, Swift, GLSL, SQL
+            li
+                p
+                    span.highlight Platforms:
+                    |  Unity, Git, iOS, OpenFrameworks, Cinder
+            li
+                p
+                    span.highlight Frameworks:
+                    |  Node, OpenCV, OpenGL
+            li
+                p
+                    span.highlight Domains:
+                    |  Virtual Reality, Augmented Reality, Graphics Programming, iOS Development, Front-End Web Development
+
+
+    section#work
+        h1 Employment
+        p.highlight 
+            b Current:
+        ul.arrow-marks
+            li
+                p VR / AR / Web / iOS / everything else developer at the #[a(href='http://www.vemilab.org/') Virtual Environment and Multimodal Interaction Laboratory]
+            li
+                p Graduate Assistant, Computer Science Department, University of Maine
+        p.highlight 
+            b Past:
+        ul.arrow-marks
+            li
+                p Interactive Kiosk - #[i Sea What Grows Exhibit - Maine Discovery Museum]
+            li
+                p VR Installation - #[i Maine Discovery Museum]
+
+    section#education
+        h1 Education
+        ul.arrow-marks
+            li
+                p #[b B.S. Computer Science] - #[i Spring 2015, University of Maine]
+            li
+                p #[b M.S. Spatial Information Science and Engineering] - #[i October 2017 (expected), University of Maine]
+        
     section#contact
         h1 Contact
         p
@@ -97,56 +159,3 @@ append content
             | //-->
             | //]]>
             | </script>
-
-    section#work
-        h1 Work
-        p.highlight #[b Current:]
-        ul.arrow-marks
-            li
-                p VR / AR / everything else developer at the #[a(href='http://www.vemilab.org/') VEMILab]
-            li
-                p Graduate Assistant, Computer Science Department, University of Maine
-        p.highlight #[b Past:]
-        ul.arrow-marks
-            li
-                p Interactive Kiosk - #[i Sea What Grows Exhibit - Maine Discovery Museum]
-            li
-                p VR Installation - #[i Maine Discovery Museum]
-        
-    section#education
-        h1 Education
-        ul.arrow-marks
-            li
-                p #[b B.S. Computer Science] - #[i Spring 2015, University of Maine]
-            li
-                p #[b M.S. Spatial Information Science and Engineering] - #[i Summer 2017 (expected), University of Maine]
-    section#skills
-        h1 Skills
-        p.
-            I've worked with a variety of languages and tools during my time at the VEMILab, 
-            and have worked extensively with Unity. Much of my time has been spent making 
-            various VR hardware communicate properly with Unity and other platforms. My 
-            academic work includes VR experiment design for human trials. I'm effective 
-            both independently and in a team, and have worked in teams using Scrum and 
-            Kanban methodologies.
-        ul.arrow-marks
-            li
-                p
-                    span.highlight Languages:
-                    |  C#, Python, JavaScript, Java, C++, Swift, GLSL, SQL
-            li
-                p
-                    span.highlight Platforms:
-                    |  Unity, Git, iOS, OpenFrameworks, Cinder
-            li
-                p
-                    span.highlight Frameworks:
-                    |  Node, OpenCV, OpenGL
-            li
-                p
-                    span.highlight Domains:
-                    |  Virtual Reality, Augmented Reality, Graphics Programming, iOS Development, Front-End Web Development
-        p.
-            You can see a sample of my public work at my 
-            #[a(href='https://www.github.com/seieibob') GitHub page].
-        

@@ -29,7 +29,7 @@ body {
 
     font-weight: lighter;
 
-    @include mobile {
+    @include tablet {
         text-align: center;
         padding: 0;
     }
@@ -39,6 +39,7 @@ body {
 .main-content {
     width: 100%;
     padding: 0 2em 0 2em;
+    padding-top: 2em;
     animation-duration: .38s;
     animation-fill-mode: both;
     animation-name: fadeInAnimation;
@@ -117,12 +118,8 @@ body {
         max-width: 80%;
         
         &.img-inline {
-            float:left;
+            float: left;
             margin: 0em 2em 1em 0;
-            //border-radius: 12px;
-            //border: solid 2px $primary_color;
-        //    width: 50%;
-        //    height: 50%;
         }
     }
 
@@ -142,8 +139,6 @@ body {
 
 body {
     background: $theme_background_color;
-/*    background-image: url(/resources/Images/dark_embroidery.png);*/
-/*    background-repeat: repeat;*/
     margin: 0;
     padding: 0;
     height: 100%;
@@ -167,7 +162,7 @@ body {
     filter: none;
     border: 0 none;
 
-    @include mobile {
+    @include tablet {
         right: 40px + 10px + 10px;
     }
 }
@@ -183,8 +178,9 @@ body {
 }
 
 // Sidebar is collapsed
-@include mobile {
+@include tablet {
     .main-content {
+
         h1{
             text-align: center;
         }
@@ -192,8 +188,6 @@ body {
         .img-inline {
             float:none;
             margin:auto;
-            margin-bottom: 1em;
-            margin-top: 1em;
         }
 
     }
