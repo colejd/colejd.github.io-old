@@ -28,33 +28,40 @@ append meta
 
 append head
     link(rel='stylesheet', href='TemplateData/style.css')
-    script(src='TemplateData/UnityProgress.js')
+    script(src="TemplateData/UnityProgress.js")
+    script(src="Build/UnityLoader.js")
 
 append title
-    | Reflector Test
+    | Reflector
 
 append content
-    .logo
-    .fullscreen
-        img(src='TemplateData/fullscreen.png', width='38', height='38', alt='Fullscreen', title='Fullscreen', onclick='SetFullscreen(1);')
-    canvas#canvas.emscripten(oncontextmenu='event.preventDefault()', height='640px', width='960px')
-    section
-        p
-            | This is a quick project in Unity to help me explore a problem for Google's Foobar challenge (Bringing a Gun to Guard Fight). If you stumble across this and you're doing the challenge, I hope this helps you out! Note that this isn't anything resembling a solution, but just a way of exploring the math of the thing. If you're not here for this reason, please note that this is deliberately abstract to preserve the secrecy of the challenge's problems.
-        p
-            | There's not much in the way of functionality here; mouse over any intersection on the grid to see information about the path of the laser. You can toggle collision for the laser on both the player and the guard. You can click to place a "breadcrumb" on any spot to help you keep track of which angles will constitute a valid bearing.
+    div.webgl-content
+      div#gameContainer(style="width: 100%; height: 60%; max-width: 100%;")
+      div.footer
+        div.webgl-logo
+        div.fullscreen(onclick="gameInstance.SetFullscreen(1);")
+        div.title Reflector
 
-append body
-    script(type='text/javascript').
-        var Module = {
-            TOTAL_MEMORY: 268435456,
-            errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-            compatibilitycheck: null,
-            backgroundColor: "#222C36",
-            splashStyle: "Light",
-            dataUrl: "Release/Test1.data",
-            codeUrl: "Release/Test1.js",
-            asmUrl: "Release/Test1.asm.js",
-            memUrl: "Release/Test1.mem",
-        };
-    script(src='Release/UnityLoader.js')
+    section
+        h1 What is this thing?
+        p.
+            This is a quick project in Unity to help me explore a problem for Google's Foobar 
+            challenge (Bringing a Gun to a Guard Fight). If you stumble across this page and you're 
+            doing the challenge, I hope this helps you out! Note that this is #[em not] a solution; 
+            it's just a way of exploring the math of the problem visually. If you're not here for 
+            the challenge, please note that this is deliberately vague to preserve 
+            its secrecy.
+        p.
+            Unity's WebGL integration doesn't like responsive layouts or high DPI screens,
+            so I would recommend that you <a href="https://www.github.com/colejd/reflector">download the source</a> 
+            and muck around with it in the editor.
+        h1 Usage
+        p.
+            Mouse over any intersection on the grid to see information about the path of the laser. 
+            You can toggle collision for the laser on both the player and the guard. Click to place 
+            a "breadcrumb" on any spot on the grid to help you keep track of which angles will 
+            constitute a valid bearing. Click on a breadcrumb to remove it.
+
+
+    script.
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Reflector.json", {onProgress: UnityProgress});
