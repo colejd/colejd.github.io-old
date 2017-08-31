@@ -49,7 +49,7 @@ function Init() {
     //var root = document.getElementsByTagName('main')[0];
 
     // Create the GUI
-    var gui = new guify.GUI({
+    var gui = new guify({
         title: 'Guify App',
         theme: getParameterByName('theme') || 'dark', // dark, light, yorha, or theme object
         align: 'right', // left, right
