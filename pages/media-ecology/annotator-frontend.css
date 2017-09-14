@@ -300,7 +300,7 @@
 
 .session-modal label, .session-modal input {
   display: block; }
-.session-modal input.text {
+.session-modal input.text, .session-modal input.file {
   margin-bottom: 12px;
   width: 95%;
   padding: .4em; }
@@ -322,6 +322,8 @@
       border: 1px solid #eee;
       padding: .6em 10px;
       text-align: left; }
+.session-modal .modal-error-text {
+  color: red; }
 .session-modal .ui-dialog .ui-state-error {
   padding: .3em; }
 .session-modal .validateTips {
