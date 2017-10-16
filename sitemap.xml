@@ -2,58 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://www.joncole.me/about.html</loc>
-        <lastmod>2017-10-07T15:29:23.586Z</lastmod>
+        <lastmod>2017-10-16T19:00:49.870Z</lastmod>
     </url>
     <url>
         <loc>http://www.joncole.me/</loc>
-        <lastmod>2017-10-07T15:29:23.945Z</lastmod>
+        <lastmod>2017-10-16T19:00:50.182Z</lastmod>
     </url>
     <url>
         <loc>http://www.joncole.me/resume.html</loc>
-        <lastmod>2017-10-07T15:29:24.030Z</lastmod>
+        <lastmod>2017-10-16T19:00:50.392Z</lastmod>
     </url>
     <url>
         <loc>http://www.joncole.me/pages/dust/</loc>
-        <lastmod>2017-10-07T15:29:24.480Z</lastmod>
+        <lastmod>2017-10-16T19:00:50.646Z</lastmod>
     </url>
     <url>
         <loc>http://www.joncole.me/pages/guify/</loc>
-        <lastmod>2017-10-07T15:29:24.488Z</lastmod>
+        <lastmod>2017-10-16T19:00:50.704Z</lastmod>
     </url>
     <url>
         <loc>http://www.joncole.me/pages/jon-trombone/</loc>
-        <lastmod>2017-10-07T15:29:24.490Z</lastmod>
+        <lastmod>2017-10-16T19:00:50.703Z</lastmod>
     </url>
     <url>
         <loc>http://www.joncole.me/pages/lobo/</loc>
-        <lastmod>2017-10-07T15:29:24.494Z</lastmod>
+        <lastmod>2017-10-16T19:00:50.702Z</lastmod>
     </url>
     <url>
         <loc>http://www.joncole.me/pages/mazer/</loc>
-        <lastmod>2017-10-07T15:29:24.495Z</lastmod>
-    </url>
-    <url>
-        <loc>http://www.joncole.me/pages/media-ecology/</loc>
-        <lastmod>2017-10-07T15:29:24.502Z</lastmod>
-    </url>
-    <url>
-        <loc>http://www.joncole.me/pages/media-ecology/raw.html</loc>
-        <lastmod>2017-10-07T15:29:24.503Z</lastmod>
+        <lastmod>2017-10-16T19:00:50.706Z</lastmod>
     </url>
     <url>
         <loc>http://www.joncole.me/pages/morpho/</loc>
-        <lastmod>2017-10-07T15:29:24.504Z</lastmod>
+        <lastmod>2017-10-16T19:00:50.715Z</lastmod>
+    </url>
+    <url>
+        <loc>http://www.joncole.me/pages/media-ecology/</loc>
+        <lastmod>2017-10-16T19:00:50.712Z</lastmod>
+    </url>
+    <url>
+        <loc>http://www.joncole.me/pages/media-ecology/raw.html</loc>
+        <lastmod>2017-10-16T19:00:50.713Z</lastmod>
     </url>
     <url>
         <loc>http://www.joncole.me/pages/reaction-diffusion/</loc>
-        <lastmod>2017-10-07T15:29:24.508Z</lastmod>
+        <lastmod>2017-10-16T19:00:50.720Z</lastmod>
     </url>
     <url>
-        <loc>http://www.joncole.me/pages/spurious-spatial-correlations/</loc>
-        <lastmod>2017-10-07T15:29:24.510Z</lastmod>
+        <loc>http://www.joncole.me/pages/shiro/</loc>
+        <lastmod>2017-10-16T19:00:50.724Z</lastmod>
     </url>
     <url>
         <loc>http://www.joncole.me/pages/reflector/</loc>
-        <lastmod>2017-10-07T15:29:24.509Z</lastmod>
+        <lastmod>2017-10-16T19:00:50.717Z</lastmod>
+    </url>
+    <url>
+        <loc>http://www.joncole.me/pages/spurious-spatial-correlations/</loc>
+        <lastmod>2017-10-16T19:00:50.723Z</lastmod>
     </url>
 </urlset>
